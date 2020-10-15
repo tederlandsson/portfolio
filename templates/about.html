@@ -1,0 +1,12 @@
+<!doctype html>
+<title>{{ about_title }}</title>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/main.css') }}">
+</head>
+<body>
+  {% include 'nav.html' %}
+  <h1>{{ about_h1 }}</h1>
+  <h2> {{ description }} </h2>
+  <h3> {{ 4/3 }} </h3>
+  <a href="/">Go home</a>
+</body>
