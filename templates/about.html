@@ -2,6 +2,7 @@
 <title>{{ content.title }}</title>
 <head>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Fira+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -10,11 +11,17 @@
 
   <div class="skills">
     <h2>Skills</h2>
+    <strong>Programming</strong>
     <ul class="no-bullets">
-    {% for skill in content.skills %}
+    {% for skill in content.programming %}
       <li>{{ skill }}</li>
     {% endfor %}
     </ul>
+    <strong>Software</strong>
+    <ul class="no-bullets">
+    {% for skill in content.software %}
+      <li>{{ skill }}</li>
+    {% endfor %}
   </div>
 
   <h2>Experience</h2>
@@ -22,7 +29,7 @@
   {% for value in content.experience %}
     <h3 class="company-header">{{ value.role }}</h3>
     <p class="company-name">{{ value.company }}</p>
-    <p>({{value.started}} - {{value.ended}}) </p>
+    <p>{{value.started}} - {{value.ended}}</p>
     {% for resp in value.responsibilities %}
       <li>{{ resp }}</li>
     {% endfor %}
