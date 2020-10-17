@@ -1,12 +1,54 @@
 <!doctype html>
-<title>{{ about_title }}</title>
+<title>{{ content.title }}</title>
 <head>
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/main.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 </head>
 <body>
   {% include 'nav.html' %}
-  <h1>{{ about_h1 }}</h1>
-  <h2> {{ description }} </h2>
-  <h3> {{ 4/3 }} </h3>
+  <h1>{{ content.h1 }}</h1>
+  <h2>{{ content.description }}</h2>
+
+  <div class="skills">
+  <h2>Skills</h2>
+  {% for skill in content.skills %}
+    <p>{{ skill }}</p>
+  {% endfor %}
+  </div>
+
+  <h2>Experience</h2>
+  <ul class="no-bullets">
+  {% for key, value in content.experience.items %}
+    <li>{{ value }}</li>
+  {% endfor %}
+  </ul>
+
+  <h2>Ended for loop</h2>
+
+  <h3>{{ content.experience[0].company }}: {{ content.experience[0].role }}</h3>
+
+  <p> {{ content.experience[0].started }} -- {{ content.experience[0].ended }} </p>
+  <p>
+    <b>Responsibilities include:</b>
+  </p>
+  {% for value in content.experience[0].responsibilities %}
+    <p>{{ value }}</p>
+  {% endfor %}
+
+  {% for value in content.experience[0] %}
+    <p>{{ value }}</p>
+  {% endfor %}
+
+
+  <h3 class="education-header">Education</h2>
+  <p>{{ content.education.school }}
+  ({{ content.education.started }} -- {{ content.education.ended }})
+  </p>
+  <p>
+  {{ content.education.level }} in {{ content.education.major }}
+  </p>
+
   <a href="/">Go home</a>
+
+  {% include 'footer.html' %}
+
 </body>
