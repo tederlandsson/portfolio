@@ -20,6 +20,16 @@ h3 {
   font-style: bold;
 }
 
+.company-header {
+  color: #3f3f3f;
+  text-align: center;
+}
+
+.company-name {
+  font-family: Arial;
+  font-size: 0.9em;
+}
+
 
 p {
   font-family: Garamond, Arial;
@@ -62,6 +72,14 @@ p {
   font-style: Roboto;
 }
 
+
+ul {
+   list-style-position: inside;
+}
+
+li {
+  text-align: justify;
+}
 .no-bullets {
   list-style-type: none;
 }

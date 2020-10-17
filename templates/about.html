@@ -3,40 +3,32 @@
 <head>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 </head>
+
 <body>
   {% include 'nav.html' %}
   <h1>{{ content.h1 }}</h1>
-  <h2>{{ content.description }}</h2>
 
   <div class="skills">
-  <h2>Skills</h2>
-  {% for skill in content.skills %}
-    <p>{{ skill }}</p>
-  {% endfor %}
+    <h2>Skills</h2>
+    <ul class="no-bullets">
+    {% for skill in content.skills %}
+      <li>{{ skill }}</li>
+    {% endfor %}
+    </ul>
   </div>
 
   <h2>Experience</h2>
-  <ul class="no-bullets">
-  {% for key, value in content.experience.items %}
-    <li>{{ value }}</li>
+  <ul>
+  {% for value in content.experience %}
+    <h3 class="company-header">{{ value.role }}</h3>
+    <p class="company-name">{{ value.company }}</p>
+    <p>({{value.started}} - {{value.ended}}) </p>
+    {% for resp in value.responsibilities %}
+      <li>{{ resp }}</li>
+    {% endfor %}
+    <br>
   {% endfor %}
   </ul>
-
-  <h2>Ended for loop</h2>
-
-  <h3>{{ content.experience[0].company }}: {{ content.experience[0].role }}</h3>
-
-  <p> {{ content.experience[0].started }} -- {{ content.experience[0].ended }} </p>
-  <p>
-    <b>Responsibilities include:</b>
-  </p>
-  {% for value in content.experience[0].responsibilities %}
-    <p>{{ value }}</p>
-  {% endfor %}
-
-  {% for value in content.experience[0] %}
-    <p>{{ value }}</p>
-  {% endfor %}
 
 
   <h3 class="education-header">Education</h2>
