@@ -3,16 +3,32 @@
 <head>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 </head>
-<!-- {% if name %}
-{% else %} -->
+
 <body>
   {% include 'nav.html' %}
   <div>
     <h1>{{ content['h1'] }}</h1>
   </div>
-    
-  <!-- {% endif %} -->
-    <h3> {{ content['description'] }} </h3>
-    <a href="about">About page</a>  
-    {% include 'footer.html' %}
+
+  <div class="grid-container">
+    <div>
+      <p>First div</p>
+    </div>
+    <div>
+      <p>Second div</p>
+    </div>
+    <div>
+      <p>Third div</p>
+    </div>
+  </div>
+
+  <h3> {{ content['description'] }} </h3>
+
+  <div class="grid-container">
+    <p>{{ content.text }}</p>
+  </div>
+
+
+  <a href="about">About page</a>
+  {% include 'footer.html' %}
 </body>
