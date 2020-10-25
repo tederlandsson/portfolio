@@ -1,0 +1,29 @@
+<!doctype html>
+<title>{{ content.title }}</title>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/test.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Fira+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="main">
+    <div class="toolbar">
+      <!-- {% include 'nav.html' %} -->
+      <ul class="no-bullets">
+        <li>Item1</li>
+        <li>Item2</li>
+      </ul>
+    </div>
+    <div class="title">
+      {{ content.h1 }}
+    </div>
+  </main>
+  <br>
+
+  <div class="panel">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur delectus voluptatem maxime
+      modi nesciunt officia.
+    </p>
+  </div>
+</body>

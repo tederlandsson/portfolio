@@ -6,54 +6,55 @@
 </head>
 
 <body>
-  {% include 'nav.html' %}
-  <h1>{{ content.h1 }}</h1>
-
-  <div class"grid-container">
-    <h2>Skills</h2>
-    <div class="item">
-      <h3>Programming</h3>
-      <ul class="no-bullets">
-      {% for skill in content.programming %}
-        <li>{{ skill }}</li>
-      {% endfor %}
-      </ul>
+  <div class="grid-container">
+    {% include 'nav.html' %}
+    {% include 'menu.html' %}
+    
+    <div class="two-cols">
+      <h1>{{ content.h1 }}</h1>
+      <h2>Skills</h2></div>
+      
+    <div class"left-col">
+        <h3>Programming</h3>
+        <ul class="no-bullets">
+        {% for skill in content.programming %}
+          <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
     </div>
-    <div class="item">
+
+    <div class"right-col">
       <h3>Software</h3>
-      <ul class="no-bullets">
+      <ul class="center-ul">
       {% for skill in content.software %}
         <li>{{ skill }}</li>
       {% endfor %}
     </div>
   </div>
 
-  <h2>Experience</h2>
-  <div class="grid-container">
-    <ul class="no-bullets">
-    {% for value in content.experience %}
-      <h3 class="company-header">{{ value.role }}</h3>
-      <p class="company-name">{{ value.company }}</p>
-      <p>{{value.started}} - {{value.ended}}</p>
-      {% for resp in value.responsibilities %}
-        <li>{{ resp }}</li>
+    <div class"two-cols">
+      <h2>Experience</h2>
+      {% for value in content.experience %}
+        <h3 class="company-header">{{ value.role }}</h3>
+        <p class="company-name">{{ value.company }}</p>
+        <p>{{value.started}} - {{value.ended}}</p>
+        <ul>
+        {% for resp in value.responsibilities %}
+          <li>{{ resp }}</li>
+        {% endfor %}
+        <br>
       {% endfor %}
-      <br>
-    {% endfor %}
-    </ul>
+      </ul>
+
+      <h3 class="education-header">Education</h2>
+      <p>{{ content.education.school }}
+        ({{ content.education.started }} -- {{ content.education.ended }})
+      </p>
+      <p>
+        {{ content.education.level }} in {{ content.education.major }}
+      </p>
+      
+    </div>
+    {% include 'footer.html' %}
   </div>
-
-
-  <h3 class="education-header">Education</h2>
-  <p>{{ content.education.school }}
-  ({{ content.education.started }} -- {{ content.education.ended }})
-  </p>
-  <p>
-  {{ content.education.level }} in {{ content.education.major }}
-  </p>
-
-  <a href="/">Go home</a>
-
-  {% include 'footer.html' %}
-
 </body>

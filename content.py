@@ -1,5 +1,5 @@
 homepage = {
-  'title': 'Demo site',
+  'title': 'Demo site | Name here',
   'h1': 'Demo site',
   'description': 'This is a test description from a dictionary',
   'text': '| "American whole magazine truth stop whose. On traditional measure example sense peace. Would mout relate own chair. Together range line beyond. First policy daughter need kind miss."'
@@ -7,7 +7,7 @@ homepage = {
 
 
 about = {
-  'title': 'About me',
+  'title': 'About me | Name here',
   'h1':'About me',
   'description': 'Experience',
   'programming': ['Javascript', 'Python', 'Node.js', 'Selenium webdriver', 'Bash', 'Auto Hotkey', 'SQL'],
@@ -44,7 +44,8 @@ about = {
       'responsibilities': [
         'Quality assurance for cash management software',
         'Owner of internal test environments',
-        'Developing test strategies and test cases'
+        'Developing test strategies and test cases',
+        'Created automated performance test suites for web applications and REST API using Apache JMeter.'
         ]
     },
   ],
@@ -58,7 +59,16 @@ about = {
 }
 
 contact = {
-  'title': 'Contact me',
+  'title': 'Contact me | Name here',
   'h1': 'Get in touch',
-  'description': "Let's talk"
+  'description': "Let's talk",
+  'linkedin': 'mynamehere',
+  'github': 'myaccount',
+  'email': 'myemail@email.com',
+  'phone': 'Some number'
+}
+
+test = {
+  'title': 'Test page title',
+  'h1': 'Test page'
 }

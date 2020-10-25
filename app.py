@@ -23,6 +23,12 @@ def contact():
   return render_template('contact.html',  content=content.contact
   )
 
+@app.route('/test')
+def test():
+  """Test page"""
+  return render_template('test.html',  content=content.test
+  )
+
 
 if __name__ == "__main__":
   app.run(debug=True)
