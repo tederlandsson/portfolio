@@ -1,21 +1,41 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(14, 1fr);
+  /* grid-template-columns: repeat(24, 1fr); */
+  /* grid-template-columns: repeat(auto-fill, minax(200px, 1fr)); */
+  /* grid-template-rows: repeat(auto-fill, minax(200px, 1fr)); */
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+  /* grid-template-rows: repeat(14, 1fr); */
   height: 100%;
   width: 100%;
 }
 
 .toolbar {
-  grid-row: 1 / span 1;
-  grid-column: 1 / -1;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
   background-color: #f3f3f3;
-  /* width: 100%; */
+  padding: 0 1rem;
+  border-bottom: 3px solid white;
+  align-items: center;
+  margin-bottom: 5%;
 }
 
-.title {
-  grid-row: 3 / span 5;
-  grid-column: 2 / span 7;
+main > .title {
+  /* display: grid; */
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 3;
+
+}
+
+main > .title {
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
 }
 
 .panel {
@@ -33,19 +53,7 @@
   background: rgba(255, 255, 255, 0.25);
 }
 
-.toolbar {
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  border-bottom: 3px solid white;
-}
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-}
+
 
 /* * ! background styling */ */
 :root {
@@ -65,8 +73,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  font-size: 24px;
-  display: flex;
+  font-size: 36px;
+  display: grid;
   justify-content: center;
   align-items: center;
 }
