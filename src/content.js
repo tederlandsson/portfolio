@@ -2,10 +2,11 @@ let content = {
   pageTitle: 'Landing page',
   aboutMe: {
     name: 'Test name',
+    introduction: 'Your reason perform if wide this method child. Information seriou  administration traditional commercial feel stock. Husband sit soon mother rise attention. Drop certainly significant. According war speech both. Team environmental degree each None name sometimes employee inside box. Success war religious.',
     role: 'Quality Engineer',
   },
-  programming: ['Javascript', 'Python', 'Node.js', 'Selenium webdriver', 'Bash', 'Auto Hotkey', 'SQL'],
-  software: ['WebdriverIO', 'Selenium webdriver', 'Cucumber', 'JMeter', 'Git', 'BrowserStack', 'Azure DevOps', 'Postman', 'Sitecore'],
+  programming: ['Javascript', 'Python', 'Bash', 'Auto Hotkey'],
+  software: ['Node.js', 'WebdriverIO', 'Selenium webdriver',  'Git', 'JMeter', 'BrowserStack', 'Azure DevOps', 'Postman', 'Sitecore'],
   contact: {
     email: 'myname@gmail.com',
     linkedin: 'LinkedIn profile',

@@ -5,15 +5,15 @@ export default class Contact extends Component {
     let content = this.props.content;
     return (
       <div class="contact">
-        <div class="grid-container">
-          <div class="three-cols">
-            <h3>Contact</h3>
-            <ul class="no-bullets">
-              <li>Drop me an email at {content.contact.email}</li>
-              <li>Find me on LinkedIn: <a href="https://www.linkedin.com">{content.contact.linkedin}</a></li>
-              <li>Find me on Github: <a href="https://www.github.com">{content.contact.github}</a></li>
-            </ul>
-          </div>
+        <div class="three-cols">
+          <h3>Contact</h3>
+          <ul class="no-bullets">
+            <li>Drop me an email at <br />{content.contact.email}</li>
+            <br />
+            <li>Find me on LinkedIn: <br /> <a href="https://www.linkedin.com">{content.contact.linkedin}</a></li>
+            <br />
+            <li>Find me on Github:<br /> <a href="https://www.github.com">{content.contact.github}</a></li>
+          </ul>
         </div>
       </div>
     );
