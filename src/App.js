@@ -12,8 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar content={content}/>
-        <Contact content={content}/>
         <About content={content}/>
+        <Contact content={content}/>
         <Footer content={content}/>
       </div>
     )

@@ -7,8 +7,9 @@ export default class Navheader extends Component {
     return (
       <div>
         <div className="navbar">
-        <ul class="no-bullets">
-          <img src={logo} className="logo" alt="Logo" />
+        <img src={logo} className="logo" alt="Logo" />
+        <br />
+        <ul class="no-bullets">          
           <li><a href="/">Home</a></li>
           <li><a href="about">About</a></li>
           <li><a href="contact">Contact</a></li>

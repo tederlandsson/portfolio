@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 
-import content from '../../content.js';
-
 export default class About extends Component {
   render() {
     let content = this.props.content;
+    const skills = content.programming.map((x) => `${x},`);
+
     return (
-      <p>{content.role}</p>
+      <div class="about">
+        <h1>{content.aboutMe.name}</h1>
+        <div class="grid-container">
+          <strong>About component</strong>
+          <p>{content.aboutMe.role}</p>
+          <h3>Skills</h3>
+          <p>{skills}</p>
+        </div>
+      </div>
     );
   }
 }
+
+

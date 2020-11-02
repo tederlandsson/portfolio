@@ -1,9 +1,19 @@
 let content = {
   pageTitle: 'Landing page',
-  name: 'Ted',
-  role: 'Quality Engineer',
+  aboutMe: {
+    name: 'Test name',
+    role: 'Quality Engineer',
+  },
+  programming: ['Javascript', 'Python', 'Node.js', 'Selenium webdriver', 'Bash', 'Auto Hotkey', 'SQL'],
+  // software: ['WebdriverIO', 'Selenium webdriver', 'Cucumber', 'JMeter', 'Git', 'BrowserStack', 'Azure DevOps', 'Postman', 'Sitecore'],
+  contact: {
+    email: 'myname@gmail.com',
+    linkedin: 'LinkedIn profile',
+    github: 'Bratislavablue',
+  },
   builtWith: 'React',
-  fontsUsed: ['Roboto', 'Fira Sans'],
+  fontsUsed: ['Avenir' ,'Fira Sans'],
+  
 }
 
 export default content
