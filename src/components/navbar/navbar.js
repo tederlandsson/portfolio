@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../../logo.svg';
 
-export default class Navbar extends Component {
+export default class Navheader extends Component {
   render() {
     return (
       // let portfolioData = this.props.portfolioData;
       <div>
-        <link rel="stylesheet" type="text/css" href="public/css/main.css" />
-        <div className="navheader">
+        {/* <link rel="stylesheet" type="text/css" href="public/css/main.css" /> */}
+        {/* <link rel="stylesheet" type="text/css" href="public/css/test.css" /> */}
+        <div className="navbar">
         <ul class="no-bullets">
           <img src={logo} className="logo" alt="Logo" />
           <li><a href="/">Home</a></li>

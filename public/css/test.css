@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.toolbar {
+.navbar {
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 1;
@@ -23,7 +23,6 @@
 }
 
 main > .title {
-  /* display: grid; */
   grid-column-start: 3;
   grid-column-end: 6;
   grid-row-start: 3;
