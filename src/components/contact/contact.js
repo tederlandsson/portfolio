@@ -7,7 +7,7 @@ export default class Contact extends Component {
       <div class="contact">
         <div class="grid-container">
           <div class="three-cols">
-            <h2>{content.role}</h2>
+            <h3>Contact</h3>
             <ul class="no-bullets">
               <li>Drop me an email at {content.contact.email}</li>
               <li>Find me on LinkedIn: <a href="https://www.linkedin.com">{content.contact.linkedin}</a></li>

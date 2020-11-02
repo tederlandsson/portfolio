@@ -5,7 +5,7 @@ let content = {
     role: 'Quality Engineer',
   },
   programming: ['Javascript', 'Python', 'Node.js', 'Selenium webdriver', 'Bash', 'Auto Hotkey', 'SQL'],
-  // software: ['WebdriverIO', 'Selenium webdriver', 'Cucumber', 'JMeter', 'Git', 'BrowserStack', 'Azure DevOps', 'Postman', 'Sitecore'],
+  software: ['WebdriverIO', 'Selenium webdriver', 'Cucumber', 'JMeter', 'Git', 'BrowserStack', 'Azure DevOps', 'Postman', 'Sitecore'],
   contact: {
     email: 'myname@gmail.com',
     linkedin: 'LinkedIn profile',
