@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 export default class Contact extends Component {
   render() {
+    let content = this.props.content;
     return (
       <div class="grid-container">
         <div class="two-cols">
-          <h1>Header here</h1>
+          <h1>{content.name}</h1>
           <h2>Subheader</h2>
           
           <ul class="no-bullets">

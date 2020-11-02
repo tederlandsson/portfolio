@@ -3,11 +3,9 @@ import logo from '../../logo.svg';
 
 export default class Navheader extends Component {
   render() {
+    
     return (
-      // let portfolioData = this.props.portfolioData;
       <div>
-        {/* <link rel="stylesheet" type="text/css" href="public/css/main.css" /> */}
-        {/* <link rel="stylesheet" type="text/css" href="public/css/test.css" /> */}
         <div className="navbar">
         <ul class="no-bullets">
           <img src={logo} className="logo" alt="Logo" />

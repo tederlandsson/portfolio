@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
+import About from './components/about/about';
 import Contact from './components/contact/contact';
 
 import './App.css';
-import portfolioData from './portfolioData';
+import content from './content.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar portfolioData={portfolioData}/>
-        <Contact portfolioData={portfolioData}/>
-        <Footer />
+        <Navbar content={content}/>
+        <Contact content={content}/>
+        <About content={content}/>
+        <Footer content={content}/>
       </div>
     )
   }
