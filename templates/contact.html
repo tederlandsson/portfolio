@@ -5,23 +5,27 @@
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 </head>
 <body>
+<div class="grid-container">
   {% include 'nav.html' %}
-  <h1>{{ content['h1'] }}</h1>
-  <h2> {{ content['description'] }} </h2>
-
-  <p>
-  Health catch term according me together ball never. Record rock college watch week institution collection anything. Media under opportunity similar.
-  </p>
-  <p>
-  Billion how choice at husband. Song share develop Mr everybody.
-  Energy wall agent political. Song cover finally phone rule.
-  </p>
-  <p>
-  House answer start behind. Around medical also its attorney before interesting step. Water piece on artist.
-  </p>
-
-  <a href="/">Go home</a>
-
+  {% include 'menu.html' %}
+  <div class="two-cols">
+    <div class="code">
+      <p>
+        import requests<br>
+      res = requests.get('https://www.google.com')
+      </p>
+      
+    </div>
+    <h1>{{ content.h1 }}</h1>
+    <h2> {{ content.description }} </h2>
+    <ul class="no-bullets">
+      <li>Drop me an email at {{ content.email }}</li>
+      <li>Find me on LinkedIn: <a href="https://www.linkedin.com">{{ content.linkedin }}</a></li>
+      <li>Find me on Github: <a href="https://www.github.com">{{ content.github }}</a></li>
+    </ul>
+  </div>
   {% include 'footer.html' %}
+</div>
+  
 
 </body>
