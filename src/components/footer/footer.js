@@ -5,8 +5,8 @@ export default class Footer extends Component {
     return (
       <div class="footer">
         <p>Powered by React</p>
-        <p><b>Fonts used:</b> Avenir, Fira Sans </p>
-        <p><b>Last updated: </b>2 Nov 2020</p>
+        <p><b>Fonts used:</b> Avenir, Work Sans</p>
+        <p><b>Last updated: </b>3 Nov 2020</p>
       </div>
     );
   }

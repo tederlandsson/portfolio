@@ -15,7 +15,7 @@ WebFont.load({
   google: {
     families: [
       'Neuton:400,700', 'sans-serif',
-      'Work Sans:300,400,700', 'sans-serif'
+      'Work Sans:300,400,500,700', 'sans-serif'
     ]
   }
 });

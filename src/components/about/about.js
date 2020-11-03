@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import utils from '../../../src/utils/utils.js';
 
 export default class About extends Component {
   render() {
     const content = this.props.content;
-    const programming = content.programming.map((x) => `${x}, `);
-    const software = content.software.map((x) => `${x}, `);
+    const programming = utils.renderArrayWithCommas(content.programming);
+    const software = utils.renderArrayWithCommas(content.software);
+
+    const volvo = content.experience.volvo;
+    const acando = content.experience.acando;
+    const scancoin = content.experience.scancoin;
 
     return (
       <div class="grid-container">
         <div class="about">
-          <h1>About me</h1>
+          <h2>About me</h2>
           <strong>{content.aboutMe.name}</strong>
           <p>{content.aboutMe.role} {content.aboutMe.introduction}</p>
           <p></p>
@@ -24,8 +29,7 @@ export default class About extends Component {
           </ul>
         </div>
       </div>
+      
     );
   }
 }
-
-
