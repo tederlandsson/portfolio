@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import About from './components/about/about';
+import Experience from './components/experience/experience';
 import Contact from './components/contact/contact';
 
 import './App.css';
@@ -26,6 +27,7 @@ class App extends Component {
       <div className="main">
         <Navbar content={content}/>
         <About content={content}/>
+        <Experience content={content.experience}/>
         <Contact content={content}/>
         <Footer content={content}/>
       </div>

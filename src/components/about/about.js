@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import utils from '../../../src/utils/utils.js';
+import utils from '../../utils/utils.js';
 
 export default class About extends Component {
   render() {
     const content = this.props.content;
     const programming = utils.renderArrayWithCommas(content.programming);
     const software = utils.renderArrayWithCommas(content.software);
-
-    const volvo = content.experience.volvo;
-    const acando = content.experience.acando;
-    const scancoin = content.experience.scancoin;
 
     return (
       <div class="grid-container">
