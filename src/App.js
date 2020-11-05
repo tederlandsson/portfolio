@@ -5,12 +5,11 @@ import About from './components/about/about';
 import Experience from './components/experience/experience';
 import Contact from './components/contact/contact';
 
-import './App.css';
+// import './App.css';
 import content from './content.js'; // My content
 
 // Extenral
 import WebFont from 'webfontloader';
-
 
 WebFont.load({
   google: {
