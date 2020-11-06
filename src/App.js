@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/Navbar/Navbar';
 import Footer from './components/footer/footer';
-import About from './components/about/about';
+import About from './components/About/About';
 import Experience from './components/experience/experience';
 import Contact from './components/contact/contact';
+
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './global';
+import { theme } from './theme';
+
 
 // import './App.css';
 import content from './content.js'; // My content
@@ -23,13 +28,19 @@ WebFont.load({
 class App extends Component {
   render() {
     return (
-      <div className="main">
-        <Navbar content={content}/>
-        <About content={content}/>
-        <Experience content={content.experience}/>
-        <Contact content={content}/>
-        <Footer content={content}/>
-      </div>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <div className="main">
+            <Navbar content={content}/>
+            <About content={content}/>
+            <Experience content={content.experience}/>
+            <Contact content={content}/>
+            <Footer content={content}/>
+          </div>
+        </>
+      </ThemeProvider>
+      
     )
   }
 }
