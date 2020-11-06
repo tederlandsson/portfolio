@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import fontSizes from '../../global';
+import margins from '../../margins';
 
 export const StyledAbout = styled.div`
   .grid-container > .about {
@@ -6,12 +8,16 @@ export const StyledAbout = styled.div`
       grid-row: 2;
       color: #fff;
       padding: 18px 0px 18px 0px;
-      margin-bottom: 3%;
+      margin-bottom: ${margins.medium};
   }
 
   .about > p {
-    margin: 0 5% 0 5%;
+    margin: 0 ${margins.large} 0 ${margins.large};
     text-align: justify;
+  }
+
+  h3 {
+    font-size: ${fontSizes.large}
   }
 
 `;

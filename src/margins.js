@@ -3,7 +3,9 @@ const margins = {
   small: '12px',
   medium: '3%',
   large: '5%',
-  huge: '10%',
+  Large: '10%',
+  huge: '15%',
 };
+
 
 export default margins;

@@ -22,6 +22,7 @@ export default class About extends Component {
             <ul class="no-bullets">
               <li>{programming}</li>            
             </ul>
+            <br />
             <h3>Software</h3>
             <ul class="no-bullets">
               <li>{software}</li>            

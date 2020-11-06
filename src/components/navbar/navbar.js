@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navigation from '../navigation/navigation';
+import Navigation from '../Navigation/Navigation';
 import StyledNavbar from './Navbar.styled';
 
 export default class Navheader extends Component {

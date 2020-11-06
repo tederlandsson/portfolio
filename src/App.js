@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import About from './components/About/About';
-import Experience from './components/experience/experience';
-import Contact from './components/contact/contact';
+import Experience from './components/Experience/Experience'
+import Contact from './components/Contact/Contact';
 
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './global';
