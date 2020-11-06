@@ -55,36 +55,38 @@ export const GlobalStyles = createGlobalStyle`
     display: grid;
   }
   
+  .no-bullets {
+    list-style-type: none;
+    padding: 0 5% 0 5%;
+    font-family: 'Work Sans', sans-serif;
+  }
 
-.no-bullets {
-  list-style-type: none;
-  padding: 0 5% 0 5%;
-  font-family: 'Work Sans', sans-serif;
-}
+  h1 {
+    font-size: ${fontSizes.huge};
+    font-family: 'Avenir', 'sans-serif';
+    font-weight: 400;
+  }
 
-h1 {
-  font-size: ${fontSizes.huge};
-  font-family: 'Avenir', 'sans-serif';
-  font-weight: 400;
-}
+  h2 {
+    font-style: bold;
+    font-size: ${fontSizes.large};
+    font-weight: 500;
+  }
 
-h2 {
-  font-style: bold;
-  font-size: ${fontSizes.large};
-  font-weight: 500;
-}
+  h3 {
+    font-size: ${fontSizes.medium};
+    margin-bottom: -2px
+  }
 
-h3 {
-  font-size: ${fontSizes.medium};
-  margin-bottom: -2px
-}
+  p {
+    font-size: ${fontSizes.medium}};
+    font-family: 'Work Sans', sans-serif;
+  }
 
-p {
-  font-size: ${fontSizes.medium}};
-  font-family: 'Work Sans', sans-serif;
-}
+  .backgroundGradient {
+    background: rgb(35,108,74);
+    background: linear-gradient(0deg, rgba(35,108,74,1) 0%, rgba(36,115,78,0.9962359943977591) 31%, rgba(37,155,100,1) 100%);
+  }
+`;
 
-  `
-  
-  // background: ${({ theme }) => theme.primaryDark};
-  // color: ${({ theme }) => theme.primaryLight};
+export default fontSizes;

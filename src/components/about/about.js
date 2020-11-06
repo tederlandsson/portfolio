@@ -12,7 +12,7 @@ export default class About extends Component {
     return (
       <StyledAbout>
         <div className="grid-container">
-          <div className="about">
+          <div className="about backgroundGradient">
             <h2>About me</h2>
             <strong>{content.aboutMe.name}</strong>
             <p>{content.aboutMe.role} {content.aboutMe.introduction}</p>
@@ -27,7 +27,7 @@ export default class About extends Component {
               <li>{software}</li>            
             </ul>
           </div>
-      </div>
+        </div>
       </StyledAbout>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/footer/footer';
+import Footer from './components/Footer/Footer';
 import About from './components/About/About';
 import Experience from './components/experience/experience';
 import Contact from './components/contact/contact';
