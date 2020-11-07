@@ -7,6 +7,7 @@ export const StyledNavbar = styled.div`
     display: inline-block;
     color: #2c2a2a;
     padding: ${margins.small} 0 ${margins.small} 0;
+    margin-bottom: 100px;
   }
 `;
 

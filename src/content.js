@@ -20,8 +20,8 @@ let content = {
       role: 'Quality engineer',
       tasks: [
         'Using the Node.js framework WebdriverIO to implement UI tests for pages consisting of React components',
-      'Building some of the company\'s most heavily trafficed web pages',
-      'Implementing automated tests end-to-end.',
+      'Quality assurance of web pages that gets millions of page visits every year',
+      'Implementing automated tests for customer journey end-to-end',
       // 'Quality assurance on new pages and market rollouts'
       ],
     },
@@ -31,8 +31,8 @@ let content = {
       ended: 'Jul. 2019',
       role: 'Software test lead',
       tasks: [
-        'Test leading e-commerce projects end-to-end',
-        'Designing test cases',
+        'Test leading e-commerce projects end-to-end in the automative industry',
+        'Testing software solutions from development stage up to and including market rollouts',
         'Executing tests of web applications and REST APIs to ensure functionality and integration end-to-end'
       ],
     },

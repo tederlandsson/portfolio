@@ -14,7 +14,7 @@ export default class About extends Component {
         <div className="grid-container">
           <div className="about backgroundGradient">
             <h2>About me</h2>
-            <strong>{content.aboutMe.name}</strong>
+            <h3>{content.aboutMe.name}</h3>
             <p>{content.aboutMe.role} {content.aboutMe.introduction}</p>
             <br />
             <h2>Skills</h2>

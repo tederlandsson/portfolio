@@ -16,8 +16,13 @@ export const StyledAbout = styled.div`
     text-align: justify;
   }
 
+  h2 {
+    font-size: ${fontSizes.Large};
+  }
+
   h3 {
-    font-size: ${fontSizes.large}
+    font-size: ${fontSizes.medium};
+    margin-bottom: ${margins.xsmall}; 
   }
 
 `;
