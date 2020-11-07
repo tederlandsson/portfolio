@@ -17,7 +17,7 @@ export default class About extends Component {
             <p>{content.role} {content.introduction}</p>
             <br />
             <h2>Skills</h2>
-            <h3>Coding</h3>
+            <h3>Programming</h3>
             <ul class="no-bullets">
               <li>{programming}</li>            
             </ul>

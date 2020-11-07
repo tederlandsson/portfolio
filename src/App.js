@@ -6,7 +6,7 @@ import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact';
 
 import { ThemeProvider } from 'styled-components';
-import theme from './theme';
+// import { Theme } from './theme/index';
 import { GlobalStyles } from './theme';
 
 import content from './content.js'; // My content
@@ -26,7 +26,7 @@ WebFont.load({
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      // <ThemeProvider theme={Theme}>
         <>
           <GlobalStyles />
           <div className="main">
@@ -37,7 +37,7 @@ class App extends Component {
             <Footer />
           </div>
         </>
-      </ThemeProvider>
+      // </ThemeProvider>
       
     )
   }

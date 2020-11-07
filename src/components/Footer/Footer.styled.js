@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import fontSizes from '../../theme';
+import { FontSizes } from '../../theme';
 
 const StyledFooter = styled.div`
     border-top: 1px solid;
@@ -9,7 +9,7 @@ const StyledFooter = styled.div`
   }
 
   .footer > p {
-    font-size: ${fontSizes.medium};
+    font-size: ${FontSizes.medium};
   }
 `;
 
