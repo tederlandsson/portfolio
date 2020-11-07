@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import { StyledExperience } from './Experience.styled';
+import content from '../../config/experience';
 
 export default class Experience extends Component {
   render() {
-    const volvo = this.props.content.volvo;
-    const acando = this.props.content.acando;
-    const scancoin = this.props.content.scancoin;
+    const volvo = content.volvo;
+    const acando = content.acando;
+    const scancoin = content.scancoin;
+
+    console.log(content);
 
     return (
       <StyledExperience>
         <div className="experience">
           <h2>Experience</h2>
           <b>{volvo.role}</b>
-          <p>{volvo.company}</p>
-          <p>{volvo.started}–{volvo.ended}</p>   
+          <p className="company">{volvo.company}</p>
+          <p className="dates">{volvo.started}–{volvo.ended}</p>   
           <ul>
             {volvo.tasks.map((x) => (
               <li>{x}</li>

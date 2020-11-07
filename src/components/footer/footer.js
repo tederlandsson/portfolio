@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import StyledFooter from './Footer.styled';
+import content from '../../config/about';
 
 export default class Footer extends Component {
-  render(props) {
+  render() {
     return (
       <div className="footer backgroundGradient">
         <StyledFooter>
@@ -10,7 +11,7 @@ export default class Footer extends Component {
           <p><b>Fonts used:</b> Avenir, Work Sans</p>
           <p><b>Last updated: </b>6 Nov 2020</p>
           <br/>
-          &copy; Copyright 2020 {this.props.content.aboutMe.name}
+          &copy; Copyright 2020 {content.name}
         </StyledFooter> 
       </div>    
     );

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import margins from '../../margins';
+import { Margins } from '../../theme';
 
 const StyledContact = styled.div`
-    margin-bottom: ${margins.medium};
+    margin-bottom: ${Margins.medium};
   }
 
   a {

@@ -6,11 +6,9 @@ import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact';
 
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './global';
-import { theme } from './theme';
+// import { Theme } from './theme/index';
+import { GlobalStyles } from './theme';
 
-
-// import './App.css';
 import content from './content.js'; // My content
 
 // Extenral
@@ -28,18 +26,18 @@ WebFont.load({
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      // <ThemeProvider theme={Theme}>
         <>
           <GlobalStyles />
           <div className="main">
-            <Navbar content={content}/>
-            <About content={content}/>
-            <Experience content={content.experience}/>
+            <Navbar />
+            <About />
+            <Experience />
             <Contact content={content}/>
-            <Footer content={content}/>
+            <Footer />
           </div>
         </>
-      </ThemeProvider>
+      // </ThemeProvider>
       
     )
   }
