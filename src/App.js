@@ -30,11 +30,11 @@ class App extends Component {
         <>
           <GlobalStyles />
           <div className="main">
-            <Navbar content={content}/>
-            <About content={content}/>
-            <Experience content={content.experience}/>
+            <Navbar />
+            <About />
+            <Experience />
             <Contact content={content}/>
-            <Footer content={content}/>
+            <Footer />
           </div>
         </>
       </ThemeProvider>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { StyledExperience } from './Experience.styled';
+import content from '../../config/experience';
 
 export default class Experience extends Component {
   render() {
-    const volvo = this.props.content.volvo;
-    const acando = this.props.content.acando;
-    const scancoin = this.props.content.scancoin;
+    const volvo = content.volvo;
+    const acando = content.acando;
+    const scancoin = content.scancoin;
 
     return (
       <StyledExperience>
