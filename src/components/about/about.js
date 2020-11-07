@@ -1,31 +1,34 @@
 import React, { Component } from 'react';
+import { StyledAbout } from './About.styled';
+import utils from '../../utils/utils.js';
+import content from '../../config/about';
 
 export default class About extends Component {
   render() {
-    const content = this.props.content;
-    const programming = content.programming.map((x) => `${x}, `);
-    const software = content.software.map((x) => `${x}, `);
+    const programming = utils.renderArrayWithCommas(content.programming);
+    const software = utils.renderArrayWithCommas(content.software);
 
     return (
-      <div class="grid-container">
-        <div class="about">
-          <h1>About me</h1>
-          <strong>{content.aboutMe.name}</strong>
-          <p>{content.aboutMe.role} {content.aboutMe.introduction}</p>
-          <p></p>
-          <h2>Skills</h2>
-          <h3>Coding</h3>
-          <ul class="no-bullets">
-            <li>{programming}</li>            
-          </ul>
-          <h3>Software</h3>
-          <ul class="no-bullets">
-            <li>{software}</li>            
-          </ul>
+      <StyledAbout>
+        <div className="grid-container">
+          <div className="about backgroundGradient">
+            <h2>About me</h2>
+            <strong>{content.name}</strong>
+            <p>{content.role} {content.introduction}</p>
+            <br />
+            <h2>Skills</h2>
+            <h3>Programming</h3>
+            <ul class="no-bullets">
+              <li>{programming}</li>            
+            </ul>
+            <br />
+            <h3>Software</h3>
+            <ul class="no-bullets">
+              <li>{software}</li>            
+            </ul>
+          </div>
         </div>
-      </div>
+      </StyledAbout>
     );
   }
 }
-
-
