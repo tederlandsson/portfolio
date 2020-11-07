@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import fontSizes from '../../global';
+import fontSizes from '../../theme/';
 import margins from '../../margins';
 
 export const StyledAbout = styled.div`

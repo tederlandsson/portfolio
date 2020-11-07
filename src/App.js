@@ -6,11 +6,9 @@ import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact';
 
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './global';
-import { theme } from './theme';
+import theme from './theme';
+import { GlobalStyles } from './theme';
 
-
-// import './App.css';
 import content from './content.js'; // My content
 
 // Extenral

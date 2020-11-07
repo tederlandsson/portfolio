@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import fontSizes from '../../global';
+import fontSizes from '../../theme';
 
 const StyledFooter = styled.div`
     border-top: 1px solid;

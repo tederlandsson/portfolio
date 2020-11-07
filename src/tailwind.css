@@ -73,9 +73,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-/* a {
+a {
   background-color: transparent;
-} */
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -492,7 +492,7 @@ table {
   border-collapse: collapse;
 }
 
-/* h1,
+h1,
 h2,
 h3,
 h4,
@@ -500,7 +500,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-} */
+}
 
 /**
  * Reset links to optimize for opt-in styling instead of
@@ -508,7 +508,7 @@ h6 {
  */
 
 a {
-  /* color: inherit; */
+  color: inherit;
   text-decoration: inherit;
 }
 
