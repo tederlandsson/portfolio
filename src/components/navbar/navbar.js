@@ -8,9 +8,9 @@ export default class Navheader extends Component {
     return (
       <header className="navbar">
         <StyledNavbar>
-        <h1>
-          {content.name}
-        </h1>
+          <h1>
+            {content.name}
+          </h1>
         <Navigation />
         </StyledNavbar>
       </header>

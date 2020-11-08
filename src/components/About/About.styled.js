@@ -15,6 +15,10 @@ export const StyledAbout = styled.div`
     text-align: justify;
   }
 
+  h2 {
+    font-size: ${FontSizes.Large};
+  }
+
   h3 {
     font-size: ${FontSizes.large}
   }

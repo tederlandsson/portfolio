@@ -8,8 +8,6 @@ export default class Experience extends Component {
     const acando = content.acando;
     const scancoin = content.scancoin;
 
-    console.log(content);
-
     return (
       <StyledExperience>
         <div className="experience">
@@ -23,16 +21,16 @@ export default class Experience extends Component {
             ))}
           </ul>
           <b>{acando.role}</b>
-          <p>{acando.company}</p>
-          <p>{acando.started}–{acando.ended}</p>   
+          <p className="company">{acando.company}</p>
+          <p className="dates">{acando.started}–{acando.ended}</p>   
           <ul>
             {acando.tasks.map((x) => (
               <li>{x}</li>
             ))}
           </ul>
           <b>{scancoin.role}</b>
-          <p>{scancoin.company}</p>
-          <p>{scancoin.started}–{acando.ended}</p>   
+          <p className="company">{scancoin.company}</p>
+          <p className="dates">{scancoin.started}–{acando.ended}</p>   
           <ul>
             {scancoin.tasks.map((x) => (
               <li>{x}</li>

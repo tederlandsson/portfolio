@@ -10,22 +10,20 @@ export const StyledExperience = styled.div`
     margin-bottom: ${Margins.small};
   }
 
-  .experience > ul {
+  ul {
     margin-bottom: ${Margins.large};
   }
 
-  .experience > b {
+  b {
     font-size: ${FontSizes.large};
     margin-bottom: ${Margins.medium};
   }
 
-  .experience > ul > li {
+  ul > li {
   }
 
   .company,
   .dates {
     margin: ${Margins.small} 0 ${Margins.small} 0;
   }
-
-  
 `;
