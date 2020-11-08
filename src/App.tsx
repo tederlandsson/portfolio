@@ -9,20 +9,6 @@ import Contact from './components/Contact/Contact';
 // import { Theme } from './theme/index';
 import { GlobalStyles } from './theme';
 
-import content from './content.js'; // My content
-
-// Extenral
-import WebFont from 'webfontloader';
-
-WebFont.load({
-  google: {
-    families: [
-      'Neuton:400,700', 'sans-serif',
-      'Work Sans:300,400,500,700', 'sans-serif'
-    ]
-  }
-});
-
 class App extends Component {
   render() {
     return (
@@ -33,7 +19,7 @@ class App extends Component {
             <Navbar />
             <About />
             <Experience />
-            <Contact content={content}/>
+            <Contact />
             <Footer />
           </div>
         </>

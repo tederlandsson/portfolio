@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Burger from '../../shared/Burger';
 import About from '../About/About';
 
 function Navigation() {
@@ -28,7 +27,7 @@ function Navigation() {
     <nav>
       <div className="menu">
         <h3 onClick={() => setShowMenu(!showMenu)}>
-          {showMenu ? 'Close menu' : 'Open Menu'}</h3>
+          {showMenu ? 'Close menu' : 'Open menu'}</h3>
       </div>
             { menuMask }
 
