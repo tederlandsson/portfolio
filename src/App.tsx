@@ -16,7 +16,7 @@ class App extends Component {
         <>
           <GlobalStyles />
           <div className="main">
-            <Navbar />
+            {/* <Navbar /> */}
             <About />
             <Experience />
             <Contact />

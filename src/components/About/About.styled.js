@@ -1,62 +1,54 @@
 import styled from 'styled-components';
-import { FontSizes, Margins } from '../../theme/';
+import { FontSizes, Margins, Colors } from '../../theme/';
 
 export const StyledAbout = styled.div`
-  .grid-container > .about {
-      grid-column: 2;
-      grid-row: 2;
-      color: #fff;
-      padding: 18px 0px 18px 0px;
-      margin-bottom: ${Margins.medium};
-  }
-
-  .about > p {
-    margin: 0 ${Margins.large} 0 ${Margins.large};
-    text-align: justify;
+    background-color: ${Colors.darkContainerBackGround};
+    padding: ${Margins.huge} 0 ${Margins.Large} 0;
+    margin-bottom: ${Margins.large};
+    border-top: 1px solid rgb(99, 99, 99, 0.25);
+    border-bottom: 1px solid rgb(99, 99, 99, 0.25);
+    background-color: #f3f3f3;
   }
 
   h2 {
+    color: black;
     font-size: ${FontSizes.huge};
   }
 
   h3 {
-    font-size: ${FontSizes.large}
-  }
-
-  .role {
-    background-color: #f3f3f3;
-    padding: ${Margins.huge} 0 ${Margins.huge} 0;
-    margin-bottom: ${Margins.large};
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-
-  .role > h3 {
-    color: rgb(99, 99, 99);
     font-size: ${FontSizes.Large};
+    color: rgb(99, 99, 99);
     margin: 0 ${Margins.Large} ${Margins.large} ${Margins.Large};
   }
 
   .lang-container {
-    display: grid;
-    grid-gap: 20px;
-  }
-
-  .lang-container:hover {
-    font-size: ${FontSizes.huge};
-    background-color: rgb(120, 197, 19);
-  }
-
-  .languages {
+    position: center;
     display: inline-block;
-    background-color: rgb(171, 243, 78);
-    padding: ${Margins.xsmall} ${Margins.small} ${Margins.xsmall} ${Margins.small};
-    font-weight: 600;
-
+    width: 30%;
+    margin: 0 ${Margins.medium} 10px ${Margins.medium};
   }
 
-  .languages > p {
-    text-align: center;
+  .lang {
+    display: grid;
+    grid-template-columns: 4;
+    background-color: rgba(233, 229, 3);
+    padding: ${Margins.smalll} ${Margins.small} ${Margins.small} ${Margins.small};
+    font-weight: 600;
+    border: 1px solid rgb(99, 99, 99, 0.25);
+  }
+
+  .lang:hover {
+    font-size: ${FontSizes.Large};
+    box-shadow: 10px 10px 0px 0px rgba(105, 103, 7, 0.8);
+    margin: 0 0 ${Margins.large} 0;
+  }
+
+  .learnMoreLink {
+    margin-top: ${Margins.large};
+  }
+
+  .learnMoreLink > i {
+    font-weight: bold;
   }
 `;
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyledAbout } from './About.styled';
-import utils from '../../utils/utils.js';
+import LearnMore from '../LearnMore/LearnMore';
+import utils from '../../utils/index';
 import { Content } from '../../config/about';
 
 export default class About extends Component {
@@ -9,17 +10,17 @@ export default class About extends Component {
   
     return (
       <StyledAbout>
-        <div className='grid-container'>
-          <div className='role'>
-            <h2>{Content.name}</h2>
-            <h3> {'// Quality engineer // Test lead'} </h3>
-            {Content.programming.map((lang) => (
-              <div className='lang-container'>
-                <p className='languages'> {lang} </p>
-              </div>  
-            ))}
-          </div>
+        <div className='role'>
+          <h2>{Content.name}</h2>
+          <h3> {'// Quality engineer // Test lead'} </h3>
+          {Content.programming.map((lang) => (
+            <ul className='lang-container'>
+              <li className='lang'> {lang} </li>
+            </ul>  
+          ))}
         </div>
+        <br />
+        <LearnMore />
       </StyledAbout>
     );
   }
