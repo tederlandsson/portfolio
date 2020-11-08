@@ -10,8 +10,8 @@ export const FontSizes = {
 };
 
 export const Margins = {
-  xsmall: '6px',
-  small: '12px',
+  xsmall: '1%',
+  small: '2%',
   medium: '3%',
   large: '5%',
   Large: '10%',
@@ -27,7 +27,8 @@ export const Typography = {
 export const Colors = {
   white: '#fff',
   primary: '',
-  secondary: '', 
+  secondary: '',
+  dark: 'rgb(43,48,54)',
   darkContainerBackGround: 'rgb(35,108,74)',
   darkContainerGradient: 'linear-gradient(0deg, rgba(35,108,74,1) 0%, rgba(36,115,78,0.9962359943977591) 31%, rgba(37,155,100,1) 100%)',
 };

@@ -5,7 +5,7 @@ import About from './components/About/About';
 import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact';
 
-import { ThemeProvider } from 'styled-components';
+// import { ThemeProvider } from 'styled-components';
 // import { Theme } from './theme/index';
 import { GlobalStyles } from './theme';
 
