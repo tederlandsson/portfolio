@@ -8,6 +8,10 @@ export const StyledLearnMore = styled.div`
     font-style: bold;
   }
 
+  .prompt > i {
+    font-weight: bold;
+  }
+
   .overlay {
     position: fixed;
     color: ${Colors.white};
@@ -21,6 +25,10 @@ export const StyledLearnMore = styled.div`
 
   .overlay > h2 {
     color: ${Colors.white};
+  }
+
+  .overlay > p {
+    text-align: justify;
   }
 
   .closeButton {

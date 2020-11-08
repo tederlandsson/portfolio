@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyledLearnMore } from './LearnMore.styled';
 import { Content, OverlayContent } from '../../config/about';
+import { isDesktop } from '../../utils';
 
 function LearnMore() {
   const [showAboutMe, setShowAboutMe] = useState(false)
@@ -9,14 +10,16 @@ function LearnMore() {
   if (showAboutMe) {
     overlay = 
     <div className="fixed bg-white top-0 left-0 w-full h-full shadow overlay">
-      <button className="closeButton">Close</button>
+      <button className="closeButton border-b-2">{isDesktop ? 'Click' : 'Press'} anywhere to close</button>
       <h2>{OverlayContent.header} I'm {Content.name}</h2>
       <br />
-      <p>{OverlayContent.text}</p>
+      {OverlayContent.text.map((x) => (
+        <p>{x} <br/></p>
+      ))}
     </div>
   } else {
     overlay = 
-    <p className="prompt">Click here to earn more <i>about me</i></p>
+    <p className="prompt">{isDesktop ? 'Click' : 'Press'} here to learn more <i>about me</i></p>
   }
 
   return (

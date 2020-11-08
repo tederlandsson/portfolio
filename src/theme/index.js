@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { readBuilderProgram } from 'typescript';
 
 export const FontSizes = {
   xsmall: '0.75em',
