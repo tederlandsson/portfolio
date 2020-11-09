@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { StyledLearnMore } from './Overlay.styled';
+import OverlayStyled from './Overlay.styled';
 import { isDesktop } from '../../utils';
 
-function LearnMore(content: any) {
+function Overlay(content: any) {
   const [showAboutMe, setShowAboutMe] = useState(false)
   
   let overlay
@@ -31,16 +31,20 @@ function LearnMore(content: any) {
     </div>
   } else {
     overlay = 
-    <p className="prompt">{isDesktop ? 'Click' : 'Press'} here to learn more <br /><i>about me</i></p>
+    <p 
+      className="prompt">
+        {isDesktop ? 'Click' : 'Press'} here to learn more <br />
+        <i>about me</i>
+    </p>
   }
 
   return (
-    <StyledLearnMore>
-      <p className="learnMoreLink"
+    <OverlayStyled>
+      <p
         onClick={() => setShowAboutMe(!showAboutMe)}
       >{overlay}</p>
-    </StyledLearnMore>
+    </OverlayStyled>
   )
 }
 
-export default LearnMore;
+export default Overlay;

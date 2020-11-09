@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/index';
 
 export const StyledExperience = styled.div`
-    margin: 0 ${Margins.large} ${Margins.medium} ${Margins.large};
+    margin: 0 ${Margins.large} ${Margins.medium} ${Margins.Large};
   }
 
   h2 {

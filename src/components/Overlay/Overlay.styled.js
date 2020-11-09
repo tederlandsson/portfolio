@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Margins, Colors, FontSizes } from '../../theme';
 
-export const StyledLearnMore = styled.div`
+export const OverlayStyled = styled.div`
     
   .prompt {
     font-size: ${FontSizes.Large};
@@ -39,3 +39,5 @@ export const StyledLearnMore = styled.div`
     margin-bottom: ${Margins.medium};
   }
 `;
+
+export default OverlayStyled;

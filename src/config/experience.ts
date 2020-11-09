@@ -9,6 +9,7 @@ const experience = {
       'Building some of the company\'s most heavily trafficed web pages',
       'Implementing automated tests end-to-end.',
       ],
+      companyAltText: 'Volvo Car Corporation logo',
     },
     acando: {
       company: 'Acando Consulting',
@@ -20,6 +21,7 @@ const experience = {
         'Designing test cases',
         'Executing tests of web applications and REST APIs to ensure functionality and integration end-to-end'
       ],
+      companyAltText: 'Acando Consulting company logo',
     },
     scancoin: {
       company: 'SCAN COIN',
@@ -32,6 +34,7 @@ const experience = {
         'Developing test strategies and test cases',
         'Created automated performance test suites for web applications and REST API using Apache JMeter.'
       ],
+      companyAltText: 'SCAN COIN company logo',
     }
 };
 
