@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { StyledAbout } from './About.styled';
 import LearnMore from '../Overlay/Overlay';
-import utils from '../../utils/index';
 import { Content, OverlayContent } from '../../config/about';
 
 export default class About extends Component {
 
   getContent() {
-    return { ...Content, ...OverlayContent} ;
+    return { ...Content, ...OverlayContent } ;
   }
 
-  render() {
-    const software = utils.renderArrayWithCommas(Content.software);
-  
+  render() {  
     return (
       <StyledAbout>
         <div className='role'>
