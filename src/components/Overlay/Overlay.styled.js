@@ -6,18 +6,16 @@ export const StyledLearnMore = styled.div`
   .prompt {
     font-size: ${FontSizes.Large};
     font-style: bold;
+    margin: 0 ${Margins.large} -3% ${Margins.large};
   }
 
   .prompt > i {
     font-weight: bold;
+    overflow: hidden;
   }
 
   .overlay {
-    position: fixed;
     color: ${Colors.white};
-  }
-
-  .overlay {
     background-color: ${Colors.blueBackground};
     border-top: 10px solid ${Colors.borderStroke};
     padding: ${Margins.medium} ${Margins.Large} ${Margins.Large} ${Margins.Large};
@@ -25,6 +23,9 @@ export const StyledLearnMore = styled.div`
 
   .overlay > h2 {
     color: ${Colors.white};
+    font-weight: bold;
+    text-align: left;
+    margin-top: ${Margins.medium};
   }
 
   .overlay > p {

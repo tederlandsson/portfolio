@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { StyledAbout } from './About.styled';
-import LearnMore from '../LearnMore/LearnMore';
+import LearnMore from '../Overlay/Overlay';
 import utils from '../../utils/index';
-import { Content } from '../../config/about';
+import { Content, OverlayContent } from '../../config/about';
 
 export default class About extends Component {
+
+  getContent() {
+    return { ...Content, ...OverlayContent} ;
+  }
+
   render() {
     const software = utils.renderArrayWithCommas(Content.software);
   
@@ -20,7 +25,7 @@ export default class About extends Component {
           ))}
         </div>
         <br />
-        <LearnMore />
+        <LearnMore data={this.getContent()}/>
       </StyledAbout>
     );
   }

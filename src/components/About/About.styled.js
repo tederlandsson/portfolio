@@ -49,6 +49,7 @@ export const StyledAbout = styled.div`
 
   .learnMoreLink > i {
     font-weight: bold;
+    text-decoration: underline;
   }
 `;
 
