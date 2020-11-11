@@ -10,12 +10,13 @@ export const FontSizes = {
 };
 
 export const Margins = {
-  xsmall: '1%',
-  small: '2%',
-  medium: '3%',
-  large: '5%',
-  Large: '10%',
-  huge: '15%',
+  xsmall: '6px',
+  small: '12px',
+  medium: '18px',
+  large: '24px',
+  Large: '36px',
+  huge: '64px',
+  Huge: '128px',
 };
 
 export const Typography = {
