@@ -31,6 +31,8 @@ export const Colors = {
   dark: 'rgb(43,48,54)',
   darkContainerBackGround: 'rgb(35,108,74)',
   darkContainerGradient: 'linear-gradient(0deg, rgba(35,108,74,1) 0%, rgba(36,115,78,0.9962359943977591) 31%, rgba(37,155,100,1) 100%)',
+  borderStroke: 'rgb(99, 99, 99, 0.25)',
+  blueBackground: 'rgb(36, 22, 114)',
 };
 
 

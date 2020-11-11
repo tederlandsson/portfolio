@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Margins } from '../../theme';
 
 const StyledContact = styled.div`
-    margin-bottom: ${Margins.medium};
+    margin-bottom: ${Margins.large};
   }
 
   a {

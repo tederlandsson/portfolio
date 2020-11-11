@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from '../Navigation/Navigation';
 import StyledNavbar from './Navbar.styled';
-import content from '../../config/about';
+import { Content } from '../../config/about';
 
 export default class Navheader extends Component {
   render() {
@@ -9,7 +9,7 @@ export default class Navheader extends Component {
       <header className="navbar">
         <StyledNavbar>
           <h1>
-            {content.name}
+            {Content.name}
           </h1>
         <Navigation />
         </StyledNavbar>
