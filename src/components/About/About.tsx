@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyledAbout } from './About.styled';
-import LearnMore from '../Overlay/Overlay';
+import Overlay from '../Overlay/Overlay';
 import { Content, OverlayContent } from '../../config/about';
 
 export default class About extends Component {
@@ -22,7 +22,7 @@ export default class About extends Component {
           ))}
         </div>
         <br />
-        <LearnMore data={this.getContent()}/>
+        <Overlay data={this.getContent()}/>
       </StyledAbout>
     );
   }

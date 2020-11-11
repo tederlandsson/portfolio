@@ -11,10 +11,11 @@ export const isDesktop = !isMobile && !isTablet;
 
   /**
    * Take array and return a string with comma-separated values
-   * @param {*} array 
+   * @param {Array} array
+   * @return {String} items -- comma-separated string.
    */
-  renderArrayWithCommas(array: string[]) {
-    let items = '';
+  renderArrayWithCommas(array: string[]): string {
+    let items: string = '';
     array.forEach((x, index) => {
         index += 1;
         if (index === array.length) {
