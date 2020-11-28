@@ -2,22 +2,22 @@ import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/';
 
 export const StyledAbout = styled.div`
-    background-color: ${Colors.darkContainerBackGround};
-    padding: ${Margins.huge} 0 ${Margins.Large} 0;
+    background-color: ${Colors.blueBackground};
+    padding: 60% 0 30% 0;
     margin-bottom: ${Margins.large};
     border-top: 1px solid rgb(99, 99, 99, 0.25);
     border-bottom: 1px solid rgb(99, 99, 99, 0.25);
-    background-color: #f3f3f3;
+    color: ${Colors.white};
   }
 
   h2 {
-    color: black;
     font-size: ${FontSizes.huge};
+    font-weight: bold;
   }
 
   h3 {
     font-size: ${FontSizes.Large};
-    color: rgb(99, 99, 99);
+    color: #f3f3f3;
     margin: 0 ${Margins.Large} ${Margins.large} ${Margins.Large};
   }
 
@@ -31,6 +31,7 @@ export const StyledAbout = styled.div`
   .lang {
     display: grid;
     grid-template-columns: 4;
+    color: black;
     background-color: rgba(233, 229, 3);
     padding: ${Margins.smalll} ${Margins.small} ${Margins.small} ${Margins.small};
     font-weight: 600;
@@ -50,6 +51,13 @@ export const StyledAbout = styled.div`
   .learnMoreLink > i {
     font-weight: bold;
     text-decoration: underline;
+  }
+
+  .iconContainer > svg {
+    font-size: 3em;
+    margin: 12px 5px 24px 5px;
+    display: inline-block;
+    border-radius: 12.5%;
   }
 `;
 

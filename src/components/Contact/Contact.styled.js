@@ -9,6 +9,12 @@ const StyledContact = styled.div`
     color: rgb(89, 12, 177);
     font-weight: 500;
   }
+
+  svg {
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export default StyledContact;

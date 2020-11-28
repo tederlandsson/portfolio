@@ -16,7 +16,8 @@ export const OverlayStyled = styled.div`
 
   .overlay {
     color: ${Colors.white};
-    background-color: ${Colors.blueBackground};
+    background-color: ${Colors.blueGradientBackGround};
+    background: {Colors.blueGradient};
     border-top: 10px solid ${Colors.borderStroke};
     padding: ${Margins.medium} ${Margins.Large} ${Margins.Large} ${Margins.Large};
   }
@@ -37,6 +38,15 @@ export const OverlayStyled = styled.div`
     text-style: italic;
     font-size: ${FontSizes.large};
     margin-bottom: ${Margins.medium};
+  }
+
+  ul > li {
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  svg {
+    margin-top: auto;
   }
 `;
 
