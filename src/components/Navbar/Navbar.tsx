@@ -11,9 +11,9 @@ type NavbarProps = {
 const Navbar: React.FC<NavbarProps> = ({content})  => {
   return (
     <header className="navbar" style={navbarWrapperCSS}>
-        <h1>
-          {content.name}
-        </h1>
+      <h1>
+        {content.name}
+      </h1>
       <Navigation />
     </header>
   );
