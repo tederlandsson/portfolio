@@ -4,23 +4,26 @@ import About from './components/About/About';
 import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact';
 
-import { AboutContent } from './config/about';
-
+// Theme
 import { GlobalStyles } from './theme';
+
+// Content
+import { AboutContent } from './config/about';
+const footerContent = AboutContent.data;
+
 
 class App extends Component {
   render() {
     return (
-        <>
-          <GlobalStyles />
-            <div className="main">
-              {/* <Navbar content={AboutCo  <ntent.data}/> */}
-              <About />
-              <Experience />
-              <Contact />
-              <Footer content={AboutContent.data}/>
-            </div>
-        </>      
+      <>
+        <GlobalStyles />
+          <div className="main">
+            <About />
+            <Experience />
+            <Contact />
+            <Footer content={footerContent}/>
+          </div>
+      </>      
     )
   }
 }

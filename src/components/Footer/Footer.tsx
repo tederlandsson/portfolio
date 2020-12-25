@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Colors } from '../../theme';
 
-type FooterProps = {
+interface FooterProps {
   content: {
     name: string;
+    poweredBy: string;
+    fontsUsed: string;
+    lastUpdated: string;
   };
 };
 
-const Footer: React.FC<FooterProps> = ({content})  => {
+const renderLoader = () => <p>Loading</p>;
+
+const Footer: React.FC<FooterProps> = (data) => {
+  <Suspense fallback={renderLoader()} />
   return (
     <div className="footer" style={footerWrapperCSS}>
-        <p>Powered by React</p>
-        <p><b>Fonts used:</b> Avenir, Work Sans</p>
-        <p><b>Last updated: </b>8 Nov 2020</p>
-        <br/>
-        &copy; Copyright 2020 {content.name}
-    </div>    
+      <p>{data.content.poweredBy}</p>
+      <p><b>Fonts used:</b> {data.content.fontsUsed}</p>
+      <p><b>Last updated: </b>{data.content.lastUpdated}</p>
+      <br/>
+      &copy; Copyright 2020 {data.content.name}
+    </div>   
   );
 };
 
