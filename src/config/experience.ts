@@ -3,7 +3,7 @@ const experience = {
       company: 'Volvo Car Corporation',
       started: 'Jun. 2019',
       ended: 'Present',
-      role: 'Quality engineer',
+      role: 'Quality assurance engineer',
       tasks: [
       'Automating UI tests for React-based web pages and end-to-end customer flows with Node.js framework WebdriverIO.',
       ' Writing new test utilities, such as SEO and content constraints, into the Volvo Cars automation framework.',

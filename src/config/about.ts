@@ -7,7 +7,7 @@ export const AboutContent = {
   },
   name: 'Test Testsson',
   introduction: 'Your reason perform if wide this method child. Information serious administration traditional commercial feel stock. Husband sit soon mother rise attention. Drop certainly significant. According war speech both. Team environmental degree each None name sometimes employee inside box. Success war religious.',
-  role: 'Quality Engineer',
+  role: 'Quality assurance engineer, software test lead',
   programming: ['JavaScript', 'Python', 'Bash', 'Auto Hotkey'],
   software: ['Node.js', 'WebdriverIO', 'Selenium webdriver',  'Git', 'JMeter', 'BrowserStack', 'Azure DevOps', 'Postman', 'Sitecore'],
 }

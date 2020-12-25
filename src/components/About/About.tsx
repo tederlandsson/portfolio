@@ -31,7 +31,7 @@ export default class About extends Component {
           <Icon icon={wavingHand} className="wave"/>
           <p>Nice to meet you, I'm </p>
           <h2>{AboutContent.name}</h2>
-          <h3> {'Quality engineer, Test lead'} </h3>
+          <h3>{AboutContent.role}</h3>
           <div className="iconContainer">
             {this.getIcons().map((x) => (
               <Icon icon={x} />
