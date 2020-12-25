@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { FontSizes, Margins } from '../../theme/index';
 import content from '../../config/experience';
-import vcc_logo from '../../assets/vcc_logo.png';
-import acando_logo from '../../assets/acando_logo.png';
+import vcc_logo from '../../assets/vcc_logo.jpg';
+import acando_logo from '../../assets/acando_logo.jpg';
 
 export default class Experience extends Component {
   render() {
