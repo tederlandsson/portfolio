@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Overlay from '../Overlay/Overlay';
 import { AboutContent, OverlayContent } from '../../config/about';
+import Button from '../Button/Button';
 
 import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/';
@@ -22,6 +23,8 @@ export default class About extends Component {
   }
 
   render() {
+    const buttonText: string = 'Learn more'; // Update this
+
     return (
       <StyledAbout>
         <div className='role'>
@@ -34,6 +37,7 @@ export default class About extends Component {
               <Icon icon={x} />
             ))}
           </div>
+          <Button buttonText={buttonText} />
         </div>
         <br />
         <Overlay data={this.getContent()}/>
