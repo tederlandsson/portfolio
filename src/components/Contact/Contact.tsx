@@ -22,7 +22,7 @@ export default class Contact extends Component {
             </li>
             <br />
             <li>
-              Find me on LinkedIn: <br /> <a href="https://www.linkedin.com">{ContactInfo.linkedin}</a>
+              Find me on LinkedIn: <br /> <a href="https://www.linkedin.com/in/tederlandsson">{ContactInfo.linkedin}</a>
               <Icon icon={linkedinFilled} />
             </li>
             

@@ -9,7 +9,9 @@ import { GlobalStyles } from './theme';
 
 // Content
 import { AboutContent } from './config/about';
-const footerContent = AboutContent.data
+const footerContent = AboutContent.data;
+
+
 class App extends Component {
   render() {
     return (
