@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = (data) => {
   );
 };
 
-const footerWrapperCSS = {
+const footerWrapperCSS: object = {
   borderTop: `1px solid ${Colors.borderStroke}`,
   padding: `24px 24px 24px 24px`,
   color: Colors.white,
