@@ -82,6 +82,8 @@ const OverlayStyled = styled.div`
 
   .overlay > p {
     text-align: justify;
+    left-align: 50%;
+    right-align: 50%;    
   }
 
   .closeButton {
