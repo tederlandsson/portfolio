@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
   );
 }
 
-const StyledExperience: object = styled.div`
+const StyledExperience = styled.div`
     margin: 0 ${Margins.large} ${Margins.medium} ${Margins.Large};
   }
 
