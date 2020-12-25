@@ -25,6 +25,8 @@ export const Typography = {
   secondary: "'Work Sans', sans-serif",
 };
 
+// Use this tool for color: 
+// https://www.color-blindness.com/color-name-hue/
 export const Colors = {
   white: '#fff',
   primary: '',
