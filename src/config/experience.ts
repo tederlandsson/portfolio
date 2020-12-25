@@ -30,7 +30,6 @@ const experience = {
       role: 'Quality assurance manager',
       tasks: [
         ' Developed and maintained test strategies for new and existing ongoing projects.',
-        ' Implemented automated performance test suites for REST APIs and web applications using Apache JMeter.',
         ' Built regression test suites for REST APIs with Postman.',
         'Created automated performance test suites for web applications and REST API using Apache JMeter.'
       ],
