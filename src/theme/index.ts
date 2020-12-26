@@ -10,12 +10,13 @@ export const FontSizes = {
 };
 
 export const Margins = {
-  xsmall: '1%',
-  small: '2%',
-  medium: '3%',
-  large: '5%',
-  Large: '10%',
-  huge: '15%',
+  xsmall: '6px',
+  small: '12px',
+  medium: '18px',
+  large: '24px',
+  Large: '36px',
+  huge: '64px',
+  Huge: '128px',
 };
 
 export const Typography = {
@@ -24,6 +25,8 @@ export const Typography = {
   secondary: "'Work Sans', sans-serif",
 };
 
+// Use this tool for color: 
+// https://www.color-blindness.com/color-name-hue/
 export const Colors = {
   white: '#fff',
   primary: '',
@@ -31,8 +34,11 @@ export const Colors = {
   dark: 'rgb(43,48,54)',
   darkContainerBackGround: 'rgb(35,108,74)',
   darkContainerGradient: 'linear-gradient(0deg, rgba(35,108,74,1) 0%, rgba(36,115,78,0.9962359943977591) 31%, rgba(37,155,100,1) 100%)',
+  blueGradientBackGround: 'rgb(15,15,89)',
+  blueGradient: 'linear-gradient(0deg, rgba(15,15,89,1) 0%, rgba(36,22,114,1) 100%)',
   borderStroke: 'rgb(99, 99, 99, 0.25)',
   blueBackground: 'rgb(36, 22, 114)',
+  tangerineYellow: '#ffcc00',
 };
 
 

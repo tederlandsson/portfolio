@@ -1,19 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navigation from '../Navigation/Navigation';
-import StyledNavbar from './Navbar.styled';
-import { Content } from '../../config/about';
+import { Margins } from '../../theme';
 
-export default class Navheader extends Component {
-  render() {
-    return (
-      <header className="navbar">
-        <StyledNavbar>
-          <h1>
-            {Content.name}
-          </h1>
-        <Navigation />
-        </StyledNavbar>
-      </header>
-    );
-  }
+type NavbarProps = {
+  content: {
+    name: string;
+  };
+};
+
+const Navbar: React.FC<NavbarProps> = ({content})  => {
+  return (
+    <header className="navbar" style={navbarWrapperCSS}>
+      <h1>
+        {content.name}
+      </h1>
+      <Navigation />
+    </header>
+  );
 }
+
+export const navbarWrapperCSS = {
+  width: '100%',
+  display: 'inline-block',
+  padding: `${Margins.small} 0 ${Margins.small} 0`,
+  marginBottom: Margins.large,
+};
+
+export default Navbar;
