@@ -13,14 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         continue-on-error: true
+        
       - name: Update dependencies
         run: yarn install
+        
       - name: Build web application
-        run: yarn start  
-      - name: Cypress run
+        run: yarn start
+        
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
-          start: yarn start
+          start: npx cypress run
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://localhost:3000'
           # wait for 2 minutes for the server to respond
