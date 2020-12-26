@@ -27,7 +27,7 @@ export default class About extends Component {
 
     return (
       <StyledAbout>
-        <div className='role'>
+        <div className='about'>
           <Icon icon={wavingHand} className="wave"/>
           <p>Nice to meet you, I'm </p>
           <h2>{AboutContent.name}</h2>
