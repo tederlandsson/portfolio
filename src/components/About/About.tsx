@@ -48,7 +48,7 @@ export default class About extends Component {
 
 const StyledAbout = styled.div`
     background: ${Colors.blueGradientBackGround};
-    padding: 30% 0 20% 0;
+    padding: 20% 0 20% 0;
     margin-bottom: ${Margins.huge};
     border-top: 1px solid rgb(99, 99, 99, 0.25);
     border-bottom: 1px solid rgb(99, 99, 99, 0.25);

@@ -1,6 +1,5 @@
-import React, { Suspense } from 'react';
+import React, { Component } from 'react';
 import { Colors } from '../../theme';
-
 interface FooterProps {
   content: {
     name: string;
@@ -9,21 +8,21 @@ interface FooterProps {
     lastUpdated: string;
   };
 };
+class Footer extends Component<FooterProps> {
+  render() {
+    const content = this.props.content;
 
-const renderLoader = () => <p>Loading</p>;
-
-const Footer: React.FC<FooterProps> = (data) => {
-  <Suspense fallback={renderLoader()} />
-  return (
-    <div className="footer" style={footerWrapperCSS}>
-      <p>{data.content.poweredBy}</p>
-      <p><b>Fonts used:</b> {data.content.fontsUsed}</p>
-      <p><b>Last updated: </b>{data.content.lastUpdated}</p>
-      <br/>
-      &copy; Copyright 2020 {data.content.name}
-    </div>   
-  );
-};
+    return (
+      <div className="footer" style={footerWrapperCSS}>
+        <p>{content.poweredBy}</p>
+        <p><b>Fonts used:</b> {content.fontsUsed}</p>
+        <p><b>Last updated: </b>{content.lastUpdated}</p>
+        <br/>
+        &copy; Copyright 2020 {content.name}
+      </div>   
+    );
+  }
+}
 
 const footerWrapperCSS: object = {
   borderTop: `1px solid ${Colors.borderStroke}`,
