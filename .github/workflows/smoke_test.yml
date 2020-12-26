@@ -29,9 +29,5 @@ jobs:
         with:
           record: true 
           parallel: true
-          group: 'Ideal'  
+          group: 'Ideal'
           start: yarn start
-          # quote the url to be safe against YML parsing surprises
-          wait-on: 'http://10.1.0.4/'
-          # wait for 2 minutes for the server to respond
-          wait-on-timeout: 120
