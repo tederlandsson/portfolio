@@ -26,9 +26,10 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
+          record: true 
           parallel: true
+          group: 'Ideal'  
           start: yarn start
-          run: npx cypress run
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://10.1.0.4/'
           # wait for 2 minutes for the server to respond
