@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - development
-      - add/cypress
+      
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
