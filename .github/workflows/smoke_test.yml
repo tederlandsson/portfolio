@@ -20,13 +20,15 @@ jobs:
       - name: Increase file watchers
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       
-      - name: Build web application
-        run: yarn start
+      #- name: Build web application
+      #  run: yarn start
         
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
-          start: npx cypress run
+          parallel: true
+          start: yarn start
+          run: npx cypress run
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://10.1.0.4/'
           # wait for 2 minutes for the server to respond
