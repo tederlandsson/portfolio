@@ -28,6 +28,6 @@ jobs:
         with:
           start: npx cypress run
           # quote the url to be safe against YML parsing surprises
-          wait-on: 'http://localhost:3000'
+          wait-on: 'http://10.1.0.4/'
           # wait for 2 minutes for the server to respond
           wait-on-timeout: 120
