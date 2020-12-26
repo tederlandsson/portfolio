@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+# cypress
+*.mp4
+*(failed).png
+
 # production
 /build
 
