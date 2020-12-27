@@ -9,9 +9,6 @@ import { GlobalStyles } from './theme';
 
 // Content
 import { AboutContent } from './config/about';
-const footerContent = AboutContent.data;
-
-
 class App extends Component {
   render() {
     return (
@@ -21,7 +18,7 @@ class App extends Component {
             <About />
             <Experience />
             <Contact />
-            <Footer content={footerContent}/>
+            <Footer content={AboutContent.data} />
           </div>
       </>      
     )

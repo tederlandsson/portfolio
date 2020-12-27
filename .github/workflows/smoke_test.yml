@@ -1,8 +1,7 @@
-
-name: Cypress smoke test
+name: Cypress test suite
 on:
   pull_request:
-  push:
+
     branches:
       - master
       - development
@@ -21,13 +20,9 @@ jobs:
       - name: Increase file watchers
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       
-      #- name: Build web application
-      #  run: yarn start
-        
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
-          record: true 
-          parallel: true
-          group: 'Ideal'
           start: yarn start
+          browser: chrome
+          env: host=remote
