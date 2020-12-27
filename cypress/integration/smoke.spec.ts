@@ -1,9 +1,8 @@
 import * as constants from '../fixtures/pageElements';
 import * as config from '../fixtures/config';
 
-describe('Cypress', () => {
+describe('Portfolio smoke test suite', () => {
   const verbose: boolean = true; // This should be parameterised
-  // const url: string = Cypress.env('host') === 'remote' ? config.urls.remote : config.urls.local;
   const url: string = config.urls.local;
 
   it('Opens the web application', () => {
@@ -43,7 +42,35 @@ describe('Cypress', () => {
 
   })
 
-  it('Renders has browser titlte', () => {
-    cy.title().should('include', '|');
+  it('Has correct browser title', () => {
+    cy.title().should('equal', config.testData.pageTitle);
   })
+
+  it('Opens the overlay', () => {
+    const button = cy.get(constants.overlay.button);
+    button.scrollIntoView();
+    button.should('be.visible');
+    button.click();
+  })
+
+  // it('Verifies overlay has content', () => {
+  //   const overlay = cy.get(constants.overlay);
+  //   overlay.scrollIntoView();
+  //   overlay.should('be.visible');
+
+  //   const copy = [constants.overlayHeaders, constants.overlayText];
+  //   const errors = [];
+
+  //   copy.map((x, index) => {
+  //     cy.get(x).then(x => {
+  //       x.text().length > 0 || errors.push({x, index});
+  //     })
+  //   })
+  //   expect(errors.length).should('be.empty')
+  // })
+
+  it('Closes the overlay', () => {
+    cy.get(constants.overlay.overlayCloseButton).click();
+  })
+
 })  

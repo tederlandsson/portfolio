@@ -18,3 +18,12 @@ export const components = [
 
 // Elements
 export const icons = 'div > .iconContainer > svg';
+
+// Overlay
+export const overlay = {
+  component: 'fixed bg-white top-0 left-0 w-full h-full shadow overlay',
+  button: '.prompt > i',
+  overlayCloseButton: '.closeButton',
+  overlayHeaders: '.overlay > h2',
+  overlayText: '.overlay > p',
+};
