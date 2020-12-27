@@ -5,5 +5,5 @@ export const urls = {
 
 
 export const testData = {
-  pageTitle: 'About me | My name',
+  pageTitle: 'Portfolio | Ted Erlandsson',
 };
