@@ -26,6 +26,4 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v1
         with:
-          parallel: true
-          group: Parallel 2x
           start: yarn start
