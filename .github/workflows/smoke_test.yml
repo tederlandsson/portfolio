@@ -20,11 +20,8 @@ jobs:
       - name: Increase file watchers
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       
-      #- name: Build web application
-      #  run: yarn start
-        
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           start: yarn start
           browser: chrome
