@@ -27,3 +27,5 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           start: yarn start
+          browser: chrome
+          env: host=remote

@@ -3,7 +3,7 @@ import * as config from '../fixtures/config';
 
 describe('Cypress', () => {
   const verbose: boolean = true; // This should be parameterised
-  const url: string = Cypress.env('local') ? config.urls.local : config.urls.remote;
+  const url: string = Cypress.env('host') === 'remote' ? config.urls.remote : config.urls.local;
 
   it('Opens the web application', () => {
     cy.visit(url);
