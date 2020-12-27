@@ -19,11 +19,25 @@ export const components = [
 // Elements
 export const icons = 'div > .iconContainer > svg';
 
+export const aboutElements = {
+  component: '.about',
+  wave: '.wave',
+  header: '.about > h2',
+  smallHeader: '.about > h3',
+  text: '.about > p',
+  // icons: '.about  > .iconContainer > svg',
+};
+
 // Overlay
-export const overlay = {
+export const overlayElements = {
   component: 'fixed bg-white top-0 left-0 w-full h-full shadow overlay',
   button: '.prompt > i',
   overlayCloseButton: '.closeButton',
   overlayHeaders: '.overlay > h2',
   overlayText: '.overlay > p',
+};
+
+
+export const elements = {
+  ...aboutElements,
 };

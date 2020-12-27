@@ -1,18 +1,18 @@
 import * as constants from '../fixtures/pageElements';
 import * as config from '../fixtures/config';
+import utils from '../../utils/ui_utils/utilityFunctions';
 
 describe('Portfolio smoke test suite', () => {
-  const verbose: boolean = true; // This should be parameterised
   const url: string = config.urls.local;
+  const verbose: boolean = utils.verbose;
 
   it('Opens the web application', () => {
     cy.visit(url);
   })
 
   it('Renders wave icon', () => {
-    const wave = cy.get(constants.wave);
-    wave.scrollIntoView();
-    wave.should('be.visible');
+    const element = utils.getElement(constants.wave);
+    utils.verifyElementIsDisplayed(element);
   })
 
   it('Renders icons in the About component', () => {
@@ -25,21 +25,22 @@ describe('Portfolio smoke test suite', () => {
   })
 
   it('Renders footer', () => {
-    const footer = cy.get(constants.footer);
-    footer.scrollIntoView();
-    footer.should('be.visible');
+    const element = utils.getElement(constants.footer);
+    utils.verifyElementIsDisplayed(element);
   })
 
   it('Renders all components', () => {
-    const verbose: boolean = true;
-
     constants.components.map((x: string) => {
       cy.get(x).should('be.visible');
       if (verbose) {
         console.log(`Testing component: ${x}`);
       }
     })
+  })
 
+  it('Verify all page elements are displayed', () => {
+    const elements = constants.elements;
+    utils.verifyElementsFromObject(elements);
   })
 
   it('Has correct browser title', () => {
@@ -47,10 +48,9 @@ describe('Portfolio smoke test suite', () => {
   })
 
   it('Opens the overlay', () => {
-    const button = cy.get(constants.overlay.button);
-    button.scrollIntoView();
-    button.should('be.visible');
-    button.click();
+    const element = utils.getElement(constants.overlayElements.button);
+    utils.verifyElementIsDisplayed(element);
+    utils.clickElement(element);
   })
 
   // it('Verifies overlay has content', () => {
@@ -70,7 +70,8 @@ describe('Portfolio smoke test suite', () => {
   // })
 
   it('Closes the overlay', () => {
-    cy.get(constants.overlay.overlayCloseButton).click();
+    const element = utils.getElement(constants.overlayElements.overlayCloseButton);
+    utils.clickElement(element);
   })
 
 })  
