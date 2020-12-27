@@ -22,6 +22,17 @@ class UtilityFunctions {
     element.should('be.visible');
   }
 
+
+  verifyElementsFromObject(elements: object): void {
+    for (const key in elements) {
+      if (this.verbose) {
+        console.log(`Element selector is: ${elements[key]}`);
+      }
+      const element: Cypress.Chainable<any> = this.getElement(elements[key]);
+      this.verifyElementIsDisplayed(element);
+    }
+  }
+
   /**
    * Get text from cypresse element
    * @param element

@@ -30,14 +30,17 @@ describe('Portfolio smoke test suite', () => {
   })
 
   it('Renders all components', () => {
-    
     constants.components.map((x: string) => {
       cy.get(x).should('be.visible');
       if (verbose) {
         console.log(`Testing component: ${x}`);
       }
     })
+  })
 
+  it('Verify all page elements are displayed', () => {
+    const elements = constants.elements;
+    utils.verifyElementsFromObject(elements);
   })
 
   it('Has correct browser title', () => {
@@ -45,7 +48,7 @@ describe('Portfolio smoke test suite', () => {
   })
 
   it('Opens the overlay', () => {
-    const element = utils.getElement(constants.overlay.button);
+    const element = utils.getElement(constants.overlayElements.button);
     utils.verifyElementIsDisplayed(element);
     utils.clickElement(element);
   })
@@ -67,7 +70,7 @@ describe('Portfolio smoke test suite', () => {
   // })
 
   it('Closes the overlay', () => {
-    const element = utils.getElement(constants.overlay.overlayCloseButton);
+    const element = utils.getElement(constants.overlayElements.overlayCloseButton);
     utils.clickElement(element);
   })
 
