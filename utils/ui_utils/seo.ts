@@ -9,7 +9,7 @@ class Seo {
     return element.invoke('text');
   }
 
-  isGoodTitle(title: Cypress.Chainable<string> = cy.title(), validtitleEnd: string = '| Vovlo Cars') {
+  isGoodTitle(title: Cypress.Chainable<string> = cy.title(), validtitleEnd: string) {
     return title.toString().endsWith(validtitleEnd);
   }
 }
