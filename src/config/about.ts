@@ -1,11 +1,11 @@
 export const AboutContent = {
   data: {
-    name: 'Test Testsson',
+    name: 'Ted',
     poweredBy: 'Powered by React',
     fontsUsed: 'Avenir, Work Sans',
     lastUpdated: 'Dec. 27',
   },
-  name: 'Test Testsson',
+  name: 'Ted',
   introduction: 'Your reason perform if wide this method child. Information serious administration traditional commercial feel stock. Husband sit soon mother rise attention. Drop certainly significant. According war speech both. Team environmental degree each None name sometimes employee inside box. Success war religious.',
   role: 'Quality assurance engineer, software test lead',
   programming: ['JavaScript', 'Python', 'Bash', 'Auto Hotkey'],
@@ -29,6 +29,6 @@ export const OverlayContent = {
 
 export const ContactInfo = {
   email: 'myemail',
-  linkedin: 'Linkedin',
-  github: 'Bratislavablue',
+  linkedin: 'LinkedIn',
+  github: 'tederlandsson',
 };
