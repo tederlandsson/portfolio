@@ -43,7 +43,7 @@ class UtilityFunctions {
       console.log(`Element text:\t${text}`)
     }
     return element.invoke('text');
-  }
+  } 
 
   /**
    * Clicks a cypress selector
