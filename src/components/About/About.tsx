@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import Overlay from '../Overlay/Overlay';
-import { AboutContent, OverlayContent } from '../../config/about';
-import Button from '../Button/Button';
 
+// Theme
 import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/';
 
+// Icons
 import { Icon } from '@iconify/react';
 import pythonIcon from '@iconify-icons/logos/python';
 import javascriptIcon from '@iconify-icons/logos/javascript';
 import typescriptIcon from '@iconify-icons/logos/typescript-icon';
 import reactIcon from '@iconify-icons/logos/react';
 import wavingHand from '@iconify-icons/emojione/waving-hand';
+
+// Content
+import { AboutContent, OverlayContent } from '../../config/about';
 
 export default class About extends Component {
   getIcons() {
@@ -23,8 +26,6 @@ export default class About extends Component {
   }
 
   render() {
-    const buttonText: string = 'Learn more'; // Update this
-
     return (
       <StyledAbout>
         <div className='about'>
@@ -37,7 +38,6 @@ export default class About extends Component {
               <Icon icon={x} />
             ))}
           </div>
-          <Button buttonText={buttonText} />
         </div>
         <br />
         <Overlay data={this.getContent()}/>
