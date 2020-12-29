@@ -48,7 +48,7 @@ class ExperienceItem extends Component<ExperienceItemProps> {
 
 const ExperienceItemStyling = styled.div`
   .experience-item {
-    margin-bottom: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall};
+    margin: ${Margins.xsmall} 0 ${Margins.medium} 0;
     color: ${Colors.white};
     text-align: left;
   }
@@ -58,26 +58,27 @@ const ExperienceItemStyling = styled.div`
     padding: ${Margins.small} ${Margins.small} ${Margins.small} ${Margins.small};
   }
 
-  .description > p {
-    padding: ${Margins.small} ${Margins.small} ${Margins.small} ${Margins.small};
+  .top-container > h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .description {
+    padding: ${Margins.small} ${Margins.small} ${Margins.small} 0;
   }
 
   .bottom-container {
-    margin: 0 ${Margins.small} ${Margins.small} ${Margins.small};
+    margin: 0 0 ${Margins.medium} 0;
     padding: 0 ${Margins.small} ${Margins.small} ${Margins.small};
     border: 2px ${Colors.experienceBlue} solid;
-  }
-
-  .header > h2 {
-    font-size: 12px;
-    font-weight: bold;
   }
 
   .subHeader {
     text-align: left;
     font-style: italic;
     color: #D6D6D6;
-    font-size: 11px;
+    font-size: 15px;
+    padding: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} 0;
   }
   
   .bottom-header {
@@ -85,9 +86,15 @@ const ExperienceItemStyling = styled.div`
     font-weight: bold;
   }
 
-  .icons {
+  .bottom-container > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: ${Margins.small};
+  }
+
+  .icons > svg {
     font-size: 3em;
-    margin: 12px 5px 24px 5px;
+    margin: ${Margins.small} 5px ${Margins.small} 5px;
     display: inline-block;
     border-radius: 12.5%;
   }
@@ -96,8 +103,9 @@ const ExperienceItemStyling = styled.div`
     border-radius: 50%;
   }
 
-  .bottom-header > h3 {
+  .bottom-container > .bottom-header > h3 {
     margin-top: ${Margins.large};
+    font-size: 48px;
   }
 
 `;
