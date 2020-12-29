@@ -78,7 +78,7 @@ const ExperienceItemStyling = styled.div`
   }
 
   .bottom-container {
-    margin: 0 0 ${Margins.medium} 0;
+    margin: 0 0 ${Margins.large} 0;
     padding: 0 ${Margins.small} ${Margins.small} ${Margins.small};
     border: 2px ${Colors.experienceBlue} solid;
   }
