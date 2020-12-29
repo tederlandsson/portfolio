@@ -10,7 +10,7 @@ WebFont.load({
   google: {
     families: [
       'Avenir:300,400,700', 'sans-serif',
-      'Work Sans:500,600', 'sans-serif'
+      'Work Sans:300,500,600', 'sans-serif'
     ]
   }
 });

@@ -29,6 +29,7 @@ export const Typography = {
 // https://www.color-blindness.com/color-name-hue/
 export const Colors = {
   white: '#fff',
+  black: '#000',
   primary: '',
   secondary: '',
   dark: 'rgb(43,48,54)',
@@ -40,6 +41,7 @@ export const Colors = {
   blueBackground: 'rgb(36, 22, 114)',
   tangerineYellow: '#ffcc00',
   experienceBlue: '#241672',
+  experienceGray: '#d6d6d6',
 };
 
 

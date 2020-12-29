@@ -12,7 +12,7 @@ interface ExperienceItemProps {
     subHeader?: string;
     description: string;
     bottomHeader?: string;
-    image?: unknown;
+    image?: string;
     imageAltText?: string,
     technologies: string[];
     icons?: Array<any>;
@@ -27,14 +27,13 @@ class ExperienceItem extends Component<ExperienceItemProps> {
       <ExperienceItemStyling>
         <div className="experience-item">
           <div className="top-container">
-            <h2 className="header">{content.header1}</h2>
+            <h3 className="header">{content.header1}</h3>
             <p className="subHeader">{content.subHeader? content.subHeader : ''}</p>
             <p className="description">{content.description}</p>
-            <img className="image" alt={content.imageAltText}></img>
-
+            <img src={content.image} alt={content.imageAltText} className="image"/>
           </div>
           <div className="bottom-container">
-            <h3 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h3>
+            <h4 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h4>
             <div className="icons">
               {content.icons?.map((x) => (
                 <Icon icon={x} />
@@ -57,15 +56,18 @@ const ExperienceItemStyling = styled.div`
   .top-container {
     background-color: ${Colors.experienceBlue};
     padding: ${Margins.small} ${Margins.small} ${Margins.small} ${Margins.small};
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
-  .top-container > h2 {
+  .top-container > h3 {
     font-size: 20px;
     font-family: ${Typography.secondary};
   }
 
   .top-container > p {
     font-family: ${Typography.secondary};
+    font-weight: 300%;
   }
 
   .description: {
@@ -81,13 +83,15 @@ const ExperienceItemStyling = styled.div`
     margin: 0 0 ${Margins.large} 0;
     padding: 0 ${Margins.small} ${Margins.small} ${Margins.small};
     border: 2px ${Colors.experienceBlue} solid;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 
   .subHeader {
     text-align: left;
     font-style: italic;
-    color: #D6D6D6;
-    font-size: 15px;
+    color: ${Colors.experienceGray};
+    font-size: ${FontSizes.medium};
     padding: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} 0;
   }
   
@@ -101,18 +105,15 @@ const ExperienceItemStyling = styled.div`
 
   .icons > svg {
     font-size: 3em;
-    margin: ${Margins.small} 5px ${Margins.small} 5px;
+    margin: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall};
     display: inline-block;
     border-radius: 12.5%;
+    color: #000;
   }
 
-  .image > img {
+  img {
     border-radius: 50%;
-  }
-
-  .bottom-container > .bottom-header > h3 {
-    margin-top: ${Margins.large};
-    font-size: 48px;
+    max-width: 90px;
   }
 
 `;
