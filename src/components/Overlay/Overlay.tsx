@@ -73,7 +73,7 @@ const OverlayStyled = styled.div`
   .prompt {
     font-size: ${FontSizes.Large};
     font-style: bold;
-    margin: 0 ${Margins.large} -3% ${Margins.large};
+    margin: 0 ${Margins.large} 0 ${Margins.large};
   }
 
   .prompt > i {
@@ -86,7 +86,7 @@ const OverlayStyled = styled.div`
     background-color: ${Colors.blueGradientBackGround};
     background: {Colors.blueGradient};
     border-top: 10px solid ${Colors.borderStroke};
-    padding: ${Margins.medium} ${Margins.Large} ${Margins.Large} ${Margins.Large};
+    padding: ${Margins.medium} ${Margins.Large} 0 ${Margins.Large};
   }
 
   .overlay > h2 {

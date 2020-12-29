@@ -16,7 +16,7 @@ import bambooIcon from '@iconify-icons/logos/bamboo';
 
 
 // images
-import vcc_logo from '../assets/vcc_logo.jpg';
+import vcc_logo from '../assets/vcc_logo_2.png';
 import acando_logo from '../assets/acando_logo.jpg';
 
 const experienceContent = [
@@ -26,6 +26,7 @@ const experienceContent = [
     description: 'Front end test automation for React components and web pages. E2E tests, CI/CD.',
     bottomHeader: 'Technologies used',
     image: vcc_logo,
+    ignoreRadius: true,
     imageAltText: 'Volvo Car Corporation company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],
     icons: [javascriptIcon, typescriptIcon, reactIcon, fileTypeYarn, nodeIcon, browserstackIcon, githubFilled, fileTypeAzurepipelines],
@@ -36,6 +37,7 @@ const experienceContent = [
     description: 'Ensured quality end-to-end for an e-commerce platform that sells car and car accessories as a subscription model.',
     bottomHeader: 'Technologies used',
     image: acando_logo,
+    ignoreRadius: false,
     imageAltText: 'Acando consulting company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],
     icons: [postmanIcon, jiraIcon, confluenceIcon, pythonIcon],
@@ -46,6 +48,7 @@ const experienceContent = [
     description: 'Developed and maintained test strategies for new and existing ongoing projects.',
     bottomHeader: 'Technologies used',
     image: acando_logo,
+    ignoreRadius: false,
     imageAltText: 'SCAN COIN company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],
     icons: [postmanIcon, jiraIcon, confluenceIcon, bitbucketIcon, bambooIcon],

@@ -13,7 +13,8 @@ interface ExperienceItemProps {
     description: string;
     bottomHeader?: string;
     image?: string;
-    imageAltText?: string,
+    imageAltText?: string;
+    ignoreRadius?: boolean,
     technologies: string[];
     icons?: Array<any>;
   }
@@ -95,19 +96,21 @@ const ExperienceItemStyling = styled.div`
   img {
     grid-column: 2;
     margin: auto auto auto auto;
-    border-radius: 50%;
     max-width: ${utils.isMobile() ? '60px' : '90px'};
+  }
+
+  .experience-item .image {
+    border-radius: 50%;
   }
 
   .bottom-container {
     margin: 0 0 ${Margins.large} 0;
     padding: 0 ${Margins.small} ${Margins.small} ${Margins.small};
-    border: 2px ${Colors.experienceBlue} solid;
+    border: 1px ${Colors.experienceBlue} solid;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
   }
 
-  
   .bottom-header {
     margin: ${Margins.small} 0 ${Margins.small} 0;
     color: #000;
@@ -124,6 +127,5 @@ const ExperienceItemStyling = styled.div`
     color: #000;
   }
 `;
-
 
 export default ExperienceItem;

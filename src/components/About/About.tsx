@@ -4,6 +4,7 @@ import Overlay from '../Overlay/Overlay';
 // Theme
 import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/';
+import pattern from '../../assets/pattern.svg';
 
 // Icons
 import { Icon } from '@iconify/react';
@@ -41,14 +42,16 @@ export default class About extends Component {
         </div>
         <br />
         <Overlay data={this.getContent()}/>
+        <div className="about-bottom"></div>
       </StyledAbout>
     );
   }
 }
 
 const StyledAbout = styled.div`
-    background: ${Colors.blueGradientBackGround};
-    padding: 20% 0 20% 0;
+    // background: ${Colors.blueGradientBackGround};
+    background: ${Colors.blueBackground};
+    padding: 20% 0 0 0;
     margin-bottom: ${Margins.huge};
     border-top: 1px solid rgb(99, 99, 99, 0.25);
     border-bottom: 1px solid rgb(99, 99, 99, 0.25);
@@ -84,5 +87,24 @@ const StyledAbout = styled.div`
 
   .wave {
     font-size: 5em;
+  }
+  
+  .about-bottom {
+    position: relative;
+    margin: ${Margins.large} 0 0;
+    background-image: url(${pattern});
+    height: 175px;
+    //background-image: linear-gradient(to right, url(${pattern}), ${Colors.blueBackground});
+  }
+
+  .about-bottom::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(to bottom, ${Colors.blueBackground}, rgba(0, 0, 255, 0));
+    width: 100%;
+    height: 100%;
   }
 `;
