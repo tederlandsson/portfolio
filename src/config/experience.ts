@@ -14,6 +14,7 @@ import confluenceIcon from '@iconify-icons/logos/confluence';
 import bitbucketIcon from '@iconify-icons/logos/bitbucket';
 import bambooIcon from '@iconify-icons/logos/bamboo';
 
+
 // images
 import vcc_logo from '../assets/vcc_logo.jpg';
 import acando_logo from '../assets/acando_logo.jpg';
@@ -27,7 +28,7 @@ const experienceContent = [
     image: vcc_logo,
     imageAltText: 'Volvo Car Corporation company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],
-    icons: [nodeIcon, javascriptIcon, typescriptIcon, reactIcon, fileTypeYarn, browserstackIcon, githubFilled, fileTypeAzurepipelines],
+    icons: [javascriptIcon, typescriptIcon, reactIcon, fileTypeYarn, nodeIcon, browserstackIcon, githubFilled, fileTypeAzurepipelines],
   },
   {
     header1: 'Softwate test lead',
