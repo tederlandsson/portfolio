@@ -14,12 +14,9 @@ import confluenceIcon from '@iconify-icons/logos/confluence';
 import bitbucketIcon from '@iconify-icons/logos/bitbucket';
 import bambooIcon from '@iconify-icons/logos/bamboo';
 
+// images
 import vcc_logo from '../assets/vcc_logo.jpg';
 import acando_logo from '../assets/acando_logo.jpg';
-
-
-// const experience = [content.volvo, content.acando, content.scancoin];
-// const logos: string[] = [vcc_logo, acando_logo, acando_logo];
 
 const experienceContent = [
   {

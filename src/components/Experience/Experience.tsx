@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ExperienceItem from './ExperienceItem';
-import { FontSizes, Margins } from '../../theme/index';
+import { Margins } from '../../theme/index';
 
 import experienceContent from '../../config/experience';
 
@@ -20,13 +20,7 @@ const Experience: React.FC = () => {
 }
 
 const StyledExperience = styled.div`
-    margin: 0 ${Margins.large} ${Margins.medium} ${Margins.Large};
-  }
-
-  .component-header {
-    font-size: ${FontSizes.huge};
-    margin-bottom: ${Margins.small};
-    font-weight: bold;
+    margin: 0 ${Margins.large} ${Margins.huge} ${Margins.large};
   }
 `;
 

@@ -88,6 +88,12 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${Typography.secondary};
   }
 
+  .component-header {
+    font-size: ${FontSizes.huge};
+    margin-bottom: ${Margins.medium};
+    font-weight: bold;
+  }
+
   h1 {
     font-size: ${FontSizes.huge};
     font-family: 'Avenir', 'sans-serif';
@@ -107,7 +113,8 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     font-size: ${FontSizes.medium}};
-    font-family: 'Work Sans', sans-serif;
+    font-family: ${Typography.secondary};
+    font-weight: 300;
   }
 
   .backgroundGradient {

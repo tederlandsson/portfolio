@@ -29,8 +29,8 @@ class ExperienceItem extends Component<ExperienceItemProps> {
           <div className="top-container">
             <h3 className="header">{content.header1}</h3>
             <p className="subHeader">{content.subHeader? content.subHeader : ''}</p>
-            <p className="description">{content.description}</p>
             <img src={content.image} alt={content.imageAltText} className="image"/>
+            <p className="description">{content.description}</p>
           </div>
           <div className="bottom-container">
             <h4 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h4>
@@ -67,7 +67,7 @@ const ExperienceItemStyling = styled.div`
 
   .top-container > p {
     font-family: ${Typography.secondary};
-    font-weight: 300%;
+    font-weight: 300;
   }
 
   .description: {
@@ -96,7 +96,7 @@ const ExperienceItemStyling = styled.div`
   }
   
   .bottom-header {
-    margin-top: ${Margins.small};
+    margin: ${Margins.small} 0 ${Margins.small} 0;
     color: #000;
     font-family: ${Typography.secondary};
     font-size: 18px;
@@ -112,6 +112,7 @@ const ExperienceItemStyling = styled.div`
   }
 
   img {
+    
     border-radius: 50%;
     max-width: 90px;
   }
