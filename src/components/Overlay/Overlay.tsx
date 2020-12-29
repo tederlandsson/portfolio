@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { isDesktop } from '../../utils';
+import utils, { isDesktop } from '../../utils';
 
 // Theme
 import { Margins, Colors, FontSizes } from '../../theme';
@@ -16,6 +16,10 @@ import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
 import reactIcon from '@iconify-icons/logos/react';
 import browserstackIcon from '@iconify-icons/logos/browserstack';
 
+
+// Images
+import portrait from '../../assets/portrait.png';
+
 function Overlay(content: any) {
   const [showAboutMe, setShowAboutMe] = useState(false)
   const icons = [nodeIcon, fileTypeYarn, reactIcon, githubFilled, fileTypeAzurepipelines, browserstackIcon, seleniumIcon];
@@ -24,13 +28,14 @@ function Overlay(content: any) {
   if (showAboutMe) {
     overlay = 
     <div className="overlay">
-      <button className="closeButton border-b-2">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
-      {content.data.header1 && (
-        <>
-          <h2>{content.data.header1} I'm {content.data.name}</h2>
-          <br />
-        </>
-      )}
+      <button className="closeButton">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
+      <img src={portrait} alt="Vector portrait" className="portrait"/>
+      <div className="header1-container">
+        {content.data.header1 && (
+          <h2>{content.data.header1}</h2>
+        )}
+        <br />
+      </div>
       {content.data.text.map((x: string[]) => (
         <p>{x}<br /></p>
       ))}
@@ -118,10 +123,11 @@ const OverlayStyled = styled.div`
   }
 
   .closeButton {
-    position: right;
     text-style: italic;
     font-size: ${FontSizes.large};
     margin-bottom: ${Margins.medium};
+    border-bottom: 2px white solid;
+    width: 100%;
   }
 
   .closeIcon {
@@ -132,5 +138,12 @@ const OverlayStyled = styled.div`
   li {
     display: inline-block;
     margin-left: 6px;
+  }
+
+  .portrait {
+    margin: ${Margins.large} auto ${Margins.large} auto;
+    max-width: ${utils.isMobile() ? '150px' : '240px'}; 
+    border-radius: 50%;
+    border: 5px white solid;
   }
 `;
