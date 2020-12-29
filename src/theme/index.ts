@@ -29,6 +29,7 @@ export const Typography = {
 // https://www.color-blindness.com/color-name-hue/
 export const Colors = {
   white: '#fff',
+  black: '#000',
   primary: '',
   secondary: '',
   dark: 'rgb(43,48,54)',
@@ -39,6 +40,8 @@ export const Colors = {
   borderStroke: 'rgb(99, 99, 99, 0.25)',
   blueBackground: 'rgb(36, 22, 114)',
   tangerineYellow: '#ffcc00',
+  experienceBlue: '#241672',
+  experienceGray: '#d6d6d6',
 };
 
 
@@ -85,6 +88,12 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${Typography.secondary};
   }
 
+  .component-header {
+    font-size: ${FontSizes.huge};
+    margin-bottom: ${Margins.medium};
+    font-weight: bold;
+  }
+
   h1 {
     font-size: ${FontSizes.huge};
     font-family: 'Avenir', 'sans-serif';
@@ -92,9 +101,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-style: bold;
+    font-family: ${Typography.secondary};
     font-size: ${FontSizes.large};
-    font-weight: 500;
+    font-weight: 600;
   }
 
   h3 {
@@ -104,7 +113,8 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     font-size: ${FontSizes.medium}};
-    font-family: 'Work Sans', sans-serif;
+    font-family: ${Typography.secondary};
+    font-weight: 300;
   }
 
   .backgroundGradient {
