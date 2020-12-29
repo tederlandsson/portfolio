@@ -16,9 +16,11 @@ import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
 import reactIcon from '@iconify-icons/logos/react';
 import browserstackIcon from '@iconify-icons/logos/browserstack';
 
+import personRunningMediumSkinTone from '@iconify-icons/twemoji/person-running-medium-skin-tone';
+
 
 // Images
-import portrait from '../../assets/portrait.png';
+// import portrait from '../../assets/portrait.png';
 
 function Overlay(content: any) {
   const [showAboutMe, setShowAboutMe] = useState(false)
@@ -29,7 +31,8 @@ function Overlay(content: any) {
     overlay = 
     <div className="overlay">
       <button className="closeButton">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
-      <img src={portrait} alt="Vector portrait" className="portrait"/>
+      {/* <img src={portrait} alt="Vector portrait" className="portrait"/> */}
+      <Icon icon={personRunningMediumSkinTone} className="top-icon"/>
       <div className="header1-container">
         {content.data.header1 && (
           <h2>{content.data.header1}</h2>
@@ -145,5 +148,9 @@ const OverlayStyled = styled.div`
     max-width: ${utils.isMobile() ? '150px' : '240px'}; 
     border-radius: 50%;
     border: 5px white solid;
+  }
+
+  .top-icon svg {
+    font-size: 10em;
   }
 `;
