@@ -55,6 +55,7 @@ const StyledAbout = styled.div`
     border-top: 1px solid rgb(99, 99, 99, 0.25);
     border-bottom: 1px solid rgb(99, 99, 99, 0.25);
     color: ${Colors.white};
+    z-index: 1;
   }
 
   h2 {

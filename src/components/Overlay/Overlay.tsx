@@ -23,7 +23,7 @@ function Overlay(content: any) {
   let overlay
   if (showAboutMe) {
     overlay = 
-    <div className="fixed top-0 left-0 w-full h-full overlay">
+    <div className="overlay">
       <button className="closeButton border-b-2">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
       {content.data.header1 && (
         <>
@@ -70,6 +70,16 @@ function Overlay(content: any) {
 export default Overlay;
 
 const OverlayStyled = styled.div`
+  .overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+  }
+
   .prompt {
     font-size: ${FontSizes.Large};
     font-style: bold;
