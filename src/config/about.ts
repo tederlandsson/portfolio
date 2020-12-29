@@ -1,9 +1,9 @@
 export const AboutContent = {
   data: {
-    name: 'Ted',
+    name: 'Ted Erlandsson',
     poweredBy: 'Powered by React',
     fontsUsed: 'Avenir, Work Sans',
-    lastUpdated: 'Dec. 27',
+    lastUpdated: 'Dec. 29',
   },
   name: 'Ted',
   introduction: 'Your reason perform if wide this method child. Information serious administration traditional commercial feel stock. Husband sit soon mother rise attention. Drop certainly significant. According war speech both. Team environmental degree each None name sometimes employee inside box. Success war religious.',

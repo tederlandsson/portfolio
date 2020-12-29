@@ -93,9 +93,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-style: bold;
+    font-family: ${Typography.secondary};
     font-size: ${FontSizes.large};
-    font-weight: 500;
+    font-weight: 600;
   }
 
   h3 {

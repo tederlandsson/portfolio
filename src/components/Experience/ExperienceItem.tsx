@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Theme
-import { Margins, Colors, FontSizes } from '../../theme';
+import { Margins, Colors, FontSizes, Typography } from '../../theme';
 import styled from 'styled-components';
 
 import { Icon } from '@iconify/react';
@@ -61,7 +61,11 @@ const ExperienceItemStyling = styled.div`
 
   .top-container > h2 {
     font-size: 20px;
-    font-weight: bold;
+    font-family: ${Typography.secondary};
+  }
+
+  .top-container > p {
+    font-family: ${Typography.secondary};
   }
 
   .description: {
@@ -88,14 +92,11 @@ const ExperienceItemStyling = styled.div`
   }
   
   .bottom-header {
-    color: #000;
-    font-weight: bold;
-  }
-
-  .bottom-container > h3 {
-    font-size: 18px;
-    font-weight: bold;
     margin-top: ${Margins.small};
+    color: #000;
+    font-family: ${Typography.secondary};
+    font-size: 18px;
+    font-weight: 600;
   }
 
   .icons > svg {
