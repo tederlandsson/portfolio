@@ -1,18 +1,29 @@
 import React, { useState } from 'react';
 import { isDesktop } from '../../utils';
-import { Margins, Colors, FontSizes } from '../../theme';
 
+// Theme
+import { Margins, Colors, FontSizes } from '../../theme';
 import styled from 'styled-components';
+
+// Icons
 import { Icon } from '@iconify/react';
+import seleniumIcon from '@iconify-icons/logos/selenium';
+import githubFilled from '@iconify-icons/ant-design/github-filled';
+import fileTypeAzurepipelines from '@iconify-icons/vscode-icons/file-type-azurepipelines';
 import closeCircleOutlined from '@iconify-icons/ant-design/close-circle-outlined';
+import nodeIcon from '@iconify-icons/fa-brands/node';
+import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
+import reactIcon from '@iconify-icons/logos/react';
+import browserstackIcon from '@iconify-icons/logos/browserstack';
 
 function Overlay(content: any) {
   const [showAboutMe, setShowAboutMe] = useState(false)
+  const icons = [nodeIcon, fileTypeYarn, reactIcon, githubFilled, fileTypeAzurepipelines, browserstackIcon, seleniumIcon];
   
   let overlay
   if (showAboutMe) {
     overlay = 
-    <div className="fixed bg-white top-0 left-0 w-full h-full shadow overlay">
+    <div className="fixed top-0 left-0 w-full h-full overlay">
       <button className="closeButton border-b-2">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
       {content.data.header1 && (
         <>
@@ -25,13 +36,18 @@ function Overlay(content: any) {
       ))}
       {content.data.header2 && (
         <>
-          <h2>{content.data.header2}</h2>
+          <h2 className="subHeader">{content.data.header2}</h2>
           <br />
         </>
       )}
       {content.data.text2 && content.data.text2.map((x: string[]) => (
         <p>{x}<br /></p>
       ))}
+      <br />
+      {icons.map((x) => (
+          <Icon icon={x} />
+      ))}
+    
     </div>
   } else {
     overlay = 
@@ -78,6 +94,11 @@ const OverlayStyled = styled.div`
     font-weight: bold;
     text-align: left;
     margin-top: ${Margins.medium};
+  }
+
+
+  .subHeader {
+    font-size: 1.3em;
   }
 
   .overlay > p {
