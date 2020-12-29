@@ -3,6 +3,7 @@ export const AboutContent = {
     name: 'Ted Erlandsson',
     poweredBy: 'Powered by React',
     fontsUsed: 'Avenir, Work Sans',
+    tests: 'cypress.io',
     lastUpdated: 'Dec. 29',
   },
   name: 'Ted',

@@ -44,7 +44,7 @@ const experienceContent = [
     subHeader: '2016–2017',
     description: 'Developed and maintained test strategies for new and existing ongoing projects.',
     bottomHeader: 'Technologies used',
-    image: '',
+    image: acando_logo,
     imageAltText: 'SCAN COIN company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],
     icons: [postmanIcon, jiraIcon, confluenceIcon, bitbucketIcon, bambooIcon],

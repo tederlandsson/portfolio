@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // Theme
 import { Margins, Colors, FontSizes, Typography } from '../../theme';
 import styled from 'styled-components';
-
+import utils from '../../../src/utils';
 import { Icon } from '@iconify/react';
 
 interface ExperienceItemProps {
@@ -28,9 +28,11 @@ class ExperienceItem extends Component<ExperienceItemProps> {
         <div className="experience-item">
           <div className="top-container">
             <h3 className="header">{content.header1}</h3>
-            <p className="subHeader">{content.subHeader? content.subHeader : ''}</p>
-            <img src={content.image} alt={content.imageAltText} className="image"/>
-            <p className="description">{content.description}</p>
+            <div className="grid-container">
+              <p className="subHeader">{content.subHeader? content.subHeader : ''}</p>
+              <img src={content.image} alt={content.imageAltText} className="image"/>
+              <p className="description">{content.description}</p>
+            </div>
           </div>
           <div className="bottom-container">
             <h4 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h4>
@@ -60,6 +62,11 @@ const ExperienceItemStyling = styled.div`
     border-top-right-radius: 6px;
   }
 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2;
+  }
+
   .top-container > h3 {
     font-size: 20px;
     font-family: ${Typography.secondary};
@@ -73,10 +80,23 @@ const ExperienceItemStyling = styled.div`
   .description: {
     text-align: justify;
     text-justify: inter-word;
+    padding: ${Margins.small} ${Margins.small} ${Margins.small} 0;
   }
 
-  .description {
-    padding: ${Margins.small} ${Margins.small} ${Margins.small} 0;
+  .subHeader {
+    text-align: left;
+    font-style: italic;
+    color: ${Colors.experienceGray};
+    font-size: ${FontSizes.medium};
+    padding: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} 0;
+    grid-column: 1;
+  }
+
+  img {
+    grid-column: 2;
+    margin: auto auto auto auto;
+    border-radius: 50%;
+    max-width: ${utils.isMobile() ? '60px' : '90px'};
   }
 
   .bottom-container {
@@ -87,13 +107,6 @@ const ExperienceItemStyling = styled.div`
     border-bottom-right-radius: 6px;
   }
 
-  .subHeader {
-    text-align: left;
-    font-style: italic;
-    color: ${Colors.experienceGray};
-    font-size: ${FontSizes.medium};
-    padding: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} 0;
-  }
   
   .bottom-header {
     margin: ${Margins.small} 0 ${Margins.small} 0;
@@ -110,13 +123,6 @@ const ExperienceItemStyling = styled.div`
     border-radius: 12.5%;
     color: #000;
   }
-
-  img {
-    
-    border-radius: 50%;
-    max-width: 90px;
-  }
-
 `;
 
 
