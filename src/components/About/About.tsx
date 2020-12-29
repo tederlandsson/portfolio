@@ -49,8 +49,7 @@ export default class About extends Component {
 }
 
 const StyledAbout = styled.div`
-    // background: ${Colors.blueGradientBackGround};
-    background: ${Colors.blueBackground};
+    background: ${Colors.experienceBlue};
     padding: 20% 0 0 0;
     margin-bottom: ${Margins.huge};
     border-top: 1px solid rgb(99, 99, 99, 0.25);
@@ -94,7 +93,7 @@ const StyledAbout = styled.div`
     margin: ${Margins.large} 0 0;
     background-image: url(${pattern});
     height: 175px;
-    //background-image: linear-gradient(to right, url(${pattern}), ${Colors.blueBackground});
+    //background-image: linear-gradient(to right, url(${pattern}), ${Colors.experienceBlue});
   }
 
   .about-bottom::after {
@@ -103,7 +102,7 @@ const StyledAbout = styled.div`
     top: 0;
     left: 0;
     display: block;
-    background: linear-gradient(to bottom, ${Colors.blueBackground}, rgba(0, 0, 255, 0));
+    background: linear-gradient(to bottom, ${Colors.experienceBlue}, rgba(0, 0, 255, 0));
     width: 100%;
     height: 100%;
   }
