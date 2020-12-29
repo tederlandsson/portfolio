@@ -27,7 +27,7 @@ export const OverlayContent = {
 }
 
 export const ContactInfo = {
-  email: 'myemail',
-  linkedin: 'LinkedIn',
-  github: 'tederlandsson',
+  email: 'mailto:myemail@mail.com',
+  linkedin: 'https://www.linkedin.com/in/tederlandsson',
+  github: 'https://github.com/tederlandsson/',
 };
