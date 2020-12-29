@@ -13,6 +13,7 @@ interface ExperienceItemProps {
     description: string;
     bottomHeader?: string;
     image?: unknown;
+    imageAltText?: string,
     technologies: string[];
     icons?: Array<any>;
   }
@@ -29,7 +30,7 @@ class ExperienceItem extends Component<ExperienceItemProps> {
             <h2 className="header">{content.header1}</h2>
             <p className="subHeader">{content.subHeader? content.subHeader : ''}</p>
             <p className="description">{content.description}</p>
-            {/* <img className="image"></img> */}
+            <img className="image" alt={content.imageAltText}></img>
 
           </div>
           <div className="bottom-container">
@@ -61,6 +62,11 @@ const ExperienceItemStyling = styled.div`
   .top-container > h2 {
     font-size: 20px;
     font-weight: bold;
+  }
+
+  .description: {
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .description {
