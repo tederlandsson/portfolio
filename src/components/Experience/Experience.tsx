@@ -1,33 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontSizes, Margins } from '../../theme/index';
-import content from '../../config/experience';
-import vcc_logo from '../../assets/vcc_logo.jpg';
-import acando_logo from '../../assets/acando_logo.jpg';
 
-const experience = [content.volvo, content.acando, content.scancoin];
-const logos: string[] = [vcc_logo, acando_logo, acando_logo];
+import ExperienceItem from './ExperienceItem';
+import { FontSizes, Margins } from '../../theme/index';
+
+import experienceContent from '../../config/experience';
 
 const Experience: React.FC = () => {
   return (
     <StyledExperience>
       <div className="experience">
         <h2>Experience</h2>
-        
-        {experience.map((x: any, index: number) => (
-          <>
-            <b>{x.role}</b>
-            <p className="company">{x.company}</p>
-            <div className="logoWrapper">
-              <img src={logos[index]} alt={x.companyAltText} />
-            </div>
-            <p className="dates">{x.started}–{x.ended}</p>   
-            <ul>
-              {x.tasks.map((x: string) => (
-                <li>{x}</li>
-              ))}
-            </ul>
-          </>
+        {experienceContent.map((x) => (
+          <ExperienceItem data={x} />
         ))}
       </div>
     </StyledExperience>
@@ -38,7 +23,7 @@ const StyledExperience = styled.div`
     margin: 0 ${Margins.large} ${Margins.medium} ${Margins.Large};
   }
 
-  h2 {
+  .experience > h2 {
     font-size: ${FontSizes.huge};
     margin-bottom: ${Margins.small};
   }

@@ -39,6 +39,7 @@ export const Colors = {
   borderStroke: 'rgb(99, 99, 99, 0.25)',
   blueBackground: 'rgb(36, 22, 114)',
   tangerineYellow: '#ffcc00',
+  experienceBlue: '#241672',
 };
 
 
