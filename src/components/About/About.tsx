@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Overlay from '../Overlay/Overlay';
 
-// Shared components
-import Button from '../Button/Button';
-
 // Theme
 import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/';
@@ -37,15 +34,12 @@ export default class About extends Component {
           <p>Nice to meet you, I'm </p>
           <h2>{AboutContent.name}</h2>
           <h3>{AboutContent.role}</h3>
-          <div className="iconContainer">
             {this.getIcons().map((x) => (
               <Icon icon={x} />
             ))}
-          </div>
         </div>
         <br />
         <Overlay data={this.getContent()}/>
-        <Button buttonText="Read more" />
         <div className="about-bottom"></div>
 
       </StyledAbout>
@@ -63,24 +57,10 @@ const StyledAbout = styled.div`
     z-index: 1;
   }
 
-  h2 {
-    font-size: ${FontSizes.huge};
-    font-weight: bold;
-  }
-
   h3 {
     font-size: ${FontSizes.Large};
-    color: #f3f3f3;
+    color: ${Colors.white};
     margin: 0 ${Margins.Large} ${Margins.large} ${Margins.Large};
-  }
-
-  .learnMoreLink {
-    margin-top: ${Margins.large};
-  }
-
-  .learnMoreLink > i {
-    font-weight: bold;
-    text-decoration: underline;
   }
 
   svg {

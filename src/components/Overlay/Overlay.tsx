@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import utils, { isDesktop } from '../../utils';
+import { isDesktop } from '../../utils';
+
+// Shared components
+import Button from '../Button/Button';
 
 // Theme
 import { Margins, Colors, FontSizes } from '../../theme';
@@ -53,19 +56,17 @@ function Overlay(content: any) {
       ))}
     </div>
   } else {
-    overlay = 
-    <p 
-      className="prompt">
-        {isDesktop ? 'Click' : 'Press'} here to learn more <br />
-        <i>about me</i>
-    </p>
+    overlay = <>
+    < Button buttonText="Read more" color="primary" />
+    </>
   }
 
   return (
     <OverlayStyled>
-      <p
+      <p >{isDesktop ? 'Click' : 'Press'} here to read more about me</p>
+      <button
         onClick={() => setShowAboutMe(!showAboutMe)}
-      >{overlay}</p>
+      >{overlay}</button>
     </OverlayStyled>
   )
 }
