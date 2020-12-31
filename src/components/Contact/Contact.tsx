@@ -19,19 +19,19 @@ const Contact: React.FC = () => {
         <ul className="no-bullets">
           <p>Let's get in touch. Here's how:</p>
           < br/>
-          <li>
+          <li data-autoid="email">
             Drop me an <a href={ContactInfo.email}>email</a>
             <Icon icon={emailIcon} />
           </li>
           <br />
-          <li>
+          <li data-autoid="linkedin" className="linkedin">
             Message me on <a href={ContactInfo.linkedin}>LinkedIn</a>
             <br />
             <Icon icon={linkedinFilled} />
           </li>
           
           <br />
-          <li>
+          <li data-autoid="github">
             Find me on <a href={ContactInfo.github}>Github</a>
             <Icon icon={githubFilled}/>
           </li>
