@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import utils, { isDesktop } from '../../utils';
 
 // Theme
 import { Margins, Colors, FontSizes } from '../../theme';
@@ -15,6 +16,7 @@ import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
 import reactIcon from '@iconify-icons/logos/react';
 import browserstackIcon from '@iconify-icons/logos/browserstack';
 import personRunningMediumSkinTone from '@iconify-icons/twemoji/person-running-medium-skin-tone';
+
 
 function Overlay(content: any) {
   const [showAboutMe, setShowAboutMe] = useState(false)
