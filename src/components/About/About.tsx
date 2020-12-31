@@ -94,7 +94,6 @@ const StyledAbout = styled.div`
     margin: ${Margins.large} 0 0;
     background-image: url(${pattern});
     height: 175px;
-    //background-image: linear-gradient(to right, url(${pattern}), ${Colors.experienceBlue});
   }
 
   .about-bottom::after {
