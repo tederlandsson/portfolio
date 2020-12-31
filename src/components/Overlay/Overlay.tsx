@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import utils, { isDesktop } from '../../utils';
 
 // Theme
 import { Margins, Colors, FontSizes } from '../../theme';
@@ -15,12 +14,7 @@ import nodeIcon from '@iconify-icons/fa-brands/node';
 import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
 import reactIcon from '@iconify-icons/logos/react';
 import browserstackIcon from '@iconify-icons/logos/browserstack';
-
 import personRunningMediumSkinTone from '@iconify-icons/twemoji/person-running-medium-skin-tone';
-
-
-// Images
-// import portrait from '../../assets/portrait.png';
 
 function Overlay(content: any) {
   const [showAboutMe, setShowAboutMe] = useState(false)
@@ -31,7 +25,6 @@ function Overlay(content: any) {
     overlay = 
     <div className="overlay">
       <button className="closeButton">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
-      {/* <img src={portrait} alt="Vector portrait" className="portrait"/> */}
       <Icon icon={personRunningMediumSkinTone} className="top-icon"/>
       <div className="header1-container">
         {content.data.header1 && (
@@ -42,20 +35,20 @@ function Overlay(content: any) {
       {content.data.text.map((x: string[]) => (
         <p>{x}<br /></p>
       ))}
+      <br />
+      {content.data.text2 && content.data.text2.map((x: string[]) => (
+        <p>{x}<br /></p>
+      ))}
+      <br />
       {content.data.header2 && (
         <>
           <h2 className="subHeader">{content.data.header2}</h2>
           <br />
         </>
       )}
-      {content.data.text2 && content.data.text2.map((x: string[]) => (
-        <p>{x}<br /></p>
-      ))}
-      <br />
       {icons.map((x) => (
           <Icon icon={x} />
       ))}
-    
     </div>
   } else {
     overlay = 
@@ -141,13 +134,6 @@ const OverlayStyled = styled.div`
   li {
     display: inline-block;
     margin-left: 6px;
-  }
-
-  .portrait {
-    margin: ${Margins.large} auto ${Margins.large} auto;
-    max-width: ${utils.isMobile() ? '150px' : '240px'}; 
-    border-radius: 50%;
-    border: 5px white solid;
   }
 
   .top-icon svg {
