@@ -16,8 +16,9 @@ import bambooIcon from '@iconify-icons/logos/bamboo';
 
 
 // images
-import vcc_logo from '../assets/vcc_logo_2.png';
+import vcc_logo from '../assets/vcc_logo.png';
 import acando_logo from '../assets/acando_logo.jpg';
+import sc_logo from '../assets/scan_coin_logo.jpg';
 
 const experienceContent = [
   {
@@ -47,7 +48,7 @@ const experienceContent = [
     subHeader: '2016–2017',
     description: 'Developed and maintained test strategies for new and existing ongoing projects.',
     bottomHeader: 'Technologies used',
-    image: acando_logo,
+    image: sc_logo,
     ignoreRadius: false,
     imageAltText: 'SCAN COIN company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],
