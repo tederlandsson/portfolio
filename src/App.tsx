@@ -8,7 +8,7 @@ import Contact from './components/Contact/Contact';
 import { GlobalStyles } from './theme';
 
 // Content
-import { AboutContent } from './config/about';
+import { AboutContent, ContactInfo } from './config/about';
 class App extends Component {
   render() {
     return (
@@ -17,7 +17,7 @@ class App extends Component {
           <div className="main">
             <About />
             <Experience />
-            <Contact />
+            <Contact content={ContactInfo.data}/>
             <Footer content={AboutContent.data} />
           </div>
       </>      
