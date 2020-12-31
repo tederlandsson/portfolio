@@ -37,7 +37,7 @@ const Overlay = (content: OverlayProps) => {
     if (showAboutMe) {
       overlay = 
       <div className="overlay">
-        <button className="closeButton">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
+        <button className="close-button">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
         <Icon icon={personRunningMediumSkinTone} className="top-icon"/>
         <div className="header1-container">
           {content.overlayContent.header1 && (
@@ -55,7 +55,7 @@ const Overlay = (content: OverlayProps) => {
         <br />
         {content.overlayContent.header2 && (
           <>
-            <h2 className="sub-header">{content.overlayContent.header2}</h2>
+            <h3 className="sub-header">{content.overlayContent.header2}</h3>
             <br />
           </>
         )}
@@ -73,6 +73,7 @@ const Overlay = (content: OverlayProps) => {
       <OverlayStyled>
         <p >{isDesktop ? 'Click' : 'Press'} here to learn more about me</p>
         <button
+          className="overlay-button"
           onClick={() => setShowAboutMe(!showAboutMe)}
         >{overlay}</button>
       </OverlayStyled>
@@ -113,9 +114,9 @@ const OverlayStyled = styled.div`
     margin-top: ${Margins.medium};
   }
 
-
   .sub-header {
     font-size: 1.3em;
+    font-weight: bold;
   }
 
   .overlay > p {
@@ -124,7 +125,7 @@ const OverlayStyled = styled.div`
     right-align: 50%;    
   }
 
-  .closeButton {
+  .overlay-button {
     text-style: italic;
     font-size: ${FontSizes.large};
     margin-bottom: ${Margins.medium};
