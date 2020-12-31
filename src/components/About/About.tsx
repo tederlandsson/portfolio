@@ -7,22 +7,24 @@ import { FontSizes, Margins, Colors } from '../../theme/';
 import pattern from '../../assets/pattern.svg';
 
 // Icons
-import { Icon, IconifyIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import pythonIcon from '@iconify-icons/logos/python';
 import javascriptIcon from '@iconify-icons/logos/javascript';
 import typescriptIcon from '@iconify-icons/logos/typescript-icon';
 import reactIcon from '@iconify-icons/logos/react';
 import wavingHand from '@iconify-icons/emojione/waving-hand';
 
-// Content
-// import { AboutContent, OverlayContent } from '../../config/about';
-
 interface AboutProps {
   aboutContent: {
     name: string;
     role: string;
   },
-  overlayContent: any;
+    overlayContent: {
+    header1: string;
+    header2: string;
+    text1: any;
+    text2?: any;
+  },
 }
 export default class About extends Component<AboutProps> {
   render() {
