@@ -7,7 +7,7 @@ import { FontSizes, Margins, Colors } from '../../theme/';
 import pattern from '../../assets/pattern.svg';
 
 // Icons
-import { Icon } from '@iconify/react';
+import { Icon, IconifyIcon } from '@iconify/react';
 import pythonIcon from '@iconify-icons/logos/python';
 import javascriptIcon from '@iconify-icons/logos/javascript';
 import typescriptIcon from '@iconify-icons/logos/typescript-icon';
@@ -15,33 +15,33 @@ import reactIcon from '@iconify-icons/logos/react';
 import wavingHand from '@iconify-icons/emojione/waving-hand';
 
 // Content
-import { AboutContent, OverlayContent } from '../../config/about';
+// import { AboutContent, OverlayContent } from '../../config/about';
 
-export default class About extends Component {
-  getIcons() {
-    return [javascriptIcon, typescriptIcon, reactIcon, pythonIcon];
-  }
-
-  getContent() {
-    return { ...AboutContent, ...OverlayContent } ;
-  }
-
+interface AboutProps {
+  aboutContent: {
+    name: string;
+    role: string;
+  },
+  overlayContent: any;
+}
+export default class About extends Component<AboutProps> {
   render() {
+    const icons = [javascriptIcon, typescriptIcon, reactIcon, pythonIcon];
+
     return (
       <StyledAbout>
         <div className='about'>
           <Icon icon={wavingHand} className="wave"/>
           <p>Nice to meet you, I'm </p>
-          <h2>{AboutContent.name}</h2>
-          <h3>{AboutContent.role}</h3>
-            {this.getIcons().map((x) => (
+          <h2>{this.props.aboutContent.name}</h2>
+          <h3>{this.props.aboutContent.role}</h3>
+            {icons.map((x) => (
               <Icon icon={x} />
             ))}
         </div>
         <br />
-        <Overlay data={this.getContent()}/>
-        <div className="about-bottom"></div>
-
+        <Overlay overlayContent={this.props.overlayContent}/>
+        <div className="about-bottom" />
       </StyledAbout>
     );
   }
@@ -50,7 +50,7 @@ export default class About extends Component {
 const StyledAbout = styled.div`
     background: ${Colors.experienceBlue};
     padding: 20% 0 0 0;
-    margin-bottom: ${Margins.huge};
+    margin-bottom: ${Margins.large};
     border-top: 1px solid rgb(99, 99, 99, 0.25);
     border-bottom: 1px solid rgb(99, 99, 99, 0.25);
     color: ${Colors.white};
@@ -78,7 +78,7 @@ const StyledAbout = styled.div`
     position: relative;
     margin: ${Margins.large} 0 0;
     background-image: url(${pattern});
-    height: 175px;
+    height: 140px;
   }
 
   .about-bottom::after {

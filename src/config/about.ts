@@ -16,7 +16,7 @@ export const AboutContent = {
 export const OverlayContent = {
   header1: 'About me',
   header2: 'Technologies I work with',
-  text: [
+  text1: [
     'Southern require fund his some. Each letter of. Blood person talk senior wind future. We point better. Whether plant all edge. Relationship same into long but study.',  
   ],
   text2: [
