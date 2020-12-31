@@ -16,14 +16,15 @@ import bambooIcon from '@iconify-icons/logos/bamboo';
 
 
 // images
-import vcc_logo from '../assets/vcc_logo_2.png';
+import vcc_logo from '../assets/vcc_logo.png';
 import acando_logo from '../assets/acando_logo.jpg';
+import sc_logo from '../assets/scan_coin_logo.jpg';
 
 const experienceContent = [
   {
     header1: 'Quality assurance engineer',
     subHeader: '2019–present',
-    description: 'Front end test automation for React components and web pages. E2E tests, CI/CD.',
+    description: 'Front end test automation for React components and web pages using JavaScript. E2E tests, CI/CD.',
     bottomHeader: 'Technologies used',
     image: vcc_logo,
     ignoreRadius: true,
@@ -47,7 +48,7 @@ const experienceContent = [
     subHeader: '2016–2017',
     description: 'Developed and maintained test strategies for new and existing ongoing projects.',
     bottomHeader: 'Technologies used',
-    image: acando_logo,
+    image: sc_logo,
     ignoreRadius: false,
     imageAltText: 'SCAN COIN company logo',
     technologies: ['JavaScript', 'TypeScript', 'WebdriverIO', 'Azure DevOps'],

@@ -17,27 +17,50 @@ export const components = [
 
 
 // Elements
-export const icons = 'div > .iconContainer > svg';
+export const icons = 'svg';
+
+
+export const experienceElements = {
+  component: experience,
+  header: '.experience h2',
+  experienceItem: '.experience-item',
+  // experienceItemHeader: '.experience-item .top-container h2',
+  // experienceItemText: '.experience-item .top-container p',
+  // experienceItemHeader2: '.experience-item .bottom-container h3',
+  // image: '.experience-item .top-container img',
+};
+
+export const contactElements = {
+  component: '.contact',
+  header: '.contact h2',
+  text: '.contact p',
+  email: '[data-autoid="email"]',
+  linkedin: '[data-autoid="linkedin"]',
+  github: '[data-autoid="github"]',
+}
 
 export const aboutElements = {
   component: '.about',
   wave: '.wave',
-  header: '.about > h2',
-  smallHeader: '.about > h3',
-  text: '.about > p',
-  // icons: '.about  > .iconContainer > svg',
+  header: '.about h2',
+  smallHeader: '.about h3',
+  button: '.overlay-button',
+  // text: '.about > p',
+  // icons: '.about svg',
 };
 
 // Overlay
 export const overlayElements = {
-  component: 'fixed bg-white top-0 left-0 w-full h-full shadow overlay',
-  button: '.prompt > i',
-  overlayCloseButton: '.closeButton',
-  overlayHeaders: '.overlay > h2',
-  overlayText: '.overlay > p',
+  component: '.overlay',
+  overlayCloseButton: '.overlay .close-button',
+  overlayHeader: '.overlay h2',
+  overlaySubHeader: '.overlay h3',
+  // overlayText: '.overlay p',
 };
 
 
 export const elements = {
   ...aboutElements,
+  // ...experienceElements,
+  ...contactElements,
 };

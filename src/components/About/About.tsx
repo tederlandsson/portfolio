@@ -14,35 +14,36 @@ import typescriptIcon from '@iconify-icons/logos/typescript-icon';
 import reactIcon from '@iconify-icons/logos/react';
 import wavingHand from '@iconify-icons/emojione/waving-hand';
 
-// Content
-import { AboutContent, OverlayContent } from '../../config/about';
-
-export default class About extends Component {
-  getIcons() {
-    return [javascriptIcon, typescriptIcon, reactIcon, pythonIcon];
-  }
-
-  getContent() {
-    return { ...AboutContent, ...OverlayContent } ;
-  }
-
+interface AboutProps {
+  aboutContent: {
+    name: string;
+    role: string;
+  },
+    overlayContent: {
+    header1: string;
+    header2: string;
+    text1: any;
+    text2?: any;
+  },
+}
+export default class About extends Component<AboutProps> {
   render() {
+    const icons = [javascriptIcon, typescriptIcon, reactIcon, pythonIcon];
+
     return (
       <StyledAbout>
         <div className='about'>
           <Icon icon={wavingHand} className="wave"/>
           <p>Nice to meet you, I'm </p>
-          <h2>{AboutContent.name}</h2>
-          <h3>{AboutContent.role}</h3>
-          <div className="iconContainer">
-            {this.getIcons().map((x) => (
+          <h2>{this.props.aboutContent.name}</h2>
+          <h3>{this.props.aboutContent.role}</h3>
+            {icons.map((x) => (
               <Icon icon={x} />
             ))}
-          </div>
         </div>
         <br />
-        <Overlay data={this.getContent()}/>
-        <div className="about-bottom"></div>
+        <Overlay overlayContent={this.props.overlayContent}/>
+        <div className="about-bottom" />
       </StyledAbout>
     );
   }
@@ -50,32 +51,16 @@ export default class About extends Component {
 
 const StyledAbout = styled.div`
     background: ${Colors.experienceBlue};
-    padding: 20% 0 0 0;
-    margin-bottom: ${Margins.huge};
-    border-top: 1px solid rgb(99, 99, 99, 0.25);
-    border-bottom: 1px solid rgb(99, 99, 99, 0.25);
+    padding: 15% 0 0 0;
+    margin-bottom: ${Margins.large};
     color: ${Colors.white};
     z-index: 1;
   }
 
-  h2 {
-    font-size: ${FontSizes.huge};
-    font-weight: bold;
-  }
-
   h3 {
     font-size: ${FontSizes.Large};
-    color: #f3f3f3;
+    color: ${Colors.white};
     margin: 0 ${Margins.Large} ${Margins.large} ${Margins.Large};
-  }
-
-  .learnMoreLink {
-    margin-top: ${Margins.large};
-  }
-
-  .learnMoreLink > i {
-    font-weight: bold;
-    text-decoration: underline;
   }
 
   svg {
@@ -93,8 +78,7 @@ const StyledAbout = styled.div`
     position: relative;
     margin: ${Margins.large} 0 0;
     background-image: url(${pattern});
-    height: 175px;
-    //background-image: linear-gradient(to right, url(${pattern}), ${Colors.experienceBlue});
+    height: 140px;
   }
 
   .about-bottom::after {

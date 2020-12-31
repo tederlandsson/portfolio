@@ -14,18 +14,20 @@ export const AboutContent = {
 }
 
 export const OverlayContent = {
-  header1: 'Nice to meet you',
+  header1: 'About me',
   header2: 'Technologies I work with',
-  text: [
+  text1: [
     'Southern require fund his some. Each letter of. Blood person talk senior wind future. We point better. Whether plant all edge. Relationship same into long but study.',  
   ],
   text2: [
-    'Southern require fund his some. Each letter of. Blood person talk senior wind future. We point better. Whether plant all edge. Relationship same into long but study.', 
+    "When I'm not working, I like to stay active as a recreational swimmer and long-distance runner.", 
   ],
 }
 
 export const ContactInfo = {
-  email: 'mailto:myemail@mail.com',
-  linkedin: 'https://www.linkedin.com/in/tederlandsson',
-  github: 'https://github.com/tederlandsson/',
+  data: {
+    email: 'mailto:myemail@mail.com',
+    linkedin: 'https://www.linkedin.com/in/tederlandsson',
+    github: 'https://github.com/tederlandsson/',
+  },
 };

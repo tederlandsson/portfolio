@@ -8,16 +8,16 @@ import Contact from './components/Contact/Contact';
 import { GlobalStyles } from './theme';
 
 // Content
-import { AboutContent } from './config/about';
+import { AboutContent, ContactInfo, OverlayContent } from './config/about';
 class App extends Component {
   render() {
     return (
       <>
         <GlobalStyles />
           <div className="main">
-            <About />
+            <About aboutContent={AboutContent} overlayContent={OverlayContent}/>
             <Experience />
-            <Contact />
+            <Contact content={ContactInfo.data}/>
             <Footer content={AboutContent.data} />
           </div>
       </>      

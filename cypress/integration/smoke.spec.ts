@@ -21,7 +21,6 @@ describe('Portfolio smoke test suite', () => {
     if (verbose) {
       console.log(`Number of icon length: ${elements}`);
     }
-    
   })
 
   it('Renders footer', () => {
@@ -30,6 +29,7 @@ describe('Portfolio smoke test suite', () => {
   })
 
   it('Renders all components', () => {
+    // eslint-disable-next-line array-callback-return
     constants.components.map((x: string) => {
       cy.get(x).should('be.visible');
       if (verbose) {
@@ -48,9 +48,14 @@ describe('Portfolio smoke test suite', () => {
   })
 
   it('Opens the overlay', () => {
-    const element = utils.getElement(constants.overlayElements.button);
+    const element = utils.getElement(constants.aboutElements.button);
     utils.verifyElementIsDisplayed(element);
     utils.clickElement(element);
+  })
+
+  it('Verifies the overlay elements', () => {
+    const elements = constants.overlayElements;
+    utils.verifyElementsFromObject(elements);
   })
 
   // it('Verifies overlay has content', () => {

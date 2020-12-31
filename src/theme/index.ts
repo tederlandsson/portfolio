@@ -20,7 +20,6 @@ export const Margins = {
 };
 
 export const Typography = {
-  // Not implemented yet
   main: "'Avenir', Helvetica, Arial, sans-serif",
   secondary: "'Work Sans', sans-serif",
 };
@@ -102,7 +101,7 @@ export const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-family: ${Typography.secondary};
-    font-size: ${FontSizes.large};
+    font-size: ${FontSizes.huge};
     font-weight: 600;
   }
 
