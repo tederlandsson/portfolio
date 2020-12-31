@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Overlay from '../Overlay/Overlay';
 
+// Shared components
+import Button from '../Button/Button';
+
 // Theme
 import styled from 'styled-components';
 import { FontSizes, Margins, Colors } from '../../theme/';
@@ -42,7 +45,9 @@ export default class About extends Component {
         </div>
         <br />
         <Overlay data={this.getContent()}/>
+        <Button buttonText="Read more" />
         <div className="about-bottom"></div>
+
       </StyledAbout>
     );
   }
