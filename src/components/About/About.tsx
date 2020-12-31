@@ -51,10 +51,8 @@ export default class About extends Component<AboutProps> {
 
 const StyledAbout = styled.div`
     background: ${Colors.experienceBlue};
-    padding: 20% 0 0 0;
+    padding: 15% 0 0 0;
     margin-bottom: ${Margins.large};
-    border-top: 1px solid rgb(99, 99, 99, 0.25);
-    border-bottom: 1px solid rgb(99, 99, 99, 0.25);
     color: ${Colors.white};
     z-index: 1;
   }

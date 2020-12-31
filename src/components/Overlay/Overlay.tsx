@@ -37,7 +37,9 @@ const Overlay = (content: OverlayProps) => {
     if (showAboutMe) {
       overlay = 
       <div className="overlay">
-        <button className="close-button">{isDesktop ? 'Click' : 'Press'} anywhere to close <Icon icon={closeCircleOutlined} className="closeIcon" /> </button>
+        <button className="close-button">{isDesktop ? 'Click' : 'Press'} anywhere to close 
+          <Icon icon={closeCircleOutlined} className="closeIcon" /> 
+        </button>
         <Icon icon={personRunningMediumSkinTone} className="top-icon"/>
         <div className="header1-container">
           {content.overlayContent.header1 && (
@@ -103,14 +105,12 @@ const OverlayStyled = styled.div`
     color: ${Colors.white};
     background-color: ${Colors.blueGradientBackGround};
     background: {Colors.blueGradient};
-    border-top: 10px solid ${Colors.borderStroke};
     padding: ${Margins.medium} ${Margins.Large} 0 ${Margins.Large};
   }
 
-  .overlay > h2 {
+  .overlay h2 {
     color: ${Colors.white};
     font-weight: bold;
-    text-align: left;
     margin-top: ${Margins.medium};
   }
 
@@ -119,17 +119,14 @@ const OverlayStyled = styled.div`
     font-weight: bold;
   }
 
-  .overlay > p {
+  .overlay p {
     text-align: justify;
-    left-align: 50%;
-    right-align: 50%;    
   }
 
   .overlay-button {
     text-style: italic;
     font-size: ${FontSizes.large};
     margin-bottom: ${Margins.medium};
-    border-bottom: 2px white solid;
     width: 100%;
   }
 
