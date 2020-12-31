@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Colors } from '../../theme';
+import { Colors, Margins } from '../../theme';
 
 import pattern from '../../assets/pattern.svg';
 import styled from 'styled-components';
@@ -24,7 +24,7 @@ class Footer extends Component<FooterProps> {
           <p><b>Software tests:</b> {content.tests}</p>
           <p><b>Last updated: </b>{content.lastUpdated}</p>
           <br/>
-          &copy; Copyright 2020 {content.name}
+          &copy; Copyright 2021 {content.name}
         </div>
       </StyledFooter>
     );
@@ -33,10 +33,24 @@ class Footer extends Component<FooterProps> {
 
 const StyledFooter = styled.div`
     border-top: 1px solid ${Colors.borderStroke};
-    padding: 24px 24px 24px 24px;
+    padding: ${Margins.large} ${Margins.large} ${Margins.large} ${Margins.large};
     color: ${Colors.white};
+    position: relative;
     background-image: url(${pattern});
     border-top: 3px #4a4a4a solid;
+    z-index: -1;
+  }
+
+  .footer::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, ${Colors.experienceBlue}, rgba(0, 0, 255, 0));
+    z-index: -1;
   }
 `;
 

@@ -20,7 +20,6 @@ export const Margins = {
 };
 
 export const Typography = {
-  // Not implemented yet
   main: "'Avenir', Helvetica, Arial, sans-serif",
   secondary: "'Work Sans', sans-serif",
 };
