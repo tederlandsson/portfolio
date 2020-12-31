@@ -23,7 +23,7 @@ const experienceContent = [
   {
     header1: 'Quality assurance engineer',
     subHeader: '2019–present',
-    description: 'Front end test automation for React components and web pages. E2E tests, CI/CD.',
+    description: 'Front end test automation for React components and web pages using JavaScript. E2E tests, CI/CD.',
     bottomHeader: 'Technologies used',
     image: vcc_logo,
     ignoreRadius: true,

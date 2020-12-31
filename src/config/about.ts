@@ -20,7 +20,7 @@ export const OverlayContent = {
     'Southern require fund his some. Each letter of. Blood person talk senior wind future. We point better. Whether plant all edge. Relationship same into long but study.',  
   ],
   text2: [
-    'Southern require fund his some. Each letter of. Blood person talk senior wind future. We point better. Whether plant all edge. Relationship same into long but study.', 
+    "When I'm not working, I like to stay active as a recreational swimmer and long-distance runner.", 
   ],
 }
 
