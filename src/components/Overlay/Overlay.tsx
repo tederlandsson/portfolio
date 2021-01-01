@@ -38,8 +38,9 @@ const Overlay = (content: OverlayProps) => {
       overlay = 
       <div className="overlay">
         <button className="close-button">{isDesktop ? 'Click' : 'Press'} anywhere to close 
-          <Icon icon={closeCircleOutlined} className="closeIcon" /> 
+          <Icon icon={closeCircleOutlined} className="closeIcon" />
         </button>
+        <br />
         <Icon icon={personRunningMediumSkinTone} className="top-icon"/>
         <div className="header1-container">
           {content.overlayContent.header1 && (
@@ -58,7 +59,6 @@ const Overlay = (content: OverlayProps) => {
         {content.overlayContent.header2 && (
           <>
             <h3 className="sub-header">{content.overlayContent.header2}</h3>
-            <br />
           </>
         )}
         {icons.map((x) => (
@@ -91,7 +91,6 @@ const OverlayStyled = styled.div`
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100%;
     overflow: scroll;
   }
 
@@ -121,6 +120,7 @@ const OverlayStyled = styled.div`
 
   .overlay p {
     text-align: justify;
+    font-size: ${FontSizes.small};
   }
 
   .overlay-button {

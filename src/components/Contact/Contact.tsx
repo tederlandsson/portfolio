@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 // Theme
 import styled from 'styled-components';
-import {  Margins, Typography } from '../../theme/';
+import {  Margins } from '../../theme/';
+import utils from '../../utils/index';
 
 import { Icon } from '@iconify/react';
 import emailIcon from '@iconify-icons/carbon/email';
@@ -20,32 +21,34 @@ interface ContactProps {
 export default class Contact extends Component<ContactProps> {
   render() {
     return (
-      <StyledContact>
-        <div className="contact">
-          <h2 className="component-header">Contact</h2>
-          <ul className="no-bullets">
-            <p>Let's get in touch. Here's how:</p>
-            < br/>
-            <li data-autoid="email">
-              Drop me an <a href={this.props.content.email}>email</a>
-              <Icon icon={emailIcon} />
-            </li>
-            <br />
-            <li data-autoid="linkedin" className="linkedin">
-              Message me on <a href={this.props.content.linkedin}>LinkedIn</a>
+      <section className="section-contained">
+        <StyledContact>
+          <div className="contact">
+            <h2 className="component-header">Contact</h2>
+            <ul className="no-bullets">
+              <p>Let's get in touch. Here's how:</p>
+              < br/>
+              <li data-autoid="email">
+                <Icon icon={emailIcon} />
+                <a href={this.props.content.email}>Email</a>
+              </li>
               <br />
-              <Icon icon={linkedinFilled} />
-            </li>
-            
-            <br />
-            <li data-autoid="github">
-              Find me on <a href={this.props.content.github}>Github</a>
-              <Icon icon={githubFilled}/>
-            </li>
-            
-          </ul>  
-        </div>
-      </StyledContact>
+              <li data-autoid="linkedin" className="linkedin">
+                <Icon icon={linkedinFilled} />
+                <a href={this.props.content.linkedin}>LinkedIn</a>
+              </li>
+              
+              <br />
+              <li data-autoid="github">
+                <Icon icon={githubFilled}/>
+                <a href={this.props.content.github}>Github</a>
+                <br />
+              </li>
+              
+            </ul>  
+          </div>
+        </StyledContact>
+      </section>
     );
   }
 }
@@ -53,22 +56,14 @@ export default class Contact extends Component<ContactProps> {
 
 const StyledContact = styled.div`
     margin-bottom: ${Margins.huge};
+
   }
 
-  a {
-    color: rgb(89, 12, 177);
-    font-weight: 500;
-  }
-
-  
   li, p {
-    font-family: ${Typography.secondary};
     font-weight: 300;
   }
 
   svg {
-    font-size: 3em;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 5em;
   }
 `;
