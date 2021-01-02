@@ -10,7 +10,6 @@ import styled from 'styled-components';
 
 // Icons
 import { Icon } from '@iconify/react';
-import seleniumIcon from '@iconify-icons/logos/selenium';
 import githubFilled from '@iconify-icons/ant-design/github-filled';
 import fileTypeAzurepipelines from '@iconify-icons/vscode-icons/file-type-azurepipelines';
 import closeCircleOutlined from '@iconify-icons/ant-design/close-circle-outlined';
