@@ -14,19 +14,7 @@ export const isDesktop = !isMobile && !isTablet;
    * @param {Array} array
    * @return {String} items -- comma-separated string.
    */
-  renderArrayWithCommas(array: string[]): string {
-    let items: string = '';
-    array.forEach((x, index) => {
-        index += 1;
-        if (index === array.length) {
-          items += x;
-        } else {
-          items += `${x}, `;
-        }        
-      });
-    return items;
-  }
-
+  
   isMobile() {
     return document.body.getBoundingClientRect().width <= 500;
   }
