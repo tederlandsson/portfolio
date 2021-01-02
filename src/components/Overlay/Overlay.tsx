@@ -115,13 +115,6 @@ const OverlayStyled = styled.div`
     font-size: ${FontSizes.small};
   }
 
-  .overlay-button {
-    text-style: italic;
-    font-size: ${FontSizes.large};
-    margin-bottom: ${Margins.medium};
-    width: 100%;
-  }
-
   .closeIcon {
     font-size: 1.5em;
     margin-top: 15px;

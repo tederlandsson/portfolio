@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import utils from '../utils/index';
+import utils, { isDesktop } from '../utils/index';
 
 export const FontSizes = {
   xsmall: '0.75em',
@@ -37,6 +37,7 @@ export const Colors = {
   experienceBlue: '#241672',
   experienceGray: '#d6d6d6',
   linkColor: 'rgb(89, 12, 177)',
+  buttonHover: '#e0e000',
 };
 
 
@@ -120,7 +121,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .section-contained {
-    width: ${utils.isMobile() ? '100%' : '50%'};
+    width: ${isDesktop ? '50%' : '100%'};
     margin: auto;
     margin-bottom: ${Margins.medium};
     max-width: 1400px;
