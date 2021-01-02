@@ -41,6 +41,10 @@ const StyledButton = styled.button`
   text-align: center;
   border-radius: 6px;
 }
+
+:hover {
+  background-color: ${Colors.buttonHover};
+}
 `;
 
 // secondary button styling

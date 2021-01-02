@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // Theme
 import { Margins, Colors, FontSizes, Typography } from '../../theme';
 import styled from 'styled-components';
-import utils from '../../../src/utils';
+import isMobile from '../../../src/utils';
 import { Icon } from '@iconify/react';
 
 interface ExperienceItemProps {
@@ -75,10 +75,9 @@ const ExperienceItemStyling = styled.div`
     font-family: ${Typography.secondary};
   }
 
-  .description: {
-    text-align: justify;
-    text-justify: inter-word;
+  .description {
     padding: ${Margins.small} ${Margins.small} ${Margins.small} 0;
+    margin-top: ${isMobile ? '-20px' : '-60px'};
   }
 
   .sub-header {
@@ -93,7 +92,7 @@ const ExperienceItemStyling = styled.div`
   img {
     grid-column: 2;
     margin: auto auto auto auto;
-    max-width: ${utils.isMobile() ? '60px' : '90px'};
+    max-width: ${isMobile ? '60px' : '80px'};
   }
 
   .experience-item .image {
