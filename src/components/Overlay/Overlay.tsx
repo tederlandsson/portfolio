@@ -10,7 +10,6 @@ import styled from 'styled-components';
 
 // Icons
 import { Icon } from '@iconify/react';
-import seleniumIcon from '@iconify-icons/logos/selenium';
 import githubFilled from '@iconify-icons/ant-design/github-filled';
 import fileTypeAzurepipelines from '@iconify-icons/vscode-icons/file-type-azurepipelines';
 import closeCircleOutlined from '@iconify-icons/ant-design/close-circle-outlined';
@@ -19,7 +18,8 @@ import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
 import reactIcon from '@iconify-icons/logos/react';
 import browserstackIcon from '@iconify-icons/logos/browserstack';
 import personRunningMediumSkinTone from '@iconify-icons/twemoji/person-running-medium-skin-tone';
-
+import javascriptIcon from '@iconify-icons/logos/javascript';
+import typescriptIcon from '@iconify-icons/logos/typescript-icon';
 interface OverlayProps {
   overlayContent: {
     header1: string;
@@ -31,7 +31,7 @@ interface OverlayProps {
 
 const Overlay = (content: OverlayProps) => {
     const [showAboutMe, setShowAboutMe] = useState(false)
-    const icons = [nodeIcon, fileTypeYarn, reactIcon, githubFilled, fileTypeAzurepipelines, browserstackIcon, seleniumIcon];
+    const icons = [typescriptIcon, javascriptIcon, reactIcon, fileTypeYarn, nodeIcon, githubFilled, fileTypeAzurepipelines, browserstackIcon];
     
     let overlay
     if (showAboutMe) {
@@ -88,19 +88,11 @@ const OverlayStyled = styled.div`
   .overlay {
     z-index: 2;
     position: fixed;
+    width: 100vw;
     top: 0;
     left: 0;
     height: 100vh;
     overflow: scroll;
-  }
-
-  .prompt {
-    font-size: ${FontSizes.Large};
-    font-style: bold;
-    margin: 0 ${Margins.large} 0 ${Margins.large};
-  }
-
-  .overlay {
     color: ${Colors.white};
     background-color: ${Colors.blueGradientBackGround};
     background: {Colors.blueGradient};

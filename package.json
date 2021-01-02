@@ -38,8 +38,8 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
-    "build:css": "postcss src/index.css -o src/tailwind.css",
-    "watch:css": "postcss src/index.css -o src/tailwind.css -w",
+    "build:css": "postcss src/index.css -o src/style.css",
+    "watch:css": "postcss src/index.css -o src/style.css -w",
     "predeploy": "yarn build:css && yarn build",
     "deploy": "gh-pages -d build",
     "start": "yarn build:css && react-scripts start",

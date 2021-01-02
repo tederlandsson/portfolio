@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 // Theme
 import styled from 'styled-components';
 import {  Margins } from '../../theme/';
-import utils from '../../utils/index';
 
 import { Icon } from '@iconify/react';
 import emailIcon from '@iconify-icons/carbon/email';
@@ -56,7 +55,6 @@ export default class Contact extends Component<ContactProps> {
 
 const StyledContact = styled.div`
     margin-bottom: ${Margins.huge};
-
   }
 
   li, p {
