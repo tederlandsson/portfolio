@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import utils, { isDesktop } from '../utils/index';
+import { isDesktop } from '../utils/index';
 
 export const FontSizes = {
   xsmall: '0.75em',

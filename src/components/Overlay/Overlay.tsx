@@ -58,7 +58,7 @@ const Overlay = (content: OverlayProps) => {
         <br />
         {content.overlayContent.header2 && (
           <>
-            <h3 className="sub-header">{content.overlayContent.header2}</h3>
+            <h3>{content.overlayContent.header2}</h3>
           </>
         )}
         {icons.map((x) => (
@@ -97,6 +97,8 @@ const OverlayStyled = styled.div`
     background-color: ${Colors.blueGradientBackGround};
     background: {Colors.blueGradient};
     padding: ${Margins.medium} ${Margins.Large} 0 ${Margins.Large};
+    text-align: center;
+    overflow-y: hidden; /* Hide vertical scrollbar */
   }
 
   .overlay h2 {
@@ -105,14 +107,12 @@ const OverlayStyled = styled.div`
     margin-top: ${Margins.medium};
   }
 
-  .sub-header {
-    font-size: 1.3em;
+  .overlay h3 {
     font-weight: bold;
   }
 
   .overlay p {
-    text-align: justify;
-    font-size: ${FontSizes.small};
+    font-size: ${FontSizes.medium};
   }
 
   .closeIcon {

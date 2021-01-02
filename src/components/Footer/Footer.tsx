@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Colors, Margins } from '../../theme';
 
+// Theme
 import pattern from '../../assets/pattern.svg';
+import { Colors, Margins } from '../../theme';
 import styled from 'styled-components';
 interface FooterProps {
   content: {
