@@ -88,19 +88,11 @@ const OverlayStyled = styled.div`
   .overlay {
     z-index: 2;
     position: fixed;
+    width: 100vw;
     top: 0;
     left: 0;
     height: 100vh;
     overflow: scroll;
-  }
-
-  .prompt {
-    font-size: ${FontSizes.Large};
-    font-style: bold;
-    margin: 0 ${Margins.large} 0 ${Margins.large};
-  }
-
-  .overlay {
     color: ${Colors.white};
     background-color: ${Colors.blueGradientBackGround};
     background: {Colors.blueGradient};
