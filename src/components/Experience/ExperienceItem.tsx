@@ -25,33 +25,35 @@ class ExperienceItem extends Component<ExperienceItemProps> {
     const content = this.props.data;
 
     return(
-      <ExperienceItemStyling>
-        <div className="experience-item">
-          <div className="top-container">
-            <h3 className="header">{content.header1}</h3>
-            <div className="grid-container">
-              <p className="subHeader">{content.subHeader? content.subHeader : ''}</p>
-              <img src={content.image} alt={content.imageAltText} className="image"/>
-              <p className="description">{content.description}</p>
+      <section className="section-contained">
+        <ExperienceItemStyling>
+          <div className="experience-item">
+            <div className="top-container">
+              <h3 className="header">{content.header1}</h3>
+              <div className="grid-container">
+                <p className="sub-header">{content.subHeader? content.subHeader : ''}</p>
+                <img src={content.image} alt={content.imageAltText} className="image"/>
+                <p className="description">{content.description}</p>
+              </div>
+            </div>
+            <div className="bottom-container">
+              <h4 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h4>
+              <div className="icons">
+                {content.icons?.map((x) => (
+                  <Icon icon={x} />
+                ))}
+              </div>
             </div>
           </div>
-          <div className="bottom-container">
-            <h4 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h4>
-            <div className="icons">
-              {content.icons?.map((x) => (
-                <Icon icon={x} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </ExperienceItemStyling>
+        </ExperienceItemStyling>
+      </section>
     );
   }
 }
 
 const ExperienceItemStyling = styled.div`
   .experience-item {
-    margin: ${Margins.xsmall} 0 ${Margins.medium} 0;
+    margin: ${Margins.xsmall} auto auto auto;
     color: ${Colors.white};
     text-align: left;
   }
@@ -68,14 +70,9 @@ const ExperienceItemStyling = styled.div`
     grid-template-columns: 2;
   }
 
-  .top-container > h3 {
+  .top-container h3 {
     font-size: 20px;
     font-family: ${Typography.secondary};
-  }
-
-  .top-container > p {
-    font-family: ${Typography.secondary};
-    font-weight: 300;
   }
 
   .description: {
@@ -84,7 +81,7 @@ const ExperienceItemStyling = styled.div`
     padding: ${Margins.small} ${Margins.small} ${Margins.small} 0;
   }
 
-  .subHeader {
+  .sub-header {
     text-align: left;
     font-style: italic;
     color: ${Colors.experienceGray};
@@ -119,13 +116,13 @@ const ExperienceItemStyling = styled.div`
     font-weight: 600;
   }
 
-  .icons > svg {
-    font-size: 3em;
+  .icons svg {
     margin: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall};
     display: inline-block;
     border-radius: 12.5%;
     color: #000;
   }
+
 `;
 
 export default ExperienceItem;

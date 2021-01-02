@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import utils from '../utils/index';
 
 export const FontSizes = {
   xsmall: '0.75em',
@@ -29,18 +30,13 @@ export const Typography = {
 export const Colors = {
   white: '#fff',
   black: '#000',
-  primary: '',
-  secondary: '',
-  dark: 'rgb(43,48,54)',
-  darkContainerBackGround: 'rgb(35,108,74)',
-  darkContainerGradient: 'linear-gradient(0deg, rgba(35,108,74,1) 0%, rgba(36,115,78,0.9962359943977591) 31%, rgba(37,155,100,1) 100%)',
   blueGradientBackGround: 'rgb(15,15,89)',
   blueGradient: 'linear-gradient(0deg, rgba(15,15,89,1) 0%, rgba(36,22,114,1) 100%)',
   borderStroke: 'rgb(99, 99, 99, 0.25)',
-  blueBackground: 'rgb(36, 22, 114)',
-  tangerineYellow: '#ffcc00',
+  blueBackground: 'rgb(36, 22, 114)',  
   experienceBlue: '#241672',
   experienceGray: '#d6d6d6',
+  linkColor: 'rgb(89, 12, 177)',
 };
 
 
@@ -87,22 +83,18 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${Typography.secondary};
   }
 
-  .component-header {
-    font-size: ${FontSizes.huge};
-    margin-bottom: ${Margins.medium};
-    font-weight: bold;
-  }
-
   h1 {
     font-size: ${FontSizes.huge};
     font-family: 'Avenir', 'sans-serif';
-    font-weight: 400;
+    font-weight: 600;
+    margin-bottom: ${Margins.medium};
   }
 
   h2 {
     font-family: ${Typography.secondary};
     font-size: ${FontSizes.huge};
     font-weight: 600;
+    margin-bottom: ${Margins.medium};
   }
 
   h3 {
@@ -110,14 +102,28 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: -2px
   }
 
-  p {
+  li, p {
     font-size: ${FontSizes.medium}};
     font-family: ${Typography.secondary};
     font-weight: 300;
   }
 
-  .backgroundGradient {
-    background: ${Colors.darkContainerBackGround};
-    background: ${Colors.darkContainerGradient};
+  a {
+    color: ${Colors.linkColor};
+    font-weight: 500;
+  }
+
+  svg {
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-contained {
+    width: ${utils.isMobile() ? '100%' : '50%'};
+    margin: auto;
+    margin-bottom: ${Margins.medium};
+    max-width: 1400px;
+    position: center;
   }
 `;
