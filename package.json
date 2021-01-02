@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://tederlandsson.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,8 +40,10 @@
   "scripts": {
     "build:css": "postcss src/index.css -o src/tailwind.css",
     "watch:css": "postcss src/index.css -o src/tailwind.css -w",
+    "predeploy": "yarn build:css && yarn build",
+    "deploy": "gh-pages -d build",
     "start": "yarn build:css && react-scripts start",
-    "build": "tsc",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cy:run": "cypress run"

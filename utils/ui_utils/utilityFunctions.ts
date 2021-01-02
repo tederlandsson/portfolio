@@ -23,7 +23,7 @@ class UtilityFunctions {
   }
 
 
-  verifyElementsFromObject(elements: object): void {
+  verifyElementsFromObject(elements: any): void {
     for (const key in elements) {
       if (this.verbose) {
         console.log(`Element selector is: ${elements[key]}`);
