@@ -26,7 +26,7 @@ export const OverlayContent = {
 
 export const ContactInfo = {
   data: {
-    email: 'mailto:tederlabdssib@gmail.com',
+    email: 'mailto:tederlandsson@gmail.com',
     linkedin: 'https://www.linkedin.com/in/tederlandsson',
     github: 'https://github.com/tederlandsson/',
   },
