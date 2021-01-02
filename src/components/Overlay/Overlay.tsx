@@ -19,7 +19,8 @@ import fileTypeYarn from '@iconify-icons/vscode-icons/file-type-yarn';
 import reactIcon from '@iconify-icons/logos/react';
 import browserstackIcon from '@iconify-icons/logos/browserstack';
 import personRunningMediumSkinTone from '@iconify-icons/twemoji/person-running-medium-skin-tone';
-
+import javascriptIcon from '@iconify-icons/logos/javascript';
+import typescriptIcon from '@iconify-icons/logos/typescript-icon';
 interface OverlayProps {
   overlayContent: {
     header1: string;
@@ -31,7 +32,7 @@ interface OverlayProps {
 
 const Overlay = (content: OverlayProps) => {
     const [showAboutMe, setShowAboutMe] = useState(false)
-    const icons = [nodeIcon, fileTypeYarn, reactIcon, githubFilled, fileTypeAzurepipelines, browserstackIcon, seleniumIcon];
+    const icons = [typescriptIcon, javascriptIcon, reactIcon, fileTypeYarn, nodeIcon, githubFilled, fileTypeAzurepipelines, browserstackIcon];
     
     let overlay
     if (showAboutMe) {
