@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 export default class Button extends Component<ButtonProps> {
   render() {
-    if (this.props.color === 'primary') {
+    if (this.props.color.toLowerCase() === 'primary') {
       return (
         <StyledButton>
           <button className="button">
@@ -37,7 +37,7 @@ const StyledButton = styled.button`
   margin: ${Margins.large} ${Margins.large} ${Margins.large} ${Margins.large};
   font-size: ${FontSizes.Large};
   font-family: ${Typography.secondary};
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   border-radius: 6px;
 }

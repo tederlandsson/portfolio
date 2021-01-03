@@ -20,14 +20,15 @@ import browserstackIcon from '@iconify-icons/logos/browserstack';
 import personRunningMediumSkinTone from '@iconify-icons/twemoji/person-running-medium-skin-tone';
 import javascriptIcon from '@iconify-icons/logos/javascript';
 import typescriptIcon from '@iconify-icons/logos/typescript-icon';
+
 interface OverlayProps {
   overlayContent: {
     header1: string;
-    header2: string;
-    text1: any;
-    text2?: any;
-  },
-}
+    header2?: string;
+    text1: string[];
+    text2?: string[];
+  };
+};
 
 const Overlay = (content: OverlayProps) => {
     const [showAboutMe, setShowAboutMe] = useState(false)
@@ -37,7 +38,7 @@ const Overlay = (content: OverlayProps) => {
     if (showAboutMe) {
       overlay = 
       <div className="overlay">
-        <button className="close-button">{isDesktop ? 'Click' : 'Press'} anywhere to close 
+        <button className="close-button">{isDesktop ? 'Click' : 'Tap'} anywhere to close 
           <Icon icon={closeCircleOutlined} className="closeIcon" />
         </button>
         <br />
@@ -48,11 +49,11 @@ const Overlay = (content: OverlayProps) => {
           )}
           <br />
         </div>
-        {content.overlayContent.text1.map((x: string[]) => (
+        {content.overlayContent.text1.map((x: string) => (
           <p>{x}<br /></p>
         ))}
         <br />
-        {content.overlayContent.text2 && content.overlayContent.text2.map((x: string[]) => (
+        {content.overlayContent.text2 && content.overlayContent.text2.map((x: string) => (
           <p>{x}<br /></p>
         ))}
         <br />
@@ -73,7 +74,7 @@ const Overlay = (content: OverlayProps) => {
 
     return (
       <OverlayStyled>
-        <p >{isDesktop ? 'Click' : 'Press'} here to learn more about me</p>
+        <p >{isDesktop ? 'Click' : 'Tap'} here to learn more about me</p>
         <button
           className="overlay-button"
           onClick={() => setShowAboutMe(!showAboutMe)}
@@ -113,6 +114,7 @@ const OverlayStyled = styled.div`
 
   .overlay p {
     font-size: ${FontSizes.medium};
+    text-align: ${isDesktop ? 'inherit' : 'justify'};
   }
 
   .closeIcon {

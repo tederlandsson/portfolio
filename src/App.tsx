@@ -8,7 +8,8 @@ import Contact from './components/Contact/Contact';
 import { GlobalStyles } from './theme';
 
 // Content
-import { AboutContent, ContactInfo, OverlayContent } from './config/about';
+import { AboutContent, ContactInfo, OverlayContent, FooterContent } from './config/about';
+
 class App extends Component {
   render() {
     return (
@@ -18,7 +19,7 @@ class App extends Component {
             <About aboutContent={AboutContent} overlayContent={OverlayContent}/>
             <Experience />
             <Contact content={ContactInfo.data}/>
-            <Footer content={AboutContent.data} />
+            <Footer content={FooterContent.data} />
           </div>
       </>      
     )
