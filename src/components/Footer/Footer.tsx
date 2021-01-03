@@ -16,6 +16,7 @@ interface FooterProps {
 class Footer extends Component<FooterProps> {
   render() {
     const content = this.props.content;
+    const year = new Date().getFullYear();
 
     return (
       <StyledFooter>
@@ -25,7 +26,7 @@ class Footer extends Component<FooterProps> {
           <p><b>Software tests:</b> {content.tests}</p>
           <p><b>Last updated: </b>{content.lastUpdated}</p>
           <br/>
-          &copy; Copyright 2021 {content.name}
+          &copy; {year} {content.name}
         </div>
       </StyledFooter>
     );
