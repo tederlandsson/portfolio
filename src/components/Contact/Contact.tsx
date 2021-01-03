@@ -17,6 +17,7 @@ interface ContactProps {
     github: string;
   };
 }
+
 export default class Contact extends Component<ContactProps> {
   render() {
     return (
@@ -32,7 +33,7 @@ export default class Contact extends Component<ContactProps> {
                 <a href={this.props.content.email}>Email</a>
               </li>
               <br />
-              <li data-autoid="linkedin" className="linkedin">
+              <li data-autoid="linkedin">
                 <Icon icon={linkedinFilled} />
                 <a href={this.props.content.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </li>
