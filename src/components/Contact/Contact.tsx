@@ -34,13 +34,13 @@ export default class Contact extends Component<ContactProps> {
               <br />
               <li data-autoid="linkedin" className="linkedin">
                 <Icon icon={linkedinFilled} />
-                <a href={this.props.content.linkedin}>LinkedIn</a>
+                <a href={this.props.content.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </li>
               
               <br />
               <li data-autoid="github">
                 <Icon icon={githubFilled}/>
-                <a href={this.props.content.github}>Github</a>
+                <a href={this.props.content.github} target="_blank" rel="noopener noreferrer">Github</a>
                 <br />
               </li>
               

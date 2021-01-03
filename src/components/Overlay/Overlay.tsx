@@ -114,6 +114,7 @@ const OverlayStyled = styled.div`
 
   .overlay p {
     font-size: ${FontSizes.medium};
+    text-align: ${isDesktop ? 'inherit' : 'justify'};
   }
 
   .closeIcon {
