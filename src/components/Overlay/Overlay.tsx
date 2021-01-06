@@ -99,7 +99,6 @@ const OverlayStyled = styled.div`
     background: {Colors.blueGradient};
     padding: ${Margins.medium} ${Margins.Large} 0 ${Margins.Large};
     text-align: center;
-    overflow-y: hidden; /* Hide vertical scrollbar */
   }
 
   .overlay h2 {
@@ -113,8 +112,12 @@ const OverlayStyled = styled.div`
   }
 
   .overlay p {
+    margin: auto 5% auto 10%;
+    position: center;
+    max-width: ${isDesktop ? '80%' : '80%'};
     font-size: ${FontSizes.medium};
-    text-align: ${isDesktop ? 'inherit' : 'justify'};
+    text-align: ${isDesktop ? 'justify' : 'justify'};
+    text-justify: inter-word;
   }
 
   .closeIcon {
