@@ -27,6 +27,7 @@ interface OverlayProps {
     header2?: string;
     text1: string[];
     text2?: string[];
+    portfolioUrl?: string;
   };
 };
 
@@ -68,7 +69,7 @@ const Overlay = (content: OverlayProps) => {
       </div>
     } else {
       overlay = <>
-      < Button buttonText="Read more" color="primary" />
+      <Button buttonText="About me" color="primary" />
       </>
     }
 
@@ -79,6 +80,14 @@ const Overlay = (content: OverlayProps) => {
           className="overlay-button"
           onClick={() => setShowAboutMe(!showAboutMe)}
         >{overlay}</button>
+        {content.overlayContent.portfolioUrl &&
+          <><br />
+          <a href={content.overlayContent.portfolioUrl}
+            className="portfolioUrl"
+            data-autoid="overlay:portfolioUrl">
+            Click here to see page source code
+          </a></>
+        }
       </OverlayStyled>
     );
 }
@@ -116,12 +125,12 @@ const OverlayStyled = styled.div`
     position: center;
     max-width: ${isDesktop ? '80%' : '80%'};
     font-size: ${FontSizes.medium};
-    text-align: ${isDesktop ? 'justify' : 'justify'};
+    text-align: ${isDesktop ? 'justify' : 'justify'};  
     text-justify: inter-word;
   }
 
   .closeIcon {
-    font-size: 1.5em;
+    font-size: ${FontSizes.Large};
     margin-top: 15px;
   }
 
@@ -132,5 +141,12 @@ const OverlayStyled = styled.div`
 
   .top-icon svg {
     font-size: 10em;
+  }
+  
+  a {
+    color: ${Colors.white};
+    font-size: ${FontSizes.medium};
+    font-weight: bold;
+    text-decoration: underline;
   }
 `;

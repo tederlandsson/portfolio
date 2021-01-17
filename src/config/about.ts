@@ -1,6 +1,7 @@
 interface AboutProps {
   name: string;
   role: string;
+  portfolioUrl?: string,
 };
 
 export const AboutContent: AboutProps = {
@@ -8,19 +9,6 @@ export const AboutContent: AboutProps = {
   role: 'Quality assurance engineer, software test lead',
 }
 
-
-export const OverlayContent = {
-  header1: 'About me',
-  header2: 'Technologies I work with',
-  text1: [
-    "Five years experience in software testing–from manual testing to test automation to test leading on big and small projects.",
-    "While I am currently working primarily with UI test automation, I am also experienced with API testing, as well as performance testing of REST APIs and web applications.",
-    "I excel at working independently and love working closely with developers to refine products and solve problems.",
-  ],
-  text2: [
-    "When I'm not working, I like to stay active as a recreational swimmer and long-distance runner.",
-  ],
-}
 
 interface ContactInfoProps {
   data: {
@@ -38,6 +26,21 @@ export const ContactInfo: ContactInfoProps = {
   },
 };
 
+
+export const OverlayContent = {
+  header1: 'About me',
+  header2: 'Technologies I work with',
+  text1: [
+    "Five years experience in software testing–from manual testing to test automation to test leading on big and small projects.",
+    "While I am currently working primarily with UI test automation, I am also experienced with API testing, as well as performance testing of REST APIs and web applications.",
+    "I excel at working independently and love working closely with developers to refine products and solve problems.",
+  ],
+  text2: [
+    "When I'm not working, I like to stay active as a recreational swimmer and long-distance runner.",
+  ],
+  portfolioUrl: `${ContactInfo.data.github}portfolio`,
+}
+
 interface FooterProps {
   data: {
     name: string;
@@ -54,7 +57,7 @@ export const FooterContent: FooterProps = {
     poweredBy: 'Powered by Github pages & React',
     fontsUsed: 'Avenir, Work Sans',
     tests: 'cypress.io',
-    lastUpdated: 'Jan. 03',
+    lastUpdated: 'Jan. 06',
   },
 }
   
