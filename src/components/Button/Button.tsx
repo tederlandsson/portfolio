@@ -5,14 +5,16 @@ import styled from 'styled-components'
 interface ButtonProps {
   buttonText: string;
   color: string;
+  url?: string;
 }
 export default class Button extends Component<ButtonProps> {
   render() {
+    const btnContent = this.props.url ? <a href={this.props.url} target="_blank" rel="noopener noreferrer">{this.props.buttonText}</a> : this.props.buttonText;
     if (this.props.color.toLowerCase() === 'primary') {
       return (
         <StyledButton>
           <button className="button">
-            {this.props.buttonText}
+            {btnContent}
           </button>
         </StyledButton>
       );
@@ -35,7 +37,7 @@ const StyledButton = styled.button`
   color: ${Colors.experienceBlue};
   padding: ${Margins.xsmall} ${Margins.small} ${Margins.xsmall} ${Margins.small}; 
   margin: ${Margins.large} ${Margins.large} ${Margins.large} ${Margins.large};
-  font-size: ${FontSizes.Large};
+  font-size: ${FontSizes.large};
   font-family: ${Typography.secondary};
   font-weight: 700;
   text-align: center;

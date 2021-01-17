@@ -1,3 +1,5 @@
+import Overlay from "../components/Overlay/Overlay";
+
 interface AboutProps {
   name: string;
   role: string;
@@ -60,4 +62,15 @@ export const FooterContent: FooterProps = {
     lastUpdated: 'Jan. 06',
   },
 }
-  
+
+interface BannerContentProps {
+  text: string;
+  url?: string;
+  linkText?: string;
+}
+
+export const BannerContent: BannerContentProps = {
+  text: 'Find page source',
+  url: OverlayContent.portfolioUrl,
+  linkText: 'on Github',
+};
