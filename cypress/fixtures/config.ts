@@ -6,4 +6,5 @@ export const urls = {
 
 export const testData = {
   pageTitle: 'Portfolio | Ted Erlandsson',
+  portoflioUrl: 'https://github.com/tederlandsson/portfolio',
 };

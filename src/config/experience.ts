@@ -33,7 +33,7 @@ const experienceContent = [
     icons: [javascriptIcon, typescriptIcon, reactIcon, fileTypeYarn, nodeIcon, browserstackIcon, githubFilled, fileTypeAzurepipelines],
   },
   {
-    header1: 'Softwate test lead',
+    header1: 'Software test lead',
     subHeader: '2017–2019',
     description: 'Ensured quality end-to-end for an e-commerce platform that sells car and car accessories as a subscription model.',
     bottomHeader: 'Technologies used',

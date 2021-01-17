@@ -5,9 +5,11 @@ export const footer = '.footer';
 export const about = '.about';
 export const experience = '.experience';
 export const contact = '.contact';
+export const banner = '.banner';
 
 
 export const components = [
+  banner,
   wave,
   footer,
   about,
@@ -28,6 +30,12 @@ export const experienceElements = {
   // experienceItemText: '.experience-item .top-container p',
   // experienceItemHeader2: '.experience-item .bottom-container h3',
   // image: '.experience-item .top-container img',
+};
+
+export const bannerElements = {
+  component: banner,
+  text: `${banner} p`,
+  link: `${banner} a`,
 };
 
 export const contactElements = {
@@ -63,4 +71,7 @@ export const elements = {
   ...aboutElements,
   // ...experienceElements,
   ...contactElements,
+  bannerComponnet: banner,
+  bannerText: bannerElements.text,
+  bannerLink: bannerElements.link,
 };
