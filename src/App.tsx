@@ -20,7 +20,7 @@ class App extends Component {
             <Banner text={BannerContent.text} url={BannerContent.url} linkText={BannerContent.linkText}/>
             <About aboutContent={AboutContent} overlayContent={OverlayContent}/>
             <Experience />
-            <Contact content={ContactInfo.data}/>
+            <Contact data={ContactInfo.data}/>
             <Footer data={FooterContent.data}
             />
           </div>
