@@ -79,4 +79,9 @@ describe('Portfolio smoke test suite', () => {
     utils.clickElement(element);
   })
 
+  it('Banner links to Portfolio', () => {
+    const element = utils.getElement(constants.bannerElements.link);
+    element.should('have.attr', 'href').and('equal', config.testData.portoflioUrl);
+  })
+
 })  

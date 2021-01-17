@@ -1248,15 +1248,40 @@
   resolved "https://registry.yarnpkg.com/@iconify-icons/ant-design/-/ant-design-1.1.0.tgz#7fbaa994dcac24195512164595118819e5749bca"
   integrity sha512-RU3MljXpV3Y777woJb8t1ymJ+4k7QqGDOYsSJxkDHNRkJruPl0CtC/QpXgPYA+beAmhTTfz2HPZSJXYnZUlAmg==
 
+"@iconify-icons/carbon@^1.1.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/carbon/-/carbon-1.1.1.tgz#226cdb2abb87bb0e3a50e920a6360a014c1e352c"
+  integrity sha512-agSidvd7mwv0ZzWd5yXDeutCj/z1arczaMWIgyvZzMwEBSbzOziCPymqal6sSBPNIAJWHy/8WczDv5/nl/t0Mw==
+
 "@iconify-icons/emojione@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify-icons/emojione/-/emojione-1.1.0.tgz#0fe77c10f9b0d3e73f97a877b50e5359c8e54c3e"
   integrity sha512-PQQWpTqIXmzxUm8t6uocrR09NDXua2u0JfYTC1B4qtiw1vhK+UHQTn1v/7TdZQ8RQo7JwDGG9ieiP9aozR7zmw==
 
+"@iconify-icons/fa-brands@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/fa-brands/-/fa-brands-1.1.0.tgz#4ae09ccffae597fe1add51c6e4fcfdbe1a455444"
+  integrity sha512-uOoUArSBCSUno12F3oINCtD5ya61evR0Tr8NH1J0b8FwYBVSo942Kdbvj5RC5NsL9j+OvyMbkGJa512mpvG0GQ==
+
+"@iconify-icons/fa-solid@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/fa-solid/-/fa-solid-1.1.0.tgz#0d6ddac718695cad981dd1c61902c1bcc78f01d8"
+  integrity sha512-ZvdHlE8wketDHu/+snIPK2F/d1mE+w8DispsHwGlkm8FSzgophGsE06bL2kStTDLo0YKtvRFrKSS0ZgcKLioag==
+
 "@iconify-icons/logos@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify-icons/logos/-/logos-1.1.0.tgz#7d2ed0e57275a63d776669428a8d6a85ff03d94f"
   integrity sha512-AqQI5jTPzt/vqsp34348P4jciwYw9/WU+M7L4wo8VyW2qf6mFOBBRx/eBO0ARpOvrblqBmjK2e0lDxuQ3IhT3g==
+
+"@iconify-icons/twemoji@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/twemoji/-/twemoji-1.1.0.tgz#e082930556ede2208b72ddab463c1907363f03eb"
+  integrity sha512-w+QXEzD5VxFvEYwtxYh7X+7SK+0tIJ0fkF50by50SrUdIqauu310Fit1tbj1QGRukyMX+jdEl5ZQvTAjvKUPJA==
+
+"@iconify-icons/vscode-icons@^1.1.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/vscode-icons/-/vscode-icons-1.1.1.tgz#1346646135caae149342dbac72407d28bc3f0296"
+  integrity sha512-J0RY3aVQgbIrzXz1cOZwd7toI5SYdgQSIZp68b+ixpxkbK1u8oS8IY1QwCfcRJzjGtlqAVnADfAibwaeMiDvFQ==
 
 "@iconify/react@^1.1.3":
   version "1.1.3"
@@ -2152,6 +2177,11 @@
   integrity sha512-I0Yd8TUELTbgRHq2K65j8rnDPAzAP+DiaF/syLem7yXwYLsHZhPd+AM2iXsWmf9P2F2NlFCgl5erZPQx9IbM9Q==
   dependencies:
     source-map "^0.6.1"
+
+"@types/webfontloader@^1.6.32":
+  version "1.6.32"
+  resolved "https://registry.yarnpkg.com/@types/webfontloader/-/webfontloader-1.6.32.tgz#8a02698b7a07a9f2cc8e34d7223dc5d59ccff77a"
+  integrity sha512-l83V/2iHvBTIlKUM1+UlabS/Jd65HVfKmqS+zPhwDlgldPtd5ujPDt0Y1es19xLWcN8NC3wwSTd71Qxbst+Kpw==
 
 "@types/webpack-sources@*":
   version "2.0.0"
@@ -7739,6 +7769,13 @@ import-local@^3.0.2:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
 
+import@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/import/-/import-0.0.6.tgz#d0eb79df86aa2677c6db61578a5212b3031e6042"
+  integrity sha1-0Ot534aqJnfG22FXilISswMeYEI=
+  dependencies:
+    optimist "0.3.x"
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
@@ -10711,6 +10748,13 @@ opn@^5.5.0:
   integrity sha512-PqHpggC9bLV0VeWcdKhkpxY+3JTzetLSqTCWL/z/tFIbI6G8JCjondXklT1JinczLz2Xib62sSp0T/gKT4KksA==
   dependencies:
     is-wsl "^1.1.0"
+
+optimist@0.3.x:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
+  integrity sha1-yQlBrVnkJzMokjB00s8ufLxuwNk=
+  dependencies:
+    wordwrap "~0.0.2"
 
 optimize-css-assets-webpack-plugin@5.0.4:
   version "5.0.4"
@@ -15042,6 +15086,11 @@ wordwrap@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
+
+wordwrap@~0.0.2:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  integrity sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
 
 workbox-background-sync@^5.1.4:
   version "5.1.4"

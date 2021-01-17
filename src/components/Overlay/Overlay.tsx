@@ -68,7 +68,7 @@ const Overlay = (content: OverlayProps) => {
       </div>
     } else {
       overlay = <>
-      < Button buttonText="Read more" color="primary" />
+      <Button buttonText="About me" color="primary" />
       </>
     }
 
@@ -116,12 +116,12 @@ const OverlayStyled = styled.div`
     position: center;
     max-width: ${isDesktop ? '80%' : '80%'};
     font-size: ${FontSizes.medium};
-    text-align: ${isDesktop ? 'justify' : 'justify'};
+    text-align: ${isDesktop ? 'justify' : 'justify'};  
     text-justify: inter-word;
   }
 
   .closeIcon {
-    font-size: 1.5em;
+    font-size: ${FontSizes.Large};
     margin-top: 15px;
   }
 
@@ -132,5 +132,12 @@ const OverlayStyled = styled.div`
 
   .top-icon svg {
     font-size: 10em;
+  }
+  
+  a {
+    color: ${Colors.white};
+    font-size: ${FontSizes.medium};
+    font-weight: bold;
+    text-decoration: underline;
   }
 `;
