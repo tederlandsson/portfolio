@@ -52,6 +52,7 @@ export const Colors = {
   experienceGray: '#d6d6d6',
   linkColor: 'rgb(89, 12, 177)',
   buttonHover: '#e0e000',
+  aqua: '#00F7F3',
 };
 
 

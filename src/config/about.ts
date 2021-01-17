@@ -56,7 +56,7 @@ export const FooterContent: FooterProps = {
     poweredBy: 'Powered by Github pages & React',
     fontsUsed: 'Avenir, Work Sans',
     tests: 'cypress.io',
-    lastUpdated: 'Jan. 06',
+    lastUpdated: 'Jan. 17',
   },
 }
 
@@ -67,7 +67,7 @@ interface BannerContentProps {
 }
 
 export const BannerContent: BannerContentProps = {
-  text: 'Find page source',
+  text: 'Find page source on ',
   url: `${ContactInfo.data.github}portfolio`,
-  linkText: 'on Github',
+  linkText: 'Github',
 };
