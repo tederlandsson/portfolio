@@ -1,5 +1,3 @@
-import Overlay from "../components/Overlay/Overlay";
-
 interface AboutProps {
   name: string;
   role: string;
@@ -40,7 +38,6 @@ export const OverlayContent = {
   text2: [
     "When I'm not working, I like to stay active as a recreational swimmer and long-distance runner.",
   ],
-  portfolioUrl: `${ContactInfo.data.github}portfolio`,
 }
 
 interface FooterProps {
@@ -71,6 +68,6 @@ interface BannerContentProps {
 
 export const BannerContent: BannerContentProps = {
   text: 'Find page source',
-  url: OverlayContent.portfolioUrl,
+  url: `${ContactInfo.data.github}portfolio`,
   linkText: 'on Github',
 };

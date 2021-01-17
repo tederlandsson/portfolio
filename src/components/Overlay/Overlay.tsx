@@ -27,7 +27,6 @@ interface OverlayProps {
     header2?: string;
     text1: string[];
     text2?: string[];
-    portfolioUrl?: string;
   };
 };
 
@@ -80,14 +79,6 @@ const Overlay = (content: OverlayProps) => {
           className="overlay-button"
           onClick={() => setShowAboutMe(!showAboutMe)}
         >{overlay}</button>
-        {content.overlayContent.portfolioUrl &&
-          <><br />
-          <a href={content.overlayContent.portfolioUrl}
-            className="portfolioUrl"
-            data-autoid="overlay:portfolioUrl">
-            Click here to see page source code
-          </a></>
-        }
       </OverlayStyled>
     );
 }
