@@ -1,6 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 import { isDesktop } from '../utils/index';
 
+interface ThemeBreakpointsProps {
+  onlyMobile: string;
+  aboveMobile: string;
+  untilDesktop: string;
+  fromDesktop: string;
+}
+
+export const ThemeBreakpoints: ThemeBreakpointsProps = {
+  onlyMobile: '@media (max-width: 479px)',
+  aboveMobile: '@media (max-width: 479px)',
+  untilDesktop: '@media (max-width: 1023px)',
+  fromDesktop: '@media (max-width: 1024px)',
+};
+
 export const FontSizes = {
   xsmall: '0.75em',
   small: '0.9em',
