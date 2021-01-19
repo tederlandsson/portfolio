@@ -40,7 +40,7 @@ export const OverlayContent = {
   ],
 }
 
-interface FooterProps {
+type FooterProps = {
   data: {
     name: string;
     poweredBy: string;
@@ -58,7 +58,7 @@ export const FooterContent: FooterProps = {
     tests: 'cypress.io',
     lastUpdated: 'Jan. 17',
   },
-}
+};
 
 interface BannerContentProps {
   text: string;

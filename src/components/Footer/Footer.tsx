@@ -1,37 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Theme
 import pattern from '../../assets/pattern.svg';
 import { Colors, Margins } from '../../theme';
 import styled from 'styled-components';
-interface FooterProps {
-  content: {
+
+
+type FooterProps = Readonly<{
+  data: {
     name: string;
-    poweredBy: string;
+    poweredBy: string,
     fontsUsed: string;
     tests: string;
-    lastUpdated: string;
-  };
-};
-class Footer extends Component<FooterProps> {
-  render() {
-    const content = this.props.content;
-    const year = new Date().getFullYear();
+    lastUpdated: string; 
+  },
+}>;
 
-    return (
-      <StyledFooter>
-        <div className="footer">
-          <p>{content.poweredBy}</p>
-          <p><b>Fonts used:</b> {content.fontsUsed}</p>
-          <p><b>Software tests:</b> {content.tests}</p>
-          <p><b>Last updated: </b>{content.lastUpdated}</p>
-          <br/>
-          &copy; {year} {content.name}
-        </div>
-      </StyledFooter>
-    );
-  }
-}
+const Footer: React.FC<FooterProps> = (
+  content
+) => {
+  const {
+    data: {
+      name,
+      poweredBy,
+      fontsUsed,
+      tests,
+      lastUpdated,
+    }
+  } = content;
+
+  const year = new Date().getFullYear();
+
+  return (
+    <StyledFooter>
+      <div className="footer">
+        <p>{poweredBy}</p>
+        <p><b>Fonts used:</b> {fontsUsed}</p>
+        <p><b>Software tests:</b> {tests}</p>
+        <p><b>Last updated: </b>{lastUpdated}</p>
+        <br/>
+        &copy; {year} {name}
+      </div>
+    </StyledFooter>
+  );
+};
 
 const StyledFooter = styled.div`
     border-top: 1px solid ${Colors.borderStroke};

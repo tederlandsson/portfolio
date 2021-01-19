@@ -1,38 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FontSizes, Margins, Colors, Typography } from '../../theme/';
 import styled from 'styled-components'
 
-interface ButtonProps {
+type ButtonProps = Readonly<{
   buttonText: string;
-  color: string;
+  color: 'primary' | 'secondary' ;
   url?: string;
-}
-export default class Button extends Component<ButtonProps> {
-  render() {
-    const btnContent = this.props.url ? <a href={this.props.url} target="_blank" rel="noopener noreferrer">{this.props.buttonText}</a> : this.props.buttonText;
-    if (this.props.color.toLowerCase() === 'primary') {
-      return (
-        <StyledButton>
-          <button className="button">
-            {btnContent}
-          </button>
-        </StyledButton>
-      );
-    } else {
-      return (
-        <StyledSecondaryButton>
-          <button className="button">
-            {this.props.buttonText}
-          </button>
-        </StyledSecondaryButton>
-      );
-    }
+}>;
+
+const Button: React.FC<ButtonProps> = (
+  content
+) => {
+  const {
+    buttonText,
+    color,
+    url,
+  } = content;
+
+  const buttonContent = url ? <a href={url} target="_blank" rel="noopener noreferrer">{buttonText}</a> : buttonText;
+
+  let button;
+
+  if (color.toLowerCase() === 'primary') {
+    button =
+      <PrimaryStyling>
+        <button className="button">{buttonContent}</button>
+      </PrimaryStyling>
+  } else {
+    button =
+      <SecondaryStyling>
+        <button className="button">{buttonContent}</button>
+      </SecondaryStyling>
   }
+  return button;
 }
 
 
 // Primary button styling
-const StyledButton = styled.button`
+const PrimaryStyling = styled.button`
   background-color: ${Colors.white};
   color: ${Colors.experienceBlue};
   padding: ${Margins.xsmall} ${Margins.small} ${Margins.xsmall} ${Margins.small}; 
@@ -50,7 +55,7 @@ const StyledButton = styled.button`
 `;
 
 // secondary button styling
-const StyledSecondaryButton = styled.button`
+const SecondaryStyling = styled.button`
   background-color: ${Colors.experienceBlue};
   color: ${Colors.white};
   border: 1px ${Colors.white} solid;
@@ -64,3 +69,5 @@ const StyledSecondaryButton = styled.button`
 }
 
 `;
+
+export default Button;

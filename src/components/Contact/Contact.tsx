@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Theme
 import styled from 'styled-components';
@@ -10,49 +10,57 @@ import githubFilled from '@iconify-icons/ant-design/github-filled';
 import linkedinFilled from '@iconify-icons/ant-design/linkedin-filled';
 
 
-interface ContactProps {
-  content: {
+type ContactProps = Readonly<{
+  data: {
     email: string;
     linkedin: string;
     github: string;
   };
-}
+}>;
 
-export default class Contact extends Component<ContactProps> {
-  render() {
-    return (
-      <section className="section-contained">
-        <StyledContact>
-          <div className="contact">
-            <h2 className="component-header">Contact</h2>
-            <ul className="no-bullets">
-              <p>Let's get in touch. Here's how:</p>
-              < br/>
-              <li data-autoid="email">
-                <Icon icon={emailIcon} />
-                <a href={this.props.content.email}>Email</a>
-              </li>
+const Contact: React.FC<ContactProps> = (
+  content
+) => {
+  const {
+    data: {
+      email,
+      linkedin,
+      github,
+    }
+  } = content;
+    
+  return (
+    <section className="section-contained">
+      <StyledContact>
+        <div className="contact">
+          <h2 className="component-header">Contact</h2>
+          <ul className="no-bullets">
+            <p>Let's get in touch. Here's how:</p>
+            < br/>
+            <li data-autoid="email">
+              <Icon icon={emailIcon} />
+              <a href={email}>Email</a>
+            </li>
+            <br />
+            <li data-autoid="linkedin">
+              <Icon icon={linkedinFilled} />
+              <a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            
+            <br />
+            <li data-autoid="github">
+              <Icon icon={githubFilled}/>
+              <a href={github} target="_blank" rel="noopener noreferrer">Github</a>
               <br />
-              <li data-autoid="linkedin">
-                <Icon icon={linkedinFilled} />
-                <a href={this.props.content.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </li>
-              
-              <br />
-              <li data-autoid="github">
-                <Icon icon={githubFilled}/>
-                <a href={this.props.content.github} target="_blank" rel="noopener noreferrer">Github</a>
-                <br />
-              </li>
-              
-            </ul>  
-          </div>
-        </StyledContact>
-      </section>
-    );
-  }
-}
-  
+            </li>
+            
+          </ul>  
+        </div>
+      </StyledContact>
+    </section>
+  );
+};
+
 
 const StyledContact = styled.div`
     margin-bottom: ${Margins.huge};
@@ -66,3 +74,5 @@ const StyledContact = styled.div`
     font-size: 5em;
   }
 `;
+
+export default Contact;

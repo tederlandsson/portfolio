@@ -10,11 +10,6 @@ describe('Portfolio smoke test suite', () => {
     cy.visit(url);
   })
 
-  it('Renders wave icon', () => {
-    const element = utils.getElement(constants.wave);
-    utils.verifyElementIsDisplayed(element);
-  })
-
   it('Renders icons in the About component', () => {
     const elements = cy.get(constants.icons).children();
     elements.its('length').should('be.at.least', 4);
