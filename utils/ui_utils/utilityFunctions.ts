@@ -29,7 +29,10 @@ class UtilityFunctions {
         console.log(`Element selector is: ${elements[key]}`);
       }
       const element: Cypress.Chainable<any> = this.getElement(elements[key]);
-      this.verifyElementIsDisplayed(element);
+      // eslint-disable-next-line no-loop-func
+      element.each(($el) => {
+        this.verifyElementIsDisplayed(cy.wrap($el));
+      });
     }
   }
 
@@ -53,6 +56,18 @@ class UtilityFunctions {
     element.scrollIntoView();
     element.click();
     this.verbose && console.log(`Clicked element ${element}`);
+  }
+
+  /**
+   * Function for checking CSS property
+   */
+  verifyCssProperty(element: Cypress.Chainable<JQuery<HTMLElement>>, cssProperty: string, cssPropertyValue: string, verbose: boolean = false) {
+    if (verbose) {
+      console.log(`[+] testing element ${element} for css property ${cssPropertyValue} --- expecting: ${cssPropertyValue}`);
+    }
+    
+    console.log(`Element is ${element}`);
+    element.should('have.css', cssProperty, cssPropertyValue);
   }
 }
 
