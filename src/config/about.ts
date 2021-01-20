@@ -56,7 +56,7 @@ export const FooterContent: FooterProps = {
     poweredBy: 'Powered by Github pages & React',
     fontsUsed: 'Avenir, Work Sans',
     tests: 'cypress.io',
-    lastUpdated: 'Jan. 17',
+    lastUpdated: 'Jan. 20',
   },
 };
 
