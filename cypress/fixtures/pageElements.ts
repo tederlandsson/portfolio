@@ -24,9 +24,9 @@ export const experienceElements = {
   component: experience,
   header: `${experience} h2`,
   experienceItem: '.experience-item',
-  experienceItemHeader: '.experience-item .top-container h2',
+  experienceItemHeader: '.experience-item .top-container h3',
   experienceItemText: '.experience-item .top-container p',
-  experienceItemHeader2: '.experience-item .bottom-container h3',
+  experienceItemHeader2: '.experience-item .bottom-container h4',
   image: '.experience-item .top-container img',
 };
 
@@ -51,8 +51,8 @@ export const aboutElements = {
   header: '.about h2',
   smallHeader: '.about h3',
   button: '.overlay-button',
-  // text: '.about > p',
-  // icons: '.about svg',
+  text: '.about > p',
+  icons: '.about svg',
 };
 
 // Overlay
