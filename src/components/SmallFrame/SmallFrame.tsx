@@ -9,7 +9,7 @@ import githubFilled from '@iconify-icons/ant-design/github-filled';
 const SmallFrame: React.FC = () => {
   return (
     <SmallFrameStyling>
-      <div className="frame">
+      <div className="smallFrame">
           <Icon icon={githubFilled} />
           <p>github.com/tederlandsson</p>
       </div>
@@ -21,6 +21,7 @@ const SmallFrame: React.FC = () => {
 const SmallFrameStyling = styled.div`
   background-color: ${Colors.blueBackground};
   margin-top: ${Margins.Large};
+  color: ${Colors.white};
 
   .frame {
     margin: auto 50% auto 50%;
