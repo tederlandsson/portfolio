@@ -3,9 +3,32 @@ View the live page running on [Github pages](https://tederlandsson.github.io/por
 
 The application is built with TypeScript and React, and is powered by Github pages.
 
+
+# Getting started
+## Dependencies
+* NodeJS
+* TypeScript
+* Yarn
+
+
+## Install dependencies
+If you have NodeJS, TypeScript and Yarn already installed on your system, you can simply install the Node modules by running the `yarn` command.
+
+Else, you will need to install the dependecies first before using `yarn` to install the Node modules. This can be done using for example [Homebrew](https://brew.sh) on Mac OS.
+
+**Install Homebrew**
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+**Dependencies**
+```bash
+deps=(node typescript yarn) && brew install ${deps[@]}
+```
+
 # Building
-* Build locally using `yarn start`
-* Build production build using `yarn build`
+* Run delevopment environment on `localhost`: `yarn start`
+* Create production build using `yarn build`
 
 
 # Deploying
@@ -14,6 +37,8 @@ The application is built with TypeScript and React, and is powered by Github pag
 
 # Repository structure
 
+## Workflows [`.github/workflows`](.github/workflows)
+Contains workflows used for Github actions.
 
 ## React components [`src/components/`](src/components)
 React components are implemented here
