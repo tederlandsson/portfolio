@@ -46,7 +46,7 @@ type FooterProps = {
     poweredBy: string;
     fontsUsed: string;
     tests: string;
-    lastUpdated: string;
+    lastUpdated?: string;
   },
 };
 
@@ -56,7 +56,6 @@ export const FooterContent: FooterProps = {
     poweredBy: 'Powered by Github pages & React',
     fontsUsed: 'Avenir, Work Sans',
     tests: 'cypress.io',
-    lastUpdated: 'Jan. 20',
   },
 };
 
