@@ -12,7 +12,7 @@ type FooterProps = Readonly<{
     poweredBy: string,
     fontsUsed: string;
     tests: string;
-    lastUpdated: string; 
+    lastUpdated?: string; 
   },
 }>;
 
@@ -37,7 +37,9 @@ const Footer: React.FC<FooterProps> = (
         <p>{poweredBy}</p>
         <p><b>Fonts used:</b> {fontsUsed}</p>
         <p><b>Software tests:</b> {tests}</p>
-        <p><b>Last updated: </b>{lastUpdated}</p>
+        {lastUpdated && 
+          <p><b>Last updated: </b>{lastUpdated}</p>
+        }
         <br/>
         &copy; {year} {name}
       </div>
