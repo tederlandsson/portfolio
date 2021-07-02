@@ -42,7 +42,7 @@ const experienceContent = [
     company: 'Acando Consulting',
     description: [
       'Consultant at Volvo Car Corporation.',
-      'End-to-end test leading for an e-commerce platform that sells car and car accessories.'
+      'End-to-end test leading on Volvo Cars online sales platform that sells car and car accessories direct to consumer.'
     ],
     bottomHeader: 'Technologies used',
     image: acando_logo,
@@ -55,7 +55,10 @@ const experienceContent = [
     header1: 'Quality assurance manager',
     subHeader: '2016–2017',
     company: 'SCAN COIN AB',
-    description: ['Developed and maintained test strategies for new and existing ongoing projects.'],
+    description: [
+      'Developed and maintained test strategies for new and existing ongoing projects.',
+      'Performed end-to-end performance tests on web applications and APIs.',
+  ],
     bottomHeader: 'Technologies used',
     image: sc_logo,
     ignoreRadius: false,
