@@ -34,7 +34,7 @@ export const OverlayContent = {
   header2: 'Technologies I work with',
   text1: [
     "Five years experience in software testing–from manual testing to test automation to test leading on big and small projects.",
-    "While I am currently working primarily with UI test automation, I am also experienced with API testing, as well as performance testing of REST APIs and web applications.",
+    "I am experienced in both UI and API testing, as well as performance testing of REST APIs and web applications.",
     "I excel at working independently and love working closely with developers to refine products and solve problems.",
   ],
   text2: [
