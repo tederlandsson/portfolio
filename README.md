@@ -27,13 +27,18 @@ deps=(node typescript yarn) && brew install ${deps[@]}
 ```
 
 # Building
-* Run delevopment environment on `localhost`: `yarn start`
+* Start development server: `yarn start`
 * Create production build using `yarn build`
 
 
 # Deploying
+Deployment is done to [Github pages](https://tederlandsson.github.io/portfolio/)
 * Predeploy: `yarn predeploy`
 * Deploy: `yarn deploy`
+* These steps can be chained to perform the deployment:
+```
+yarn predeploy && yarn deploy
+```
 
 # Repository structure
 
@@ -41,11 +46,10 @@ deps=(node typescript yarn) && brew install ${deps[@]}
 Contains workflows used for Github actions.
 
 ## React components [`src/components/`](src/components)
-React components are implemented here
+React components are implemented here.
 
 ## Static content [`src/config`](src/config)
 This directory holds static content such as text and icons.
-
 
 ## Tests [`cypress/`](cypress/)
 Tests are implemented using [Cypress](https://www.cypress.io/) and can run by
