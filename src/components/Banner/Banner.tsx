@@ -1,3 +1,4 @@
+import React from 'react';
 import { FontSizes, Margins, Colors, Typography } from '../../theme/';
 import styled from 'styled-components';
 
@@ -18,9 +19,7 @@ const Banner: React.FC<BannerProps> = (
 
   return (
     <BannerStyling>
-      <div
-        className="banner"
-      >
+      <div className="banner">
         <p>{text} 
           <a href={url} target="_blank" rel="noopener noreferrer">{linkText ? linkText : 'here!'}</a>
         </p>
