@@ -78,21 +78,4 @@ describe('Portfolio smoke test suite', () => {
     const element = utils.getElement(constants.bannerElements.link);
     element.should('have.attr', 'href').and('equal', config.testData.portoflioUrl);
   })
-
-  it('Renders the small frame when the banner link is rendered', () => {
-    const elements = [constants.smallFrameElements.icon, constants.smallFrameElements.text];
-    
-    utils.getElement(constants.bannerElements.link).trigger('mouseover');
-
-    elements.forEach((x) => {
-      utils.getElement(x).should('be.visible');
-    });
-    utils.getElement(elements[1]).should('contain', 'github');
-  })
-
-  // it('Stops rendering the small frame when not hovered', () => {
-  //   utils.getElement(constants.aboutElements.wave).trigger('mouseover');
-  //   utils.getElement(constants.smallFrameElements.text).should('not.be.visible');
-  // })
-
 })  

@@ -11,7 +11,7 @@ interface ExperienceItemProps {
     header1: string;
     subHeader?: string;
     company?: string;
-    description: string;
+    description: string[];
     bottomHeader?: string;
     image?: string;
     imageAltText?: string;
@@ -41,14 +41,17 @@ class ExperienceItem extends Component<ExperienceItemProps> {
               {content?.image &&
                 <img src={content.image} alt={content.imageAltText} className="image"/>
               }
-              <p className="description">{content.description}</p>
+              <p className="description">
+                {content.description.map((desc: string) => (
+                  <p>{desc}</p>
+                ))}</p>
               </div>
             </div>
             <div className="bottom-container">
               <h4 className="bottom-header">{content.bottomHeader ? content.bottomHeader : '' }</h4>
               <div className="icons">
-                {content.icons?.map((x) => (
-                  <Icon icon={x} />
+                {content.icons?.map((icon) => (
+                  <Icon icon={icon} />
                 ))}
               </div>
             </div>

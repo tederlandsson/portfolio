@@ -6,7 +6,6 @@ export const overlay = '.overlay';
 export const experience = '.experience';
 export const contact = '.contact';
 export const banner = '.banner';
-export const smallFrame = '.smallFrame';
 
 export const components = [
   banner,
@@ -34,12 +33,6 @@ export const bannerElements = {
   component: banner,
   text: `${banner} p`,
   link: `${banner} a`,
-};
-
-export const smallFrameElements = {
-  component: smallFrame,
-  icon: `${smallFrame} svg`,
-  text: `${smallFrame} p`,
 };
 
 export const contactElements = {
