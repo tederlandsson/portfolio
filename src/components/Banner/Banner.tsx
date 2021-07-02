@@ -1,9 +1,5 @@
-import React, { useState} from 'react';
 import { FontSizes, Margins, Colors, Typography } from '../../theme/';
-import { isDesktop } from '../../utils/index';
 import styled from 'styled-components';
-
-import SmallFrame from '../SmallFrame/SmallFrame';
 
 type BannerProps = Readonly<{
   text: string;
@@ -20,30 +16,16 @@ const Banner: React.FC<BannerProps> = (
     linkText,
   } = content;
 
-  const [showOverlay, setShowOverlay] = useState(false)
-
-  let overlay
-  if (showOverlay && isDesktop) {
-    overlay = <SmallFrame />
-  } else {
-    overlay = <></>
-  }
-
   return (
-    <>
     <BannerStyling>
       <div
         className="banner"
-        onMouseEnter={() => setShowOverlay(true)}
-        onMouseLeave={() => setShowOverlay(false)}
       >
         <p>{text} 
           <a href={url} target="_blank" rel="noopener noreferrer">{linkText ? linkText : 'here!'}</a>
         </p>
       </div>
     </BannerStyling>
-    {overlay}
-    </>
   );
 };
 
