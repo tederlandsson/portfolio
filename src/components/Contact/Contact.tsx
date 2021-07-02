@@ -12,6 +12,7 @@ import linkedinFilled from '@iconify-icons/ant-design/linkedin-filled';
 
 type ContactProps = Readonly<{
   data: {
+    text: string,
     email: string;
     linkedin: string;
     github: string;
@@ -23,6 +24,7 @@ const Contact: React.FC<ContactProps> = (
 ) => {
   const {
     data: {
+      text,
       email,
       linkedin,
       github,
@@ -35,7 +37,7 @@ const Contact: React.FC<ContactProps> = (
         <div className="contact">
           <h2 className="component-header">Contact</h2>
           <ul className="no-bullets">
-            <p>Let's get in touch. Here's how:</p>
+            <p>{text}</p>
             < br/>
             <li data-autoid="email">
               <Icon icon={emailIcon} />

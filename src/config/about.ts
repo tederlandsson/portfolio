@@ -12,6 +12,7 @@ export const AboutContent: AboutProps = {
 
 interface ContactInfoProps {
   data: {
+    text: string;
     email: string;
     linkedin: string;
     github: string;
@@ -20,6 +21,7 @@ interface ContactInfoProps {
 
 export const ContactInfo: ContactInfoProps = {
   data: {
+    text: "Interested in working together? Let's get in touch. Here's how:",
     email: 'mailto:tederlandsson@gmail.com',
     linkedin: 'https://www.linkedin.com/in/tederlandsson',
     github: 'https://github.com/tederlandsson/',

@@ -24,6 +24,7 @@ const experienceContent = [
   {
     header1: 'Quality assurance engineer',
     subHeader: '2019–present',
+    company: 'Volvo Car Corporation',
     description: 'Front end test automation for React components and web pages using JavaScript. E2E tests, CI/CD.',
     bottomHeader: 'Technologies used',
     image: vcc_logo,
@@ -35,6 +36,7 @@ const experienceContent = [
   {
     header1: 'Software test lead',
     subHeader: '2017–2019',
+    company: 'Acando Consulting',
     description: 'Ensured quality end-to-end for an e-commerce platform that sells car and car accessories as a subscription model.',
     bottomHeader: 'Technologies used',
     image: acando_logo,
@@ -46,6 +48,7 @@ const experienceContent = [
   {
     header1: 'Quality assurance manager',
     subHeader: '2016–2017',
+    company: 'SCAN COIN AB',
     description: 'Developed and maintained test strategies for new and existing ongoing projects.',
     bottomHeader: 'Technologies used',
     image: sc_logo,

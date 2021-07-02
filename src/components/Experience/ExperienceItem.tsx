@@ -10,6 +10,7 @@ interface ExperienceItemProps {
   data: {
     header1: string;
     subHeader?: string;
+    company?: string;
     description: string;
     bottomHeader?: string;
     image?: string;
@@ -31,9 +32,16 @@ class ExperienceItem extends Component<ExperienceItemProps> {
             <div className="top-container">
               <h3 className="header">{content.header1}</h3>
               <div className="grid-container">
-                <p className="sub-header">{content.subHeader? content.subHeader : ''}</p>
+              {content?.company && 
+                 <>
+                  <p className="company">{content.company}</p>
+                </>
+              }
+              <p className="sub-header">{content.subHeader? content.subHeader : ''}</p>
+              {content?.image &&
                 <img src={content.image} alt={content.imageAltText} className="image"/>
-                <p className="description">{content.description}</p>
+              }
+              <p className="description">{content.description}</p>
               </div>
             </div>
             <div className="bottom-container">
@@ -73,6 +81,7 @@ const ExperienceItemStyling = styled.div`
   .top-container h3 {
     font-size: 20px;
     font-family: ${Typography.secondary};
+    margin-bottom: ${Margins.xsmall};
   }
 
   .description {
@@ -80,12 +89,16 @@ const ExperienceItemStyling = styled.div`
     margin-top: ${isMobile ? '-20px' : '-60px'};
   }
 
+  .company {
+    font-style: bold;
+  }
+
   .sub-header {
     text-align: left;
     font-style: italic;
     color: ${Colors.experienceGray};
     font-size: ${FontSizes.medium};
-    padding: ${Margins.xsmall} ${Margins.xsmall} ${Margins.xsmall} 0;
+    padding: ${Margins.xsmall} ${Margins.xsmall} ${Margins.medium} 0;
     grid-column: 1;
   }
 
@@ -121,7 +134,6 @@ const ExperienceItemStyling = styled.div`
     border-radius: 12.5%;
     color: #000;
   }
-
 `;
 
 export default ExperienceItem;
